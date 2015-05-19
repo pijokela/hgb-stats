@@ -1,0 +1,76 @@
+#head	type	name	description
+#labels	Type	Name	Description
+#line	ModelTrait	Agile	Agile: Direct Attacks targeting this model will miss on a Margin of Success of zero (MOS:0) or less. Area Effect attacks will hit this model on a Margin of zero or greater. A Braced model loses the benefit of Agile (See 10.2).
+#line	ModelTrait	Airdrop	Airdrop: This model may deploy using the Reserve rules (See 15.1b)
+#line	ModelTrait	Amphib:X	Amphibious  May add the rating of the trait to the distance that can be moved in water that is difficult terrain.
+#line	ModelTrait	AMS	Anti-Missile System: This model gains a free Reroll when attacked by weapons using the Indirect or Missile categories. Friendly Models within 6” of this model also gain this Reroll.
+#line	ModelTrait	ANN	Advanced Neural Net: When choosing a posture, select one Skill rating. Improve that Skill rating by 1 for the duration of the models activation.
+#line	ModelTrait	APC:X	Armored Personnel Carrier:X: This model may Transport up to X Infantry Squad models. These infantry models do not have to be in the same Combat Group. Two Infantry Team models may be Transported in the place of one Infantry Squad model (See 16.3).
+#line	ModelTrait	Arms	Arms: This model can use a weapon with the Arm Arc to Snap Fire. This model may purchase Grenades, Shaped Charges, and Panzerfausts upgrades. This model may climb vertical terrain without requiring the Climbing trait (See 6.5f).
+#line	ModelTrait	Attached:X	Attached:X: The model name X is attached to this model. Do not count the Actions of any attached models when creating units.
+#line	ModelTrait	Autocom:X”	Autocom:X”: The range for models to be in Formation with this model is X” (See 5.3).
+#line	ModelTrait	Autopilot	Autopilot: When this model uses the Standby action it gains one additional standby token.
+#line	ModelTrait	Conscript	Conscript: This model may not be a commander. If out of formation, this model degrades all its skills by 1 (GUN:4+ becomes GUN:5+) (See 10.3).
+#line	ModelTrait	CBS	Counter-Battery Sensors: This model, and any friendly models in formation with it, may Snap Fire in response to an enemy Indirect attack. A Snap Fire reaction using CBS may select an Indirect Category weapon to Snap Fire with and counts as having Forward Observed the target (See 14.3).
+#line	ModelTrait	Comms:X	This model may use the Comms:X trait to count as X Comms rolls successes (See 14.1a). If passive ECM reduces the Comms:X trait to zero, this model must roll Comms as normal but may only count successes up to the rating of the trait (See 14.1, 14.2). This model may Relay (See 14.1e)
+#line	ModelTrait	Drone Bay:X	Drone Bay:X:This model may purchase X Drones from the Generic upgrades list without counting towards the unit action limit by paying the TV cost. This model may dock one attached Drone per rating of the trait (See 18.2).
+#line	ModelTrait	ECM:X	Electronic Counter Measures system: A model with this trait reduces the Comms:X rating of enemy models within Sensor range by the ECM Trait rating. A model with ECM may use any Electronic Warfare actions noted as ECM actions (See 14.2, 14.2a, 14.2b, 14.2c).
+#line	ModelTrait	ECCM	Electronic Counter-Counter Measures system: Models with ECCM may Reroll Comms rolls and EW rolls. A model with ECCM may take passive EW rolls for any friendly models within 6” that are targeted by an enemy EW action. Requires Lock to active model (See 14.2, 14.2b).
+#line	ModelTrait	Field Armor	Field Armor: This model suffers one less damage from each damaging attack to a minimum of one damage.
+#line	ModelTrait	HGC:X	Heavy Gear Carrier:X: This model may transport X models with the Gear type (See 16.3).
+#line	ModelTrait	Init:X	Initiative:X: Add the rating of the trait to any initiative tests this model makes (See 3.1, 5.0).
+#line	ModelTrait	Jetpack:X”	Jetpack:X”: This model may use its Jetpack to make a Powered Boost move instead of a normal Move. A Powered Boost move may only turn once at the start of the move and does not use any movement type advantages or disadvantages. The model must move in a straight line with both a horizontal and vertical distance up to the Jetpack rating and may not interrupt this move to make an action. Any terrain less than the vertical maximum of the jump rating is ignored and no dangerous terrain tests are made for terrain that the model power boosts over.
+#line	ModelTrait	Jump Jets:X	Jump Jets:X: When this model Moves it may displace vertically up to the rating of the trait each time it encounters terrain up X Height or less. This model may not end its movement on terrain that is too narrow to contain its base.
+#line	ModelTrait	Low Profile	Low Profile: This models silhouette is always ½ the Height indicated. When Activating, this model may choose to use its regular Height when choosing posture.
+#line	ModelTrait	Lumbering	Lumbering: This model may only turn once per Move.
+#line	ModelTrait	Medic	Combat Medic: This model removes two intensity from Fire or Corrosion tokens when it uses a Damage Control Action (See 9.6b) targeting a model with the Infantry type. Medics may not be commanders. For details See 16.5.
+#line	ModelTrait	NCM:X”	N-KIDU Command Matrix:X”: Conscript N-KIDU models within X” of this this model count as Organized.
+#line	ModelTrait	MCV	Multi-Component Vehicle: This model has one or more additional components attached to it. Each component is a separate target (See 16.6)
+#line	ModelTrait	Mount	Mount: This model does not have a rear arc. Its front arc extends 360 degrees around the model. Unless noted otherwise, all weapons on a model with Mount have the Fast Turret arc (FT).
+#line	ModelTrait	Offroad:X	Offroad:X: This model adds +X” to the distance it may move in difficult terrain. This does not apply to water features.
+#line	ModelTrait	Recon	Recon: This model may deploy using the Recon Special Deployment options.
+#line	ModelTrait	Recovery	Recovery Vehicle: This model removes two intensity from Fire or Corrosion tokens when it uses a Damage Control Action (See 9.6b) targeting a non-infantry model. Recovery Vehicles may not be Commanders (See 16.5).
+#line	ModelTrait	Resist:C	Corrosion Resistance: This model degrades the Target Number of Corrosion Marginal hit rolls to 5+ (See 9.6).
+#line	ModelTrait	Resist:F	Fire Resistance: This model degrades the Target Number of Fire Marginal hit rolls to 5+ (See 9.6).
+#line	ModelTrait	Resist:H	Haywire Resistance: This model is not affected by Haywire and does not suffer any marginal damage rolls from a Haywire weapon attack, though it does take normal damage (See 9.6).
+#line	ModelTrait	SatUp:X+	Satellite Uplink:X+: This model may use actions and abilities noted as requiring a SatUp:X trait (See 14.0). This model may Relay (See 14.1f).
+#line	ModelTrait	Sensor Boom	Sensor Boom: This model may extend its silhouette by 1” in any direction when making an attack action for purposes of Lock and Sensor Lock.
+#line	ModelTrait	Sensors:X	Sensors:X: This models Sensor range is X. This model may use the Sensor Boost action (See 7.7).
+#line	ModelTrait	Shield:X	Shield:X: This model gains a +XD6 modifier to defense from attacks from the front. Attacks that ignore cover ignore this bonus. AE attacks with the primary target in this models front arc do allow the modifier.
+#line	ModelTrait	Smoke:X	Smoke:X: Combat or Braced posture models with Smoke:X may use an Action to fire Smoke. Firing Smoke places a AE:3” centered on the location of the Active model. Smoke is Light Area Cover and has a height of 4”.  Each Smoke trait can be used X times per game. Remove Smoke Area Effects in the Cleanup Phase
+#line	ModelTrait	Stable	Stable Weapons Platform: This model adds a +1D6 modifier to all Gunnery rolls
+#line	ModelTrait	Stealth	Stealth: This model improves its Piloting skill by 1 for defense rolls against Direct and Indirect ranged attacks. This modifier does not apply when the model is using an attack action or reaction,  active sensors, an EW action, or making a Comms roll. This modifier does not apply if the model is attacked with a melee attack, or has no cover from the Observer of a Forward Observation (See 14.3). Sensor Lock against a model with the Stealth trait has a -6” modifier to the range of the Sensors.
+#line	ModelTrait	TD:X	Target Designator: A TD may only be used at Combat or Braced speeds and only if the target model does not have Full Cover. A Forward Observation by a model using a Target Designator trait may use the TD trait to activate the Guided trait on weapons chained to the Forward Observation. The TD trait adds a +XD6 modifier to a Guided attack. A Target Designator allows the target the terrain Cover modifier it would have against a direct attack.
+#line	ModelTrait	Towed	Towed: One model with this trait may be transported by a vehicle with the APC trait without using the transport capacity of the towing vehicle. After movement is completed this model is placed within 1” of the rear of the vehicle and may be attacked as a separate target. A Towed model must still disembark from the transport in order to fire. A towed model may not change elevation in a building and must be deployed on the lowest floor.
+#line	ModelTrait	Transport:X/Y	Transport:X/Y: This model may transport X models of the Y model type (See 16.3).
+#line	ModelTrait	Vet	Veteran: This model is a veteran and has one skill point. This model may purchase upgrades from the Veteran upgrade list (See A.2, 18.6)
+#line	ModelTrait	Vuln:C	Vulnerable to Corrosion: This model suffers Corrosion Marginal damage on a target number of 3+ (see 9.6).
+#line	ModelTrait	Vuln:F	Vulnerable to Fire: This model suffers Fire Marginal damage on a target number of 3+ (See 9.6).
+#line	ModelTrait	Vuln:H	Vulnerable to Haywire: This model suffers one additional Marginal hit when hit by a weapon with Haywire (See 9.6).
+#line	WeaponTrait	AA	Anti-Air: This weapon resolves attack rolls against Flying models using their normal Gunnery skill instead of a 6+. Do not add the additional 12” of range when firing at a model using an Air Strike action.
+#line	WeaponTrait	AI	Anti-Infantry: This weapon may do more than one damage per attack against models with the Infantry type.
+#line	WeaponTrait	AE:X”	Area Effect X”: Models within X inches of a target Primary model or point are Secondary targets. (See 10.2).
+#line	WeaponTrait	AP:X	Armor Piercing:X: A Target with an Armor Rating higher than the Penetration Rating of the attack will suffer damage equal to the Margin of Success up to the rating of the trait, or normal damage, whichever is greater. Area Effect attacks with the AP trait only resolve the AP trait against primary targets.
+#line	WeaponTrait	AS	Anti-Structure: Attack rolls targeting structures (buildings and fortifications) are resolved using normal Gunnery Skill instead of GU:6+ (See 6.9a).
+#line	WeaponTrait	Auto	Automatic Fire System: The weapon system this trait is attached to may snap fire without spending an action. The attack resolves with its Gunnery skill degraded by 1.
+#line	WeaponTrait	Blast	Blast: Marginal hits with this weapon always cause 1 damage.
+#line	WeaponTrait	Brawler:X	Brawler:X: Add the rating as a modifier to any Melee attack or Melee defense rolls this model makes with a target in an Arc with a melee category weapon. A model with multiple instances of the Brawler trait adds them all together for the total modifier.
+#line	WeaponTrait	Burst:X	Burst:X: Add a +XD6 modifier to any attack roll made with this weapon.
+#line	WeaponTrait	Corrosion:X	Corrosion:X: This weapon uses the Corrosion Special Weapon rules (See 9.6).
+#line	WeaponTrait	Fire:X	Fire:X: This weapon uses the Fire Special Weapon rules (See 9.6).
+#line	WeaponTrait	Flak	Flak: Weapons with Flak add a +2D6 modifier to attacks targeting Flying models and may Snap Fire at models that use Flying Movement to Cross the battlefield (See 17.3c).
+#line	WeaponTrait	Frag	Fragmentation: Weapon with Frag add a +2D6 modifier to attack rolls targeting Infantry.
+#line	WeaponTrait	Guided	Guided: A Guided weapon that attacks a target that has been Forward Observed with a Target Designator may benefit from the Target Designator:X (TD:X) rating modifier, and does not suffer the range modifiers for attacking using the Indirect Category (See 8.2).
+#line	WeaponTrait	Haywire	Haywire: This weapon uses the Haywire Special Weapon rules (See 9.6).
+#line	WeaponTrait	LA:X	Limited Ammunition:X: This weapon may Attack a number of times equal to the X rating. Mark this model with a token to indicate ammunition remaining.
+#line	WeaponTrait	PEN:X	Penetration:X: This weapon has a Penetration rating of X instead of the normal listed Penetration rating.
+#line	WeaponTrait	Link	Linked Weapon: Attacks with this weapon improve the attack skill rating of the active model by 1.
+#line	WeaponTrait	PEN:X/Y	Penetration:X with Persistent Damage rating:Y: This weapon has a Penetration rating of X instead of the normal listed Penetration rating, and a Special Weapon Effect rating of Y (See 9.6).
+#line	WeaponTrait	Precise	Precise: Add an additional +1D6 modifier when braced.
+#line	WeaponTrait	Proximity:X	Proximity:X: Weapons with this trait have an Area Effect that is centered on the attacking model. Do not resolve the attack against the firing model. All targets of an Area Effect attack with Proximity are Primary Targets.
+#line	WeaponTrait	Range:X-Y/Z”	Range X-Y/Z”: Replace the normal range of this weapon type with the range indicated in the rating of the trait.
+#line	WeaponTrait	Reach:X	Reach:X: This melee weapon has a range of 0-X / X”.
+#line	WeaponTrait	Split:X	Split Fire:X: This weapon may split attacks between X targets (See 10.5).
+#line	WeaponTrait	Spray	Spray: Attacks with this weapon ignore cover modifiers for partial and area terrain.
+#line	WeaponTrait	Silent	Silenced: Attack actions with this weapon do not remove a Hiding token (See 7.6), or cause a model to lose their Stealth trait bonus to defense.
+#line	WeaponTrait	Stabilizer	Stabilizer: This weapon may only be fired if the model is Braced (See 6.0).

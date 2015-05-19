@@ -1,0 +1,152 @@
+#head	prefix	name	code	range	pen	traits	category
+#labels	Weight	Weapon Type	Code	Range	Pen	Traits	Category
+#line		Anti-Personnel Rockets	APR	6-18 / 36"	0	AI, AE:5"	Ballistic, Indirect
+#line	Light	Anti-Personnel Rockets	LAPR	6-18 / 36"	3	AI, AE:5"	Ballistic, Indirect
+#line	Medium	Anti-Personnel Rockets	MAPR	6-18 / 36"	5	AI, AE:5"	Ballistic, Indirect
+#line	Heavy	Anti-Personnel Rockets	HAPR	6-18 / 36"	7	AI, AE:5"	Ballistic, Indirect
+#line	 	Anti-Tank Missile	ATM	12-36 / 72"	0	AP:2, Guided	Missile, Indirect
+#line	Light	Anti-Tank Missile	LATM	12-36 / 72"	8	AP:2, Guided	Missile, Indirect
+#line	Medium	Anti-Tank Missile	MATM	12-36 / 72"	9	AP:4, Guided	Missile, Indirect
+#line	Heavy	Anti-Tank Missile	HATM	12-36 / 72"	10	AP:6, Guided	Missile, Indirect
+#line	 	Anti-Vehicle Missile	AVM	6-12 / 24"	0	AP:1, Guided	Missile, Indirect
+#line	Light	Anti-Vehicle Missile	LAVM	6-12 / 24"	5	AP:1, Guided	Missile, Indirect
+#line	Medium	Anti-Vehicle Missile	MAVM	6-12 / 24"	6	AP:1, Guided	Missile, Indirect
+#line	Heavy	Anti-Vehicle Missile	HAVM	6-12 / 24"	7	AP:1, Guided	Missile, Indirect
+#line	 	Anti-Vehicle Rocket Pack	RP	6-12 / 24"	0	AE:4"	Ballistic, Indirect
+#line	Light	Anti-Vehicle Rocket Pack	LRP	6-12 / 24"	7	AE:4"	Ballistic, Indirect
+#line	Medium	Anti-Vehicle Rocket Pack	MRP	6-12 / 24"	8	AE:4"	Ballistic, Indirect
+#line	Heavy	Anti-Vehicle Rocket Pack	HRP	6-12 / 24"	9	AE:4"	Ballistic, Indirect
+#line		Anti-Personnel Grenade Launchers	APGL	0"	3	Proximity: 3", AI, Frag	Ballistic, Indirect
+#line	 	Air Burst Missile	ABM	18-48 / 96"	0	AI, AE:3", Blast, Guided	Missile, Indirect
+#line	Light	Air Burst Missile	LABM	18-48 / 96"	5	AI, AE:3", Blast, Guided	Missile, Indirect
+#line	Medium	Air Burst Missile	MABM	18-48 / 96"	6	AI, AE:3", Blast, Guided	Missile, Indirect
+#line	Heavy	Air Burst Missile	HABM	18-48 / 96"	7	AI, AE:3", Blast, Guided	Missile, Indirect
+#line	 	Artillery Gun	AG	24-48 / 96"	0	AE:4", AP:1, AS,  Blast	Ballistic, Indirect
+#line	Light	Artillery Gun	LAG	24-48 / 96"	8	AE:4", AP:1, AS,  Blast	Ballistic, Indirect
+#line	Medium	Artillery Gun	NAG	24-48 / 96"	10	AE:4", AP:1, AS,  Blast	Ballistic, Indirect
+#line	Heavy	Artillery Gun	MAG	24-48 / 96"	12	AE:4", AP:1, AS,  Blast	Ballistic, Indirect
+#line	 	Artillery Missile	AM	18-48 / 96"	0	AE:4", AS, Blast, Guided	Missile, Indirect
+#line	Light	Artillery Missile	LAM	18-48 / 96"	7	AE:4", AS, Blast, Guided	Missile, Indirect
+#line	Medium	Artillery Missile	MAM	18-48 / 96"	9	AE:4", AS, Blast, Guided	Missile, Indirect
+#line	Heavy	Artillery Missile	HAM	18-48 / 96"	11	AE:4", AS, Blast, Guided	Missile, Indirect
+#line	 	Artillery Rockets	AR	18-36 / 72"	0	AE: 5"	Indirect
+#line	Light	Artillery Rockets	LAR	18-36 / 72"	7	AE: 5"	Indirect
+#line	Medium	Artillery Rockets	MAR	18-36 / 72"	8	AE: 5"	Indirect
+#line	Heavy	Artillery Rockets	HAR	18-36 / 72"	9	AE: 5"	Indirect
+#line	 	Auto-Cannon	AC	6-18 / 36"	0	Burst:1	Ballistic
+#line	Light	Auto-Cannon	LAC	6-18 / 36"	6	Burst:1	Ballistic
+#line	Medium	Auto-Cannon	MAC	6-18 / 36"	7	Burst:1	Ballistic
+#line	Heavy	Auto-Cannon	HAC	6-18 / 36"	8	Burst:1	Ballistic
+#line	 	Bazooka	BZ	6-12 / 24"	0	AP:0	Ballistic
+#line	Light	Bazooka	LBZ	6-12 / 24"	7	AP:2	Ballistic
+#line	Medium	Bazooka	MBZ	6-12 / 24"	8	AP:3	Ballistic
+#line	Heavy	Bazooka	HBZ	6-12 / 24"	9	AP:4	Ballistic
+#line	 	Combat Weapon	CW	0-0 / 0"	0	-	Melee
+#line	Light	Combat Weapon	LCW	0-0 / 0"	5	-	Melee
+#line	Medium	Combat Weapon	MCW	0-0 / 0"	7	-	Melee
+#line	Heavy	Combat Weapon	HCW	0-0 / 0"	9	-	Melee
+#line	 	Field Mortar	FM	18-36 / 72"	0	AE:4", Blast	Indirect
+#line	Light	Field Mortar	LFM	18-36 / 72"	8	AE:4", Blast	Indirect
+#line	Medium	Field Mortar	MFM	18-36 / 72"	9	AE:4", Blast	Indirect
+#line	Heavy	Field Mortar	HFM	18-36 / 72"	10	AE:4", Blast	Indirect
+#line	 	Flamer 	FL	0-6 / 9"	0	AE:3", AI, Fire, Spray, 	Ballistic, Melee
+#line	Light	Flamer 	LFL	0-6 / 9"	3	AE:3", AI, Fire:1, Spray, 	Ballistic, Melee
+#line	Medium	Flamer 	MFL	0-6 / 9"	4	AE:3", AI, Fire:2, Spray, 	Ballistic, Melee
+#line	Heavy	Flamer 	HFL	0-6 / 9"	5	AE:3", AI, Fire:3, Spray, 	Ballistic, Melee
+#line	 	Field Gun	FG	12-24 / 48"	0	AE:3", Ammo: AS, Ammo:AP:0	Ballistic, Indirect
+#line	Light	Field Gun	LFG	12-24 / 48"	8	AE:3", Ammo: AS, Ammo:AP:1	Ballistic, Indirect
+#line	Medium	Field Gun	MFG	12-24 / 48"	9	AE:3", Ammo: AS, Ammo:AP:2	Ballistic, Indirect
+#line	Heavy	Field Gun	HFG	12-24 / 48"	10	AE:3", Ammo: AS, Ammo:AP:3	Ballistic, Indirect
+#line	 	Frag Cannon	FC	3-9 / 18"	0	Ammo: Burst:1, Ammo: Frag (AI)	Ballistic
+#line	Light	Frag Cannon	LFC	3-9 / 18"	5	Ammo: Burst:1, Ammo: Frag (AI)	Ballistic
+#line	Medium	Frag Cannon	MFC	3-9 / 18"	6	Ammo: Burst:1, Ammo: Frag (AI)	Ballistic
+#line	Heavy	Frag Cannon	HFC	3-9 / 18"	7	Ammo: Burst:1, Ammo: Frag (AI)	Ballistic
+#line	 	Grenade Launcher	GL	6-12 / 24"	0	AE:3", Blast	Ballistic, Indirect
+#line	Light	Grenade Launcher	LGL	6-12 / 24"	7	AE:3", Blast	Ballistic, Indirect
+#line	Medium	Grenade Launcher	MGL	6-12 / 24"	8	AE:3", Blast	Ballistic, Indirect
+#line	Heavy	Grenade Launcher	HGL	6-12 / 24"	9	AE:3", Blast	Ballistic, Indirect
+#line	 	Grenades	HG	3-6 / 9"	0	AE:3", Blast	Indirect
+#line	Light	Grenades	LHG	3-6 / 9"	8	AE:3", Blast	Indirect
+#line	Medium	Grenades	MHG	3-6 / 9"	9	AE:3", Blast	Indirect
+#line	Heavy	Grenades	HHG	3-6 / 9"	10	AE:3", Blast	Indirect
+#line	 	Guided Mortar	GM	18-36 / 72"	0	AE:3", Blast, Guided	Indirect
+#line	Light	Guided Mortar	LGM	18-36 / 72"	6	AE:3", Blast, Guided	Indirect
+#line	Medium	Guided Mortar	MGM	18-36 / 72"	7	AE:3", Blast, Guided	Indirect
+#line	Heavy	Guided Mortar	HGM	18-36 / 72"	8	AE:3", Blast, Guided	Indirect
+#line	 	Infantry Laser	IL	6-18 / 36"	0	AI, Burst:1	Advanced
+#line	Light	Infantry Laser	LIL	6-18 / 36"	3	AI, Burst:1	Advanced
+#line	Medium	Infantry Laser	MIL	6-18 / 36"	4	AI, Burst:1	Advanced
+#line	Heavy	Infantry Laser	HIL	6-18 / 36"	5	AI, Burst:1	Advanced
+#line	 	Infantry Mortars	IM	18-36 / 72"	0	AE:2", AI, Blast, Stabilizer	Indirect
+#line	Light	Infantry Mortars	LIM	18-36 / 72"	4	AE:2", AI, Blast, Stabilizer	Indirect
+#line	Medium	Infantry Mortars	MIM	18-36 / 72"	5	AE:2", AI, Blast, Stabilizer	Indirect
+#line	Heavy	Infantry Mortars	HIM	18-36 / 72"	6	AE:2", AI, Blast, Stabilizer	Indirect
+#line	 	Infantry Support Weapons	IS	6-18 / 36"	0		Ballistic
+#line	Light	Infantry Support Weapons	LIS	6-18 / 36"	3		Ballistic
+#line	Medium	Infantry Support Weapons	MIS	6-18 / 36"	4		Ballistic
+#line	Heavy	Infantry Support Weapons	HIS	6-18 / 36"	5		Ballistic
+#line	Light	Infantry Weapons	IW	3-9 / 18"	0	AI, Burst:1	Ballistic
+#line	Light	Infantry Weapons	LIW	3-9 / 18"	2	AI, Burst:1	Ballistic
+#line	Medium	Infantry Weapons	MIW	3-9 / 18"	3	AI, Burst:1	Ballistic
+#line	Heavy	Infantry Weapons	HIW	3-9 / 18"	4	AI, Burst:1	Ballistic
+#line	 	Laser Cannon	LC	12-36 / 72"	0	Precise	Advanced
+#line	Light	Laser Cannon	LLC	12-36 / 72"	8	Precise	Advanced
+#line	Medium	Laser Cannon	MLC	12-36 / 72"	9	Precise	Advanced
+#line	Heavy	Laser Cannon	HLC	12-36 / 72"	10	Precise	Advanced
+#line	 	Machine Gun	MG	3-9 / 18"	0	AI, Burst:2	Ballistic
+#line	Light	Machine Gun	LMG	3-9 / 18"	2	AI, Burst:2	Ballistic
+#line	Medium	Machine Gun	MMG	3-9 / 18"	3	AI, Burst:2	Ballistic
+#line	Heavy	Machine Gun	HMG	3-9 / 18"	4	AI, Burst:2	Ballistic
+#line		Pack Gun	PG	0-6 / 9"	6	Burst:2, Split:2	Ballistic, Melee
+#line	 	Panzerfaust	PZ	3-6 / 9"	0	AP:0	Ballistic
+#line	Light	Panzerfaust	LPZ	3-6 / 9"	6	AP:2	Ballistic
+#line	Medium	Panzerfaust	MPZ	3-6 / 9"	7	AP:3	Ballistic
+#line	Heavy	Panzerfaust	HPZ	3-6 / 9"	8	AP:4	Ballistic
+#line	 	Particle Accelerator	PA	6-18 / 36"	0	Haywire	Advanced
+#line	Light	Particle Accelerator	LPA	6-18 / 36"	7	Haywire	Advanced
+#line	Medium	Particle Accelerator	MPA	6-18 / 36"	8	Haywire	Advanced
+#line	Heavy	Particle Accelerator	HPA	6-18 / 36"	9	Haywire	Advanced
+#line	 	Pulse Laser	PL	12-24/ 48"	0	AS, AE:2", Blast	Advanced
+#line	Light	Pulse Laser	LPL	12-24/ 48"	9	AS, AE:2", Blast	Advanced
+#line	Medium	Pulse Laser	MPL	12-24/ 48"	10	AS, AE:2", Blast	Advanced
+#line	Heavy	Pulse Laser	HPL	12-24/ 48"	11	AS, AE:2", Blast	Advanced
+#line	 	Railgun	RG	12-36 / 72"	0	AP:0	Advanced
+#line	Light	Railgun	LRG	12-36 / 72"	8	AP:2	Advanced
+#line	Medium	Railgun	MRG	12-36 / 72"	9	AP:4	Advanced
+#line	Heavy	Railgun	HRG	12-36 / 72"	10	AP:6	Advanced
+#line	 	Rifle	RF	12-24 / 48"	0	Precise	Ballistic
+#line	Light	Rifle	LRF	12-24 / 48"	7	Precise	Ballistic
+#line	Medium	Rifle	MRF	12-24 / 48"	8	Precise	Ballistic
+#line	Heavy	Rifle	HRF	12-24 / 48"	9	Precise	Ballistic
+#line	 	Rotary Cannon	RC	6-12 / 24"	0	Burst:2, Split:2	Ballistic
+#line	Light	Rotary Cannon	LRC	6-12 / 24"	6	Burst:2, Split:2	Ballistic
+#line	Medium	Rotary Cannon	MRC	6-12 / 24"	7	Burst:2, Split:2	Ballistic
+#line	Heavy	Rotary Cannon	HRC	6-12 / 24"	8	Burst:2, Split:2	Ballistic
+#line	 	Rotary Laser	RL	6-12 / 24"	0	Burst:1, Split:2	Advanced
+#line	Light	Rotary Laser	LRL	6-12 / 24"	7	Burst:1, Split:2	Advanced
+#line	Medium	Rotary Laser	MRL	6-12 / 24"	8	Burst:1, Split:2	Advanced
+#line	Heavy	Rotary Laser	HRL	6-12 / 24"	9	Burst:1, Split:2	Advanced
+#line	 	Shaped Explosives	SE	0-0 / 0" 2	0	AP:0, AS, Brawler:-1D6 	Melee
+#line	Light	Shaped Explosives	LSE	0-0 / 0" 2	8	AP:2, AS, Brawler:-1D6 	Melee
+#line	Medium	Shaped Explosives	MSE	0-0 / 0" 2	9	AP:3, AS, Brawler:-1D6 	Melee
+#line	Heavy	Shaped Explosives	HSE	0-0 / 0" 2	10	AP:4, AS, Brawler:-1D6 	Melee
+#line	 	Snub Cannon	SC	3-9 / 18"	0	AP:0, AS	Ballistic
+#line	Light	Snub Cannon	LSC	3-9 / 18"	8	AP:2, AS	Ballistic
+#line	Medium	Snub Cannon	MSC	3-9 / 18"	9	AP:3, AS	Ballistic
+#line	Heavy	Snub Cannon	HSC	3-9 / 18"	10	AP:4, AS	Ballistic
+#line	 	Spike Gun	SG	0-0 / 0"	0	AP:0	Melee
+#line	Light	Spike Gun	LSG	0-0 / 0"	6	AP:2	Melee
+#line	Medium	Spike Gun	MSG	0-0 / 0"	7	AP:4	Melee
+#line	Heavy	Spike Gun	HSG	0-0 / 0"	8	AP:6	Melee
+#line	 	Surface to Air Missile	SAM	12-36 / 72"	0	AA, Flak, Guided	Missile
+#line	Light	Surface to Air Missile	LSAM	12-36 / 72"	5	AA, Flak, Guided	Missile
+#line	Medium	Surface to Air Missile	MSAM	12-36 / 72"	7	AA, Flak, Guided	Missile
+#line	Heavy	Surface to Air Missile	HSAM	12-36 / 72"	9	AA, Flak, Guided	Missile
+#line	 	Tank Gun	TG	18-36 / 72"	0	Ammo:AP:0, Ammo:AS (AP:1), Ammo:AE:3" (AP:1)	Ballistic
+#line	Light	Tank Gun	LTG	18-36 / 72"	9	Ammo:AP:2, Ammo:AS (AP:1), Ammo:AE:3" (AP:1)	Ballistic
+#line	Medium	Tank Gun	MTG	18-36 / 72"	10	Ammo:AP:3, Ammo:AS (AP:1), Ammo:AE:3" (AP:1)	Ballistic
+#line	Heavy	Tank Gun	HTG	18-36 / 72"	11	Ammo:AP:4, Ammo:AS (AP:1), Ammo:AE:3" (AP:1)	Ballistic
+#line	 	Vibro Blade	VB	0-0 / 0"	0	AP:0	Melee
+#line	Light	Vibro Blade	LVB	0-0 / 0"	7	AP:1	Melee
+#line	Medium	Vibro Blade	MVB	0-0 / 0"	8	AP:3	Melee
+#line	Heavy	Vibro Blade	HVB	0-0 / 0"	9	AP:5	Melee

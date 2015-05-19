@@ -1,0 +1,684 @@
+#head	faction	chassis	name	tv	ua	mr	ar	hs	a	gu	pi	ew	weapons	traits	type	special	
+#labels	Faction	Chassis	Model	TV	UA	MR	AR	H/S	A	GU	PI	EW	Weapons	Traits	Type/Height	Special Rules	
+#types	str	str	str	i	array(str,',')	array(str' ')	i	array(i,'/')	str	str	str	array(str,',')	array(str,',')	str			
+#line	NORTH	Hunter	Hunter	6	GP(0+), FS, ST, HT	W:5" G:6"	6	4 / 2	1	4+	4+	6+	LAC (Arm, Split:2), LRP, APGL, LPZ, LVB (Arm)	Arms	Gear 1.5"		
+#line	NORTH	Hunter	Hunter Gunner	7	GP, SK , FS	W:5" G:6"	6	4 / 2	1	4+	4+	6+	MAC (Arm), LRP, APGL, LVB (Arm)	Arms	Gear 1.5"		
+#line	NORTH	Hunter	MP Hunter	6	GP, DG (0-1)	W:5" G:6"	6	4 / 2	1	4+	4+	6+	MFC (Arm), LRP, APGL, LVB (Arm)	Arms	Gear 1.5"		
+#line	NORTH	Hunter	Assault Hunter	8	GP, FS	W:5" G:6"	6	4 / 2	1	4+	4+	6+	LSC (Arm), APGL, LVB (Arm)	Arms	Gear 1.5"		
+#line	NORTH	Hunter	Destroyer Hunter	9	FS	W:5" G:6"	6	4 / 2	1	4+	4+	6+	MBZ (Arm), LRP, APGL, LVB (Arm)	Arms	Gear 1.5"		
+#mod{chassis:'Hunter'}	NORTH	Hunter	#replace:{from:'Hunter', to: 'Headhunter'}	+1	+(CMD)	-	-	-	-	-	-	5+	-	+Init:1, Comms:1			
+#line	NORTH	Hunter XMG	Hunter XMG Gunner	11	SK, DG	W:6" G:7"	6	4 / 2	1	3+	3+	5+	MAC (Arm), MRP, MCW (Arm, Reach:1")	Arms, Brawler:1, Shield:1	Gear 1.5"		
+#line	NORTH	Hunter XMG	Hunter XMG Grenadier	12	SK, DG	W:6" G:7"	6	4 / 2	1	3+	3+	5+	LGL (Arm), MRP, MCW (Arm, Reach:1")	Arms, Brawler:1, Shield:1	Gear 1.5"		
+#mod{chassis:'Hunter XMG'}	NORTH	Hunter XMG	#postfix:'Melee Specialist'	+1	-	-	-	-	-	-	-	-	-MCW, +MVB (Arm, Reach:1")	-			
+#line	NORTH	Jaguar	Jaguar	9	SK (0+), FS, RC	W:6" G:7"	6	3 / 3	1	3+	3+	5+	MAC (Arm, Split:2), LRP, APGL, LVB (Arm)	Agile, Arms	Gear 1.5"		
+#line	NORTH	Jaguar	Destroyer Jaguar	12	SK, FS, DG	W:6" G:7"	6	3 / 3	1	3+	3+	5+	MBZ (Arm), LRP, APGL, LVB (Arm)	Agile, Arms	Gear 1.5"		
+#line	NORTH	Jaguar	Flash Jaguar	12	SK, DG	W:6" G:7"	6	3 / 3	1	3+	3+	5+	LLC (Arm), LRP, APGL, LVB (Arm)	Agile, Arms	Gear 1.5"		
+#line	NORTH	Jaguar	Sniper Jaguar	12	SK, FS	W:6" G:7"	6	3 / 3	1	3+	3+	5+	HRF (Arm), LRP, APGL, LVB (Arm)	Agile, Arms	Gear 1.5"		
+#line	NORTH	Jaguar	Assault Jaguar	12	SK , FS	W:6" G:7"	6	3 / 3	1	3+	3+	5+	LSC (Arm), LRP, APGL, LVB (Arm)	Agile, Arms	Gear 1.5"		
+#line	NORTH	Jaguar	Arrow Jaguar	12	SK	W:6" G:7"	6	3 / 3	1	3+	3+	5+	MAC (Arm), LATM, APGL, LVB (Arm)	Agile, Arms	Gear 1.5"		
+#line	NORTH	Jaguar	Fire Jaguar	12	SK	W:6" G:7"	6	3 / 3	1	3+	3+	5+	MAC (Arm), MRP (Link), LVB (Arm)	Agile, Arms	Gear 1.5"		
+#mod{chassis:'Jaguar'}	NORTH	Jaguar	#prefix:'Para'	+1	+PT	-	-	-	-	-	-	-	-	+Airdrop			
+#mod{chassis:'Jaguar'}	NORTH	Jaguar	#prefix:'Thunder'	+1	+(CMD)	-	-	-	-	-	-	4+	-	+Init:1, SatUp:6+ (Aux)			
+#line	NORTH	Leopard	Leopard	9	DG (0+)	W:6" G:7"	6	3 / 3	1	4+	3+	6+	MAC (Arm), LFC (Arm), LRP, APGL, MHG, MCW (Arm)	Airdroppable, Arms, Climber	Gear 1.5"		
+#line	NORTH	Leopard	Leopard Flash	10	DG	W:6" G:7"	6	3 / 3	1	4+	3+	6+	MRL (Arm), LRP, APGL, MHG, MCW (Arm)	Airdroppable, Arms, Climber	Gear 1.5"		
+#line	NORTH	Leopard	Leopard Saboteur	9	DG	W:6" G:7"	6	3 / 3	1	4+	3+	6+	MAC (Arm), LFC (Arm), LRP, APGL, MSE, MSG (Arm)	Airdroppable, Arms, Climber	Gear 1.5"		
+#line	NORTH	Leopard	Leopard Wildfire	9	DG	W:6" G:7"	6	3 / 3	1	4+	3+	6+	MFL (Arm), LFC (Arm), LRP, APGL, MHG, MCW (Arm)	Airdroppable, Arms, Climber	Gear 1.5"		
+#line	NORTH	Cheetah	Cheetah	9	RC (0+), DG	W:7" G:9"	4	3 / 3	1	5+	2+	4+	PG (Arm), RP (PEN:6), LVB (Arm)	Agile, Arms, Comms:1, ECM:2, TD:1, Sensors:24" (Aux)	Gear 1.5"		
+#line	NORTH	Cheetah	Strike Cheetah	11	DG	W:7" G:9"	5	3 / 3	1	4+	2+	4+	LBZ (Arm), PG (Arm), RP (PEN:6), LVB (Arm)	Agile, Arms, Comms:1, ECM:1, Sensors: 24" (Aux)	Gear 1.5"		
+#line	NORTH	Cheetah	White Cat Cheetah	10	RC	W:7" G:9"	4	3 / 3	1	5+	2+	4+	LAC (Arm), RP (PEN:6), LVB (Arm)	Agile, Arms, Comms:1, ECM:2, ECCM, Sensors:30" (Aux), SatUp:5+ (Aux)	Gear 1.5"		
+#line	NORTH	Cheetah	Metal Cat Cheetah	8	RC, DG	W:7" G:9"	5	3 / 3	1	4+	2+	6+	LBZ (Arm), PG (Arm), RP (PEN:6), LVB (Arm)	Agile, Arms, Comms:1	Gear 1.5"		
+#line	NORTH	Panther	Panther	16	SF (0+)	W:6" G:7"	6	3 / 3	1	3+	3+	5+	MAC (Arm, Precise, Silent), LRP, LVB (Arm)	Airdrop, Agile, Arms, Sensors:18", Stealth (Aux), Vet, TD:2	Gear 1.5"		
+#line	NORTH	Panther	Panther Sniper	17	SF	W:6" G:7"	6	3 / 3	1	3+	3+	5+	HRF (Arm, Silent), LRP, LVB (Arm)	Airdrop, Agile, Arms, Sensors:18", Stealth (Aux), Vet, TD:2	Gear 1.5"		
+#line	NORTH	Black Cat	Black Cat	15	SF (0+)	W:7" G:9"	4	3 / 3	1	3+	2+	4+	PG (Arm, Silent), RP (PEN:6), LVB (Arm)	Agile, Airdrop, Arms, Sensors:24", Stealth (Aux), Vet, ECM:2, TD:1	Gear 1.5"		
+#line	NORTH	Black Cat	Black Cat Sniper	16	SF	W:7" G:9"	4	3 / 3	1	3+	2+	4+	HRF (Arm, Stabilizer, Silent), RP (PEN:6), LVB (Arm)	Agile, Airdrop, Arms, Sensors:24", Stealth (Aux), Vet, TD:1	Gear 1.5"		
+#line	NORTH	Ferret	Ferret	5	RC, DG	W:5" G:9"	4	3 / 3	1	5+	3+	4+	PG (Arm), RP (PEN:6), LVB (Arm)	Arms, Brawler:-1, Comms:1, Sensors:24" (Aux), TD:1	Gear 1"		
+#line	NORTH	Ferret	Sniper Ferret	5	RC, DG	W:5" G:9"	4	3 / 3	1	5+	3+	4+	LRF (Arm), RP (PEN:6), LVB (Arm)	Arms, Brawler:-1, Comms:1, Sensors:24" (Aux), TD:1	Gear 1"		
+#line	NORTH	Ferret	Ferret Mk. 2 Gunner	6	RC, DG	W:5" G:9"	4	3 / 3	1	5+	3+	4+	LAC (Arm), RP (PEN:6), LVB (Arm)	Arms, Brawler: -1, Comms:1, Sensors:24" (Aux), TD:1	Gear 1"		
+#line	NORTH	Ferret	Wild Ferret	7	RC	W:5" G:9"	4	3 / 3	1	5+	3+	4+	PG (Arm), LVB (Arm)	Arms, Brawler:-1, Comms;1, ECM:1, ECCM, SatUp:5+ (Aux), Sensors 24" (Aux), Vuln:H	Gear 1"		
+#line	NORTH	Weasel	Weasel	12	RC	W:5" G:8"	4	3 / 3	1	5+	4+	3+	PG (Arm), LVB (Arm)	Arms, Comms:2, ECM:2, ECCM (G), SatUp:4+, Sensors: 24", Vet	Gear 1"		
+#line	NORTH	Bobcat	Bobcat	6	RC	W:5" G:9"	5	3 / 3	1	5+	3+	4+	PG (Arm), RP (PEN:6), LVB (Arm)	Arms, Brawler:-1, Comms:1, Sensors:18", TD:1	Gear 1.5"		
+#line	NORTH	Wildcat	Wildcat	7	RC , SK	W:6" G:8"	5	3 / 3	1	5+	4+	6+	LAC (Arm), LRP, MVB (Arm)	Agile, Arms, Brawler:1, Comms:1	Gear 1.5"		
+#line	NORTH	Wildcat	Riotmaster Wildcat	7	RC , SK	W:6" G:8"	5	3 / 3	1	5+	4+	6+	LFC (Arm), LRP, MVB (Arm)	Agile, Arms, Brawler:1, Comms:1	Gear 1.5"		
+#line	NORTH	Wildcat	Gunner Wildcat	8	SK	W:6" G:8"	5	3 / 3	1	5+	4+	6+	MAC (Arm), LRP, MVB (Arm)	Agile, Arms, Brawler:1, Comms:1	Gear 1.5"		
+#line	NORTH	Wildcat	Assault Wildcat	8	SK	W:6" G:8"	5	3 / 3	1	5+	4+	6+	LSC (Arm), MVB (Arm)	Agile, Arms, Brawler:1, Comms:1	Gear 1.5"		
+#line	NORTH	Tiger	Tiger	10	GP , SK	W:5" G:6"	7	3 / 3	1	3+	4+	6+	MAC (Arm), MRP, APGL, LCW (Arm)	Arms	Gear 1.5"		
+#line	NORTH	Tiger	Assault Tiger	12	GP , SK	W:5" G:6"	7	3 / 3	1	3+	4+	6+	LSC (Arm), MRP, APGL, LCW (Arm)	Arms	Gear 1.5"		
+#line	NORTH	Tiger	Destroyer Tiger	12	SK	W:5" G:6"	7	3 / 3	1	3+	4+	6+	MBZ (Arm), MRP, APGL, LCW (Arm)	Arms	Gear 1.5"		
+#mod{chassis:'Tiger'}	NORTH	Tiger	#replace:{from:'Tiger', to:'Sabertooth'}	+1	+(CMD)	-	-	-	-	-	-	5+	-	+Comms:1, SatUp:6+ (Aux)	Gear 1.5"		
+#line	NORTH	Para Hunter	Para Hunter	7	PT (0+)	W:5" G:6"	6	4 / 2	1	4+	4+	6+	LAC (Arm), LGL (Arm), APGL, LSG (Arm)	Airdrop, Arms	Gear 1.5"		
+#line	NORTH	Para Hunter	Para Strike Hunter	9	PT	W:5" G:6"	6	4 / 2	1	4+	4+	6+	LBZ (Arm), APGL, LSG (Arm)	Airdrop, Arms	Gear 1.5"		
+#mod{chassis:'Para Hunter'}	NORTH	Para Hunter	#replace:{from:'Hunter', to:'Headhunter'}	+1	+(CMD)	-	-	-	-	-	-	5+	-	+Init:1			
+#line	NORTH	Para Cheetah	Para Cheetah	10	PT	W:7" G:9"	4	3 / 3	1	5+	2+	4+	PG (Arm), LSG (Arm)	Agile, Airdrop, Arms, Comms:1, ECM:2, TD:1, Sensors:18" (Aux)	Gear 1.5"		
+#line	NORTH	Para Cheetah	Strike Para Cheetah	12	PT	W:7" G:9"	5	3 / 3	1	4+	2+	4+	LBZ (Arm), LSG (Arm)	Airdrop, Agile, Arms, Comms:1, ECM:1, Sensors: 18" (Aux)	Gear 1.5"		
+#line	NORTH	Para Cheetah	Grenadier Para Cheetah	12	PT	W:7" G:9"	5	3 / 3	1	4+	2+	4+	LAC (Arm), LGL (Arm), LSG (Arm)	Agile, Airdrop, Arms, Comms:1, ECM:1, Sensors: 18" (Aux)	Gear 1.5"		
+#line	NORTH	Koala	Koala	11	PT	W:4" G:6"	7	3 / 3	1	4+	5+	6+	HAC (Arm, Split:2), MFC (Arm), MRP (Link), HMG, MSG (Arm)	Airdrop, Arms, Brawler:1	Gear 2"		
+#line	NORTH	Koala	Sniper Koala	11	PT	W:4" G:6"	7	3 / 3	1	4+	5+	6+	HAC (Arm, Precise), MRP (Link), MSG (Arm)	Airdrop, Arms, Brawler:1	Gear 2"		
+#line	NORTH	Koala	Grenadier Koala	11	PT	W:4" G:6"	7	3 / 3	1	4+	5+	6+	HAC (Arm, Split:2), MGL (Arm), MRP (Link), MSG (Arm)	Airdrop, Arms, Brawler:1	Gear 2"		
+#line	NORTH	Dingo	Dingo	11	PT	W:4" G:6"	7	3 / 3	1	4+	5+	6+	HAC (Arm, Split:2), MRP (Link), MGM, PG (Arm), MMG, MSG (Arm)	Airdrop, Arms, Brawler:1	Gear 2"		
+#line	NORTH	Dingo	Chaingun Dingo	12	PT	W:4" G:6"	7	3 / 3	1	4+	5+	6+	HRC (Arm), HRP, HMG (Link), MSG (Arm)	Airdrop, Arms, Brawler:1	Gear 2"		
+#line	NORTH	Grizzly	Grizzly	14	FS, DG	W:4" G:5"	8	4 / 2	1	4+	5+	6+	HAC (Arm, Split:2), MRP (Link), MGM, PG (Arm), HMG, LVB (Arm)	Arms, Autopilot	Gear 2"		
+#line	NORTH	Grizzly	Rabid Grizzly	14	FS, DG	W:4" G:5"	8	4 / 2	1	4+	5+	6+	MGL (Arm), MRP (Link), MFM, PG (Arm), HMG, LVB (Arm)	Arms, Autopilot, Field Armor	Gear 2"		
+#line	NORTH	Grizzly	Assault Grizzly	14	FS, DG	W:4" G:5"	8	4 / 2	1	4+	5+	6+	MSC (Arm), MRP (Link), MGM, PG (Arm), HMG, LVB (Arm)	Arms, Autopilot	Gear 2"		
+#line	NORTH	Grizzly	Strike Grizzly	14	FS, DG	W:4" G:5"	8	4 / 2	1	4+	5+	6+	MBZ (Arm), MRP (Link), MGM, PG (Arm), HMG, LVB (Arm)	Arms, Autopilot	Gear 2"		
+#line	NORTH	Grizzly	Grizzly Destroyer	15	FS	W:4" G:5"	8	4 / 2	1	4+	5+	6+	HBZ (Arm), MRP (Link), MGM, PG (Arm), HMG, LVB (Arm)	Arms, Autopilot	Gear 2"		
+#line	NORTH	Grizzly	Crossbow Grizzly	15	FS	W:4" G:5"	8	4 / 2	1	4+	5+	6+	HAC (Arm), MATM, PG (Arm), HMG, LVB (Arm)	Arms, Autopilot	Gear 2"		
+#mod{chassis:'Grizzly'}	NORTH	Grizzly	#prefix:'Thunder'	+1	+(CMD)	-	-	-	-	-	-	5+	-	+Init:1, SatUp:6+ (Aux)			
+#line	NORTH	Razorback	Razorback	11	SK, FS, DG	W:4" G:5"	7	4 / 2	1	4+	4+	6+	LSC (Arm), MRP, PG (Arm), LMG, APGL, LCW (Arm)	Arms	Gear 1.5"		
+#line	NORTH	Razorback	Chaingun Razorback	12	SK, FS, DG	W:4" G:5"	7	4 / 2	1	4+	4+	6+	HRC (Arm), LAR, PG (Arm), LMG, APGL, LCW (Arm)	Arms	Gear 1.5"		
+#line	NORTH	Kodiak	Kodiak	19	SK, FS	W:4" G:5"	9	4 / 2	2	3+	5+	6+	MPA (Arm), HRP, LATM, HMG, APGL, MVB (Arm)	Arms, Vet	Gear 2"		
+#line	NORTH	Kodiak	Chaingun Kodiak	19	SK, FS	W:4" G:5"	9	4 / 2	2	3+	5+	6+	HRC (Arm), HRP, LATM, HMG, APGL, MVB (Arm)	Arms, Vet	Gear 2"		
+#line	NORTH	Kodiak	Destroyer Kodiak	21	SK, FS	W:4" G:5"	9	4 / 2	2	3+	5+	6+	HBZ (Arm), HRP, LATM, HMG, APGL, MVB (Arm)	Arms, Vet	Gear 2"		
+#line	NORTH	Bear	Bear	10	FS, DG	W:5" G:6"	8	3 / 3	1	4+	5+	6+	HAC (Arm, Split:2), MRP (Link), LMG, LGM, LVB (Arm)	Arms	Gear 2"		
+#line	NORTH	Bear	Mauler Bear	10	DG	W:5" G:6"	8	3 / 3	1	4+	5+	6+	LGL (Arm), MRP (Link), LMG (Link), APGL (Auto), LVB (Arm)	Arms	Gear 2"		
+#line	NORTH	Bear	Mad Dog	10	DG	W:5" G:6"	7	3 / 3	1	4+	5+	6+	HAC (Arm), HRP, LMG (Link), LVB (Arm)	Arms	Gear 2"		
+#line	NORTH	Bear	Den Mother	11	FS (CMD), DG (CMD)	W:5" G:6"	8	3 / 3	1	4+	5+	5+	HAC (Arm, Split:2), MRP (Link), LMG, LGM, LVB (Arm)	Arms, SatUp:6+ (Aux)	Gear 2"		
+#line	NORTH	Lion	Lion	12	SK	W:5" G:6"	7	3 / 3	1	4+	4+	6+	HAC (Arm), HRP, APGL, HCW (Arm)	Arms, Agile, Brawler:1	Gear 1.5"		
+#line	NORTH	Lion	Lion Lightning	13	SK	W:5" G:6"	7	3 / 3	1	4+	4+	6+	MPA (Arm), HRP, APGL, HCW (Arm)	Arms, Agile, Brawler:1	Gear 1.5"		
+#line	NORTH	Lion	Lion Initiate	12	SK	W:5" G:6"	7	3 / 3	1	4+	4+	6+	HRC (Arm), MAPR (Link), APGL, HCW (Arm)	Arms, Agile, Brawler:1	Gear 1.5"		
+#line	NORTH	Lion	Strike Lion	12	SK, DG	W:5" G:6"	7	3 / 3	1	4+	4+	6+	MBZ (Arm), MAR, APGL, HCW (Arm)	Arms, Agile, Brawler:1	Gear 1.5"		
+#mod{chassis:'Lion'}	NORTH	Lion	#prefix:'Mountain'	+1	-	-	-	-	-	-	-	-	-	+Climber			
+#line	NORTH	Scimitar	Scimitar	26	SK, FS	W:5" G:6"	10	5 / 3	2	4+	5+	5+	SC (Arm, AP:5, PEN:11), LATM (T), MAC (T, AA), APGL, MSG (Arm, Link), HVB (Arm, Reach:2")	Arms, Brawler:1, Climber	Strider 3"		
+#line	NORTH	Scimitar	Scimitar Feral	24	SK, FS	W:5" G:6"	10	5 / 3	2	4+	5+	5+	HGL (Arm), LATM (T), MAC (T, AA), APGL, MSG (Arm, Link), HVB (Arm, Reach:2")	Arms, Brawler:1, Climber	Strider 3"		
+#line	NORTH	Scimitar	Scimitar Assault	28	SK, FS	W:5" G:6"	10	5 / 3	2	4+	5+	5+	SC (Arm, AP:5, PEN:11), MATM (T), MAC (T, AA), APGL, MSG (Arm, Link), HVB (Arm, Reach:2")	Arms, Brawler:1, Climber	Strider 3"		
+#line	NORTH	Scimitar	Scimitar Lightning	27	SK, FS	W:5" G:6"	10	5 / 3	2	4+	5+	5+	HPL (Arm), LATM (T), MAC (T, AA), APGL, MSG (Arm, Link), HVB (Arm, Reach:2")	Arms, Brawler:1, Climber	Strider 3"		
+#mod{name:'Scimitar'}	NORTH	Scimitar	#postfix:'Rotary Laser'	+1	-	-	-	-	-	-	-	-	-LATM, +MRL (FT, Link)				
+#mod{name:'Scimitar Feral'}	NORTH	Scimitar	#postfix:'Rotary Laser'	+1	-	-	-	-	-	-	-	-	-LATM, +MRL (FT, Link)				
+#mod{name:'Scimitar Lightning'}	NORTH	Scimitar	#postfix:'Rotary Laser'	+1	-	-	-	-	-	-	-	-	-LATM, +MRL (FT, Link)				
+#mod{chassis:'Scimitar'}	NORTH	Scimitar	#postfix:'Command'	+2	+(CMD)	-	-	-	-	-	-	-	-	+Init:1, ECCM, SatUp:6+ (Aux)			
+#line	NORTH	Mammoth	Mammoth	28	ST	W:4" G:5"	11	6 / 2	2	4+	6+	5+	HSC (Arm, Precise), MATM (Arm), MRC (FT), MMG (FT+F, Split:2, Auto, Aux)	Autopilot, Lumbering, TD:0 (Aux)	Strider 2.5"		
+#line	NORTH	Mammoth	Assault Mammoth	25	ST	W:4" G:5"	11	6 / 2	2	4+	6+	5+	2xHSC (Arm, Precise), HRC (FT), MMG (FT+F, Split:2, Auto, Aux)	Autopilot, Lumbering	Strider 2.5"		
+#line	NORTH	Mammoth	Brawler Mammoth	24	ST	W:4" G:5"	11	6 / 2	2	4+	6+	5+	2xHGL (Arm, Precise), HRC (FT), MMG (FT+F, Split:2, Auto, Aux)	Autopilot, Lumbering	Strider 2.5"		
+#line	NORTH	Mammoth	Gunner Mammoth	24	ST	W:4" G:5"	11	6 / 2	2	4+	6+	5+	MAC (Arm, Link, Split:2), HFC (Arm, Link, Split:2), HRC (FT), MMG (FT+F, Split:2, Auto, Aux)	Autopilot, Lumbering	Strider 2.5"		
+#line	NORTH	Mammoth	Command Mammoth	29	ST (CMD)	W:4" G:5"	11	6 / 2	2	4+	6+	4+	HSC (Arm, Precise), MRC (FT), MMG (FT+F, Split:2, Auto, Aux), HCW (Arm)	AMS, Arms, Autopilot, Brawler:2, Comms:1, ECCM, Init:2, SatUp:5+, Lumbering	Strider 2.5"		
+#mod{chassis:'Mammoth'}	NORTH	Mammoth	#postfix:'Anti-Infantry'	+0	-	-	-	-	-	-	-	-	-MMG, +MAPR	-			
+#line	NORTH	Thunderhammer	Thunderhammer	28	ST	W:4"	11	4 / 4	2	4+	6+	5+	HAG (T), HAC (T), MRP (Range:6-12/48"), APGL	Lumbering, Stable	Strider 3"		
+#line	NORTH	Thunderhammer	Thunderhammer Lightning	30	ST	W:4"	11	4 / 4	2	4+	6+	5+	HRG (T), HAC (T), MRP (Range:6-12/48"), APGL	Lumbering, Stable	Strider 3"		
+#line	NORTH	Thunderhammer	Thunderhammer Storm	28	ST	W:4"	11	4 / 4	2	4+	6+	5+	HGM (T, Link), HAC (T), MRP (Range:6-12/48"), APGL	Lumbering, Stable	Strider 3"		
+#line	NORTH	Thunderhammer	Thunderhammer Flak	20	ST	W:4"	11	4 / 4	2	4+	6+	5+	HAC (FT, AA, Link, Split:2), MRP (Range:6-12/48"), APGL	Lumbering, Stable	Strider 3"		
+#line	NORTH	Thunderhammer	Thunderhammer Support	30	ST	W:4"	11	4 / 4	2	4+	6+	5+	HATM (T), HAC (T), MRP (Range:6-12/48"), APGL	AMS, Lumbering, Stable	Strider 3"		
+#mod{chassis:'Thunderhammer'}	NORTH	Thunderhammer	#postfix:'Bastion'	+1	IN (0-1)	-	-	-	-	-	-	-	-	+APC:2			
+#line	NORTH	Klemm	Klemm	18	LT (0+)	G:6"	10	4 / 4	2	4+	6+	6+	LAC (FT, Split:2), MATM (T, Aux), MMG, APGL	Offroad:1, Smoke:3 (Aux)	Vehicle 1"		
+#line	NORTH	Klemm	Bandit Hunter Klemm	16	LT (0+)	G:6"	10	5 / 3	2	4+	6+	6+	HRF (T), MRP (T), MMG, APGL	Offroad:1, Smoke:3 (Aux)	Vehicle 1"		
+#line	NORTH	Klemm	Tyburr	17	LT (SU)	G:6"	10	5 / 3	2	4+	6+	6+	LTG (T), MMG, APGL	Offroad:1, Smoke:3 (Aux)	Vehicle 1"		
+#line	NORTH	Klemm	Jaxon	16	LT (SU)	G:6"	9	3 / 5	2	5+	6+	6+	2xHAR (T), MMG, APGL	Offroad:1, Smoke:3 (Aux)	Vehicle 1.5"		
+#line	NORTH	Klemm	Stormhammer	16	LT (SU)	G:6"	9	3 / 5	2	5+	6+	6+	HFM (T), MMG, APGL	Offroad:1, Smoke:3 (Aux)	Vehicle 1.5"		
+#line	NORTH	Aller	Aller	32	HT	G:4"	12	5 / 3	3	4+	6+	6+	HRG (T, Precise), LPL (FT, AA), HAC (FT), MMG (T, Auto, Aux)	Offroad:1, Smoke:3 (Aux)	Vehicle 1.5"		
+#line	NORTH	Aller	Naval Support Aller	36	HT (SU)	G:4"	12	5 / 3	3	4+	6+	6+	HRG (T, Precise), HATM (T, Aux), LPL (FT, AA), HAC (FT), MMG (T, Auto, Aux)	Offroad:1	Vehicle 1.5"		
+#line	NORTH	Aller	Hardy Aller	32	HT	G:4"	12	5 / 3	3	4+	6+	6+	HTG (T), HRC (FT, AA), HAC (FT), MMG (T, Auto, Aux)	Offroad:1, Smoke:3 (Aux)	Vehicle 1.5"		
+#line	NORTH	Verder	Verder	26	HT (SU)	G:4"	11	4 / 4	2	4+	6+	6+	AG (PEN:14), MLC (AA)	Offroad:1	Vehicle 2"		
+#line	NORTH	Dragonfly	Dragonfly VTOL (North)	19	VL (0+)	F:12" H:12"	6	4 / 4	2	4+	3+	6+	MAC (FT+F, AA), MATM, LSAM	Agile, TD:1	Vehicle 3"		
+#line	NORTH	Badger	Badger	6	CV, IN , GP	G:7"	6	4 / 4	1	5+	6+	6+	LAC (FT, Link)	APC:2	Vehicle 1"		
+#line	NORTH	Badger	Cavalry Badger	8	CV, FS	G:7"	6	4 / 4	1	5+	6+	6+	MRP (T, Link)	APC:2	Vehicle 1"		
+#line	NORTH	Badger	Rabid Badger	8	CV	G:7"	6	4 / 4	1	5+	6+	6+	LATM (T)	APC:2	Vehicle 1"		
+#line	NORTH	Badger	Medical Badger	3	IN	G:7"	6	4 / 4	1	5+	6+	6+	-	APC:1, Medic	Vehicle 1"		
+#line	NORTH	Stinger	Stinger	4	IN (SU)	G:7"	4	2 / 4	1	5+	6+	6+	LABM (T), LMG		Vehicle 1"		
+#line	NORTH	Antelope	Antelope	3	CV (0+), IN (0+)	G:9"	4	2 / 4	1	5+	4+	5+	MMG		Vehicle 0.5"		
+#line	NORTH	Bricklayer	Bricklayer	5	EG (0+), IN (0-1)	W:5" G:6"	4	3 / 3	1	5+	4+	6+	LAC (Arm), LCW (Reach: 1"), LHG (Arm), LSE (Arm)	Arms, Recovery, Smoke, Vuln:F	Gear 1.5"		
+#line	NORTH	Engineering Grizzly	Engineering Grizzly	8	EG (0+), IN (0-1)	W:4" G:6"	6	3 / 3	1	5+	5+	6+	HAC (Arm), HCW (Reach: 1"), MHG (Arm), MSE (Arm)	Arms, Brawler:2, Recovery, Vuln:F	Gear 2"		
+#line	NORTH	Field Gun	Field Gun	4	IN (SU)	G:2"	4	3 / 0	1	5+	6+	-	LFG (Stabilizer)	Towed	Infantry		
+#line	NORTH	Lynx	Lynx	4	IN (0+), ST, HT	W:6" G:8"	4	3 / 3	1	5+	4+	-	HIS (Arm, Burst:1), LPZ, LHG, LCW	Arms	Gear 1"		
+#line	NORTH	Wallaby	Wallaby	2	IN (0+)	G:11"	2	3 / 0	1	5+	4+	6+	MIW	Agile	Infantry 0.5"		
+#line	NORTH	Infantry Squad	Grenadier Infantry Squad	2	IN (0+), GP , FS	I:3"	2	2 / 2	1	4+	4+	6+	HIW (AE:2")		Infantry 0.5"		
+#line	NORTH	Infantry Squad	Anti-tank Infantry Squad	4	IN , FS	I:3"	2	2 / 2	1	4+	4+	6+	LIW, MAVM		Infantry 0.5"		
+#line	NORTH	Infantry Squad	Mortar Infantry Squad	4	IN , FS	I:3"	2	2 / 2	1	4+	4+	6+	LIW, HIM		Infantry 0.5"		
+#line	NORTH	Infantry Team	Sniper Infantry Team	3	IN , GP	I:3"	2	2 / 0	1	4+	4+	6+	LIW, MIS (AP:1, Precise, Silent, Stabilizer)	Stealth	Infantry 0.5"		
+#line	NORTH	Infantry Squad	Recon Infantry Squad	3	IN , GP	I:3"	2	2 / 2	1	4+	4+	4+	LIW	TD:1	Infantry 0.5"		
+#mod{chassis:'Infantry Team', faction:'NORTH'}	NORTH	Infantry Team	#prefix:'Paratrooper'	+1	-	-	-	-	-	-	-	-	-	+Airdrop	-		
+#mod{chassis:'Infantry Squad', faction:'NORTH'}	NORTH	Infantry Squad	#prefix:'Paratrooper'	+1	-	-	-	-	-	-	-	-	-	+Airdrop	-		
+#line	SOUTH	Jager	Jager	6	GP (0+), SK , FS, ST, HT	W:5" G:6"	6	4 / 2	1	4+	4+	6+	LAC (Arm, Split:2), LRP, APGL, LHG, LVB (Arm)	Arms	Gear 1.5"		
+#line	SOUTH	Jager	Striking Jager	8	GP, SK , FS	W:5" G:6"	6	4 / 2	1	4+	4+	6+	LBZ (Arm), LRP, APGL, LVB (Arm)	Arms	Gear 1.5"		
+#line	SOUTH	Jager	Jager Gunner	7	GP, SK , FS	W:5" G:6"	6	4 / 2	1	4+	4+	6+	MAC (Arm), LRP, APGL, LVB (Arm)	Arms	Gear 1.5"		
+#line	SOUTH	Jager	Brawler Jager	8	GP , SK	W:5" G:6"	6	4 / 2	1	4+	4+	6+	LAC (Arm), LGL (Arm), LRP, APGL, LVB (Arm)	Arms	Gear 1.5"		
+#line	SOUTH	Jager	Blitz Jager	8	SK	W:5" G:6"	6	4 / 2	1	4+	4+	6+	LAC (Arm), LATM (LA:2), LVB (Arm)	Arms	Gear 1.5"		
+#line	SOUTH	Jager	FlammJager	6	GP, SK	W:5" G:6"	6	4 / 2	1	4+	4+	6+	MFL (Arm), LRP (Fire:0), LVB (Arm)	Arms, Resist Fire	Gear 1.5"		
+#mod{chassis:'Jager'}	SOUTH	Jager	#prefix:'Command'	+1	+(CMD)	-	-	-	-	-	-	5+	-	+Init:1, Sensors:18"			
+#line	SOUTH	Para Jager	Para Jager	7	PT (0+)	W:5" G:6"	6	4 / 2	1	4+	4+	6+	LAC (Arm), LGL (Arm), LSG (Arm)	Arms, Airdrop	Gear 1.5"		
+#line	SOUTH	Para Jager	Para Striking Jager	9	PT	W:5" G:6"	6	4 / 2	1	4+	4+	6+	LBZ (Arm), LSG (Arm)	Arms, Airdrop	Gear 1.5"		
+#mod{chassis:'Para Jager'}	SOUTH	Para Jager	#prefix:'Command'	+1	+(CMD)	-	-	-	-	-	-	5+	-	+Init:1			
+#line	SOUTH	Asp	Asp	3	MI (0+), IN	W:4" G:5"	6	2 / 4	1	5+	5+	6+	HMG (Arm), LHG	Arms, Conscript	Gear 1.5"		
+#line	SOUTH	Asp	Gunner Asp	4	MI , IN	W:4" G:5"	6	2 / 4	1	5+	5+	6+	LAC (Arm), LHG	Arms, Conscript	Gear 1.5"		
+#line	SOUTH	Asp	Brawler Asp	4	MI , IN	W:4" G:5"	6	2 / 4	1	5+	5+	6+	HMG (Arm), MPZ	Arms, Conscript	Gear 1.5"		
+#line	SOUTH	Salamander	Salamander	5	MI, IN	W:6" G:8"	5	3 / 3	1	5+	4+	6+	MAC (Arm), LFL (Arm), MCW (Reach: 1")	Agile, Arms	Gear 1.5"		
+#line	SOUTH	Salamander	Salamander Riotmaster	6	MI	W:6" G:8"	5	3 / 3	1	5+	4+	6+	MAC (Arm), LFC (Arm), MCW (Reach: 1")	Agile, Arms	Gear 1.5"		
+#line	SOUTH	Salamander	Salamander Brawler	6	MI	W:6" G:8"	5	3 / 3	1	5+	4+	6+	MAC (Arm), LGL (Arm), MCW (Reach: 1")	Agile, Arms	Gear 1.5"		
+#line	SOUTH	Salamander	Salamander Hunter	7	MI	W:6" G:8"	5	3 / 3	1	5+	4+	6+	HRF (Arm), LVB (Arm)	Agile, Arms	Gear 1.5"		
+#line	SOUTH	Street Viper	Street Viper	5	MI	W:6" G:8"	5	3 / 3	1	5+	4+	6+	LRF (Arm), LPZ, LVB (Arm)	Agile, Arms, Brawler:1	Gear 1.5"		
+#line	SOUTH	Street Viper	Anti-Air Street Viper	6	MI	W:6" G:8"	5	3 / 3	1	5+	4+	6+	MAC (Arm, AA), LVB (Arm)	Agile, Arms, Brawler:1	Gear 1.5"		
+#line	SOUTH	Street Viper	Riotmaster Street Viper	6	MI	W:6" G:8"	5	3 / 3	1	5+	4+	6+	MFC (Arm), MPZ, LVB (Arm)	Agile, Arms, Brawler:1	Gear 1.5"		
+#line	SOUTH	Python	Badlands Python	10	MI	W:4" G:5"	8	3 / 3	1	4+	5+	6+	HAC (Arm), MRP, MFM, LVB (Arm)	Arms	Gear 2"		
+#line	SOUTH	Black Mamba	Black Mamba	11	SK (0+), FS, RC (CMD)	W:6" G:7"	7	3 / 3	1	3+	3+	5+	MAC (Arm, Split:2), LRP, APGL, LVB (Arm)	Agile, Arms	Gear 1.5"		
+#line	SOUTH	Black Mamba	Strike Black Mamba	12	SK , FS	W:6" G:7"	7	3 / 3	1	3+	3+	5+	LBZ (Arm), LRP, APGL, LVB (Arm)	Agile, Arms	Gear 1.5"		
+#line	SOUTH	Black Mamba	Brawler Black Mamba	13	SK	W:6" G:7"	7	3 / 3	1	3+	3+	5+	MGL (Arm), LAPR, APGL, LVB (Arm)	Agile, Arms	Gear 1.5"		
+#line	SOUTH	Black Mamba	Long Fang Black Mamba	14	SK	W:6" G:7"	7	3 / 3	1	3+	3+	5+	MAC (Arm), MRP (Link), LVB (Arm)	Agile, Arms	Gear 1.5"		
+#line	SOUTH	Black Mamba	Blazing Black Mamba	12	SK	W:6" G:7"	7	3 / 3	1	3+	3+	5+	MRL (Arm), LRP, APGL, LVB (Arm)	Agile, Arms	Gear 1.5"		
+#line	SOUTH	Black Mamba	Blitz Black Mamba	12	SK , FS	W:6" G:7"	7	3 / 3	1	3+	3+	5+	MAC (Arm), LATM (LA:2), APGL, LVB (Arm)	Agile, Arms	Gear 1.5"		
+#mod{chassis:'Black Mamba'}	SOUTH	Black Mamba	#prefix:'Para'	+1	+PT	-	-	-	-	-	-	-	-	+Airdrop			
+#mod{chassis:'Black Mamba'}	SOUTH	Black Mamba	#prefix:'Razorfang'	+1	+(CMD)	-	-	-	-	-	-	4+	-	+Init:1, SatUp:6+ (Aux)			
+#line	SOUTH	Snakeye Black Mamba	Snake-eye (Black Mamba)	17	SF (0+)	W:6" G:7"	7	3 / 3	1	3+	3+	5+	LLC (Arm, Silent), LVB (Arm)	Agile, Airdrop, Arms, Stealth (Aux), Vet	Gear 1.5"		
+#line	SOUTH	Snakeye Black Mamba	Snake-eye Firestorm	17	SF	W:6" G:7"	7	3 / 3	1	3+	3+	5+	MRL (Arm), LVB (Arm)	Agile, Airdrop, Arms, Stealth (Aux), Vet	Gear 1.5"		
+#line	SOUTH	Green Mamba	Green Mamba	16	SF (0+)	W:6" G:7"	7	3 / 3	1	3+	3+	5+	MAC (Arm, Split:2), LRP, LVB (Arm)	Agile, Airdrop, Arms, Stealth (Aux), Vet	Gear 1.5"		
+#line	SOUTH	Green Mamba	Green Mamba Gunner	16	SF	W:6" G:7"	7	3 / 3	1	3+	3+	5+	HAC (Arm), LRP, LVB (Arm)	Agile, Airdrop, Arms, Stealth (Aux), Vet	Gear 1.5"		
+#line	SOUTH	Green Mamba	Green Mamba Strike	16	SF	W:6" G:7"	7	3 / 3	1	3+	3+	5+	LBZ (Arm), LRP, LVB (Arm)	Agile, Airdrop, Arms, Stealth (Aux), Vet	Gear 1.5"		
+#line	SOUTH	Chameleon	Chameleon	15	SF (0+)	W:6" G:8"	4	3 / 3	1	3+	3+	3+	PG (Arm, Silent), RP (PEN:6), LVB (Arm)	Agile, Arms, Comms:2 (Aux), ECM:1, TD:2, Sensors:18" (Aux), Stealth, Vet	Gear 1.5"		
+#line	SOUTH	Chameleon	Chameleon Hunter	15	SF	W:6" G:8"	4	3 / 3	1	3+	3+	3+	LAC (Arm, Silent), RP (PEN:6), LVB (Arm)	Agile, Arms, Comms:2 (Aux), ECM:1, TD:2, Sensors:18" (Aux), Stealth, Vet	Gear 1.5"		
+#line	SOUTH	Diamondback	Diamondback	9	SK	W:5" G:7"	6	4 / 2	1	4+	4+	6+	MAC (Arm), MAPR, APGL, LVB (Arm)	Arms, Brawler:1, Field Armor	Gear 1.5"		
+#line	SOUTH	Diamondback	Strike Diamondback	10	SK	W:5" G:7"	6	4 / 2	1	4+	4+	6+	MBZ (Arm), MAPR, APGL, LVB (Arm)	Arms, Brawler:1, Field Armor	Gear 1.5"		
+#line	SOUTH	Diamondback	Gunner Diamondback	10	SK	W:5" G:7"	6	4 / 2	1	4+	4+	6+	HAC (Arm), MAPR, APGL, LVB (Arm)	Arms, Brawler:1, Field Armor	Gear 1.5"		
+#mod{chassis:'Diamonback'}	SOUTH	Diamondback	#prefix:'Support'	+1	-	-	-	-	-	-	-	-	-MAPR, +MAR	-			
+#line	SOUTH	Sidewinder	Sidewinder	10	GP, SK	W:5" G:6"	7	3 / 3	1	3+	4+	6+	MAC (Arm), MRP, APGL, LCW (Arm)	Arms	Gear 1.5"		
+#line	SOUTH	Sidewinder	Sidewinder Sniper	10	GP, SK	W:5" G:6"	7	3 / 3	1	3+	4+	6+	MRF (Arm), LPG (Arm), LGM, APGL, LCW (Arm)	Arms	Gear 1.5"		
+#line	SOUTH	Sidewinder	Sidewinder Striker	12	SK	W:5" G:6"	7	3 / 3	1	3+	4+	6+	MBZ (Arm), LPG (Arm), LGM, APGL, LCW (Arm)	Arms	Gear 1.5"		
+#line	SOUTH	Sidewinder	Sidewinder Riotmaster	10	GP	W:5" G:6"	7	3 / 3	1	3+	4+	6+	MFC (Arm), MRP, APGL, LCW (Arm)	Arms	Gear 1.5"		
+#mod{chassis:'Sidewinder'}	SOUTH	Sidewinder	#prefix:'Razorfang'	+1	+(CMD)	-	-	-	-	-	-	5+	-	+Comms:1. SatUp:6+ (Aux)			
+#line	SOUTH	Viper	Desert Viper	9	SK , FS	W:5"	7	5 / 1	1	4+	4+	6+	MGL (Arm), MRP, APGL, LVB (Arm)	Arms	Gear 1.5"		
+#line	SOUTH	Viper	Pit Viper	11	SK , FS	W:5"	7	5 / 1	1	4+	4+	6+	MSC (Arm), MRP, APGL, LVB (Arm)	Arms	Gear 1.5"		
+#mod{chassis:'Viper'}	SOUTH	Viper	#prefix:'Swamp'	+1	-	-	-	-	-	-	-	-	-	+Amphib			
+#line	SOUTH	Black Adder	Black Adder	10	SK , FS	W:4" G:6"	6	5 / 1	1	4+	4+	6+	LSC (Arm), MRP, APGL, MVB (Arm)	Arms, Field Armor	Gear 1.5"		
+#line	SOUTH	Black Adder	Long Fang Black Adder	10	SK , FS	W:4" G:6"	6	5 / 1	1	4+	4+	6+	LAC (Arm, Split:2), MRP (Link), APGL, MVB (Arm)	Arms, Field Armor	Gear 1.5"		
+#line	SOUTH	Iguana	Iguana	10	RC (0+)	W:6" G:8"	5	3/ 3	1	4+	3+	3+	LPG (Arm), LRP, LVB (Arm)	Agile, Arms, Comms:2 (Aux), ECM:1, Sensors:18" (Aux), TD:1	Gear 1.5"		
+#line	SOUTH	Iguana	Iguana Gunner	11	RC	W:6" G:8"	5	3/ 3	1	4+	3+	3+	LAC (Arm), LRP, LVB (Arm)	Agile, Arms, Comms:2 (Aux), ECM:1, Sensors:18" (Aux), TD:1	Gear 1.5"		
+#line	SOUTH	Iguana	Hunting Iguana	9	RC	W:6" G:8"	5	3/ 3	1	4+	3+	3+	LRF (Arm), LRP, LVB (Arm)	Agile, Arms, Comms:2 (Aux), ECM:1, Sensors: 24" (Aux)	Gear 1.5"		
+#line	SOUTH	Iguana	Striking Iguana	12	RC	W:6" G:8"	5	3 / 3	1	4+	3+	3+	LBZ (Arm), LRP, LVB (Arm)	Agile, Arms, Comms:2 (Aux), ECM:1, TD:1	Gear 1.5"		
+#line	SOUTH	Iguana	Chatterbox Iguana	11	RC	W:6" G:8"	5	3 / 3	1	4+	3+	3+	PG (Arm), LVB (Arm)	Agile, Arms, Comms:2 (Aux), ECM:1, SatUp:5+ (Aux), Sensors:18" (Aux), TD:2	Gear 1.5"		
+#line	SOUTH	Iguana	Black Box Iguana	12	RC (CMD)	W:6" G:8"	5	3 / 3	1	4+	3+	3+	LAC (Arm), LPZ, LVB (Arm)	Agile, Arms, Init:1, Comms:2 (Aux), ECCM, ECM:2, Sensors:18" (Aux), TD:1	Gear 1.5"		
+#line	SOUTH	Iguana	Para Iguana	11	PT (0+)	W:6" G:8"	5	3 / 3	1	4+	3+	4+	LAC (Arm), LGL (Arm), LSG (Arm)	Agile, Airdrop, Arms, Comms:2 (Aux), ECM:1, TD:1	Gear 1.5"		
+#line	SOUTH	Silverscale	Silverscale	12	RC	W:5" G:7"	5	3 / 3	1	4+	4+	4+	LAC (Arm), LRP, APGL, LVB (Arm)	Arms, Comms:1, ECM:2, TD:2, Sensors:18" (Aux), Sensor Boom (Aux)	Gear 1.5"		
+#line	SOUTH	MP Black Mamba	MP Black Mamba	10	MP (0+)	W:6" G:7"	7	3 / 3	1	3+	3+	5+	HFC (Arm), MPZ, APGL, MCW (Arm)	Airdrop, Arms, Brawler:1, Shield:2,	Gear 1.5"		
+#line	SOUTH	Iguana MP	Iguana MP	8	MP (0+)	W:6" G:7"	5	3 / 3	1	4+	3+	4+	HFC (Arm), APGL, LCW (Arm)	Arms, Brawler:1, Shield:2	Gear 1.5"		
+#line	SOUTH	Cobra MP	Cobra MP	8	MP (0+)	W:6" G:7"	8	4 / 2	1	4+	5+	6+	LAC (Arm, Split:2), HPZ, MAPR, LMG, MCW (Arm)	Arms	Gear 2"		
+#mod{chassis:'Cobra MP'}	SOUTH	Cobra MP	Cobra MP Commander	+1	+(CMD)	-	-	-	-	-	-	-	-	+Comms:1, ECCM			
+#mod{chassis:'MP Black Mamba'}	SOUTH	MP Black Mamba	MP Black Mamba Commander	+1	+(CMD)	-	-	-	-	-	-	-	-	+Comms:1, ECCM			
+#line	SOUTH	Fer De Lance	Fer De Lance	12	HG (0+)	W:5" G:6"	7	4 / 2	1	3+	4+	5+	MRF (Arm), LATM, APGL, LVB (Arm) (Reach: 1")	Arms, Brawler:1, Vet	Gear 1.5"		
+#line	SOUTH	Fer De Lance	Fer De Lance Slashing	14	HG	W:5" G:6"	7	4 / 2	1	3+	4+	5+	MRF (Arm), MATM (LA:2), APGL, LVB (Arm) (Reach: 1")	Arms, Brawler:1, Vet	Gear 1.5"		
+#line	SOUTH	Fer De Lance	Fer De Lance Force	12	HG	W:5" G:6"	7	4 / 2	1	3+	4+	5+	LPL (Arm), APGL, LVB (Arm) (Reach: 1")	Arms, Brawler:1, Vet	Gear 1.5"		
+#line	SOUTH	Fer De Lance	Command Fer De Lance	12	HG (CMD)	W:5" G:6"	7	4 / 2	1	3+	4+	4+	MRF (Arm), LGM, APGL, LVB (Arm) (Reach: 1")	Arms, Brawler:1, Comms:1, ECCM, SatUp: 6+ (Aux), Vet	Gear 1.5"		
+#line	SOUTH	Gila	Gila	12	HG (0+)	W:6" G:7"	6	3 / 3	1	4+	3+	5+	HAC (Arm), LFC (Arm), LRP, LVB (Arm, Reach: 1")	Agile, Arms, Brawler:1, Field Armor, Vet	Gear 1.5"		
+#line	SOUTH	Gila	Gila Hunter	12	HG	W:6" G:7"	6	3 / 3	1	4+	3+	5+	HRF (Arm), LRP, LVB (Arm, Reach: 1")	Agile, Arms, Brawler:1, Field Armor, Vet	Gear 1.5"		
+#line	SOUTH	Cobra	Spitting Cobra	13	FS	W:4" G:5"	8	4 / 2	1	4+	5+	6+	HAC (Arm: Split:2), MRP, MAR, LGM, MMG, LVB (Arm)	Arms, Autopilot	Gear 2"		
+#line	SOUTH	Cobra	Striking Cobra	14	FS	W:4" G:5"	8	4 / 2	1	4+	5+	6+	MBZ (Arm), MRP, MMG, LVB (Arm)	Arms, Autopilot	Gear 2"		
+#line	SOUTH	Cobra	Junglemower Cobra	14	FS	W:4" G:5"	8	4 / 2	1	4+	5+	6+	HRC (Arm), MAR, LGM, MMG, LVB (Arm)	Arms, Autopilot	Gear 2"		
+#line	SOUTH	Cobra	Support Cobra	14	FS	W:4" G:5"	8	4 / 2	1	4+	5+	6+	HAC (Arm), MRP, LFG, LVB (Arm)	Arms, Autopilot	Gear 2"		
+#line	SOUTH	Cobra	Junglemower Support Cobra	14	FS	W:4" G:5"	8	4 / 2	1	4+	5+	6+	HRC (Arm), LFG, LVB (Arm)	Arms, Autopilot	Gear 2"		
+#line	SOUTH	Cobra	Artillery Cobra	15	FS	W:4" G:5"	8	4 / 2	1	4+	5+	6+	HAC (Arm), MFM, LVB (Arm)	Arms, Autopilot, CBS	Gear 2"		
+#line	SOUTH	Cobra	Slashing Cobra	15	FS	W:4" G:5"	8	4 / 2	1	4+	5+	6+	HAC (Arm), MATM, LGM, MMG, LVB (Arm)	Arms, Autopilot	Gear 2"		
+#line	SOUTH	Cobra	FlammCobra	12	FS, SK	W:4" G:5"	8	4 / 2	1	4+	5+	6+	HFL (Arm), MRP (Fire:1), HAR (Fire:2), LGM, MMG, LVB (Arm)	Arms, Autopilot, Resist:F	Gear 2"		
+#mod{chassis:'Cobra'}	SOUTH	Cobra	#prefix:'Razor Fang'	+1	+(CMD)	-	-	-	-	-	-	5+	-	+Init:1, SatUp:6+ (Aux)			
+#line	SOUTH	Python	Python	12	FS	W:4" G:5"	8	3 / 3	1	4+	5+	6+	HAC (Arm), MAR, MRP, LGM, LVB (Arm)	Arms, Autopilot	Gear 2"		
+#line	SOUTH	King Cobra	King Cobra	18	SK, FS, HG	W:4" G:5"	9	4 / 2	2	3+	5+	6+	MPA (Arm), MRP, LAR, LGM, HMG, APGL, MVB (Arm)	Arms, Brawler:1, Vet	Gear 2"		
+#line	SOUTH	King Cobra	King Cobra Gunner	18	SK, HG	W:4" G:5"	9	4 / 2	2	3+	5+	6+	HRC (Arm), MRP, LAR, LGM, APGL, MVB (Arm)	Arms, Brawler:1, Vet	Gear 2"		
+#line	SOUTH	King Cobra	King Cobra Hooded	18	FS , HG	W:4" G:5"	9	4 / 2	2	3+	5+	6+	MLC (Arm), MRP, LAR, LGM, APGL, MVB (Arm)	Arms, Brawler:1, Vet	Gear 2"		
+#line	SOUTH	Drake	Drake	25	SK, FS, ST	W:4" G:5"	10	5 / 3	2	4+	5+	5+	BZ (Arm, AP:5, PEN:10), HRP (Link), MABM, HFL (Arm), HFC (FT, Auto), HSG (Arm, Reach 1")	Arms, Brawler:2, Resist:F, Shield:1	Strider 3"		
+#line	SOUTH	Drake	Hooded Drake	26	SK, FS, ST	W:4" G:5"	10	5 / 3	2	4+	5+	5+	MLC (Arm, Link), HRP (Link), MABM, HFL (Arm), HFC (FT, Auto), HSG (Arm, Reach: 1")	Arms, Brawler:2, Resist:F, Shield:1	Strider 3"		
+#line	SOUTH	Drake	Blazing Drake	26	SK, FS, ST	W:4" G:5"	10	5 / 3	2	4+	5+	5+	HRL (Arm, Link), HRP (Fire:2, Link), HGL (Arm), HFL (Arm), HFC (FT, Auto), HSG (Arm, Reach: 1")	Arms, Brawler:2, Resist:F, Shield:1	Strider 3"		
+#line	SOUTH	Drake	Command Drake	25	SK (CMD), FS (CMD), ST (CMD)	W:4" G:5"	10	5 / 3	2	4+	5+	4+	HRC (Arm), HRP (Link), MABM, HFL (Arm), HFC (FT, Auto), HSG (Arm, Reach: 1")	AMS, Arms, Brawler:2, Init:1, ECCM, Resist:F, SatUp:6+ (Aux), Shield:1	Strider 3"		
+#mod{chassis:'Drake'}	SOUTH	Drake	#prefix:'Anti-Gear'	+2	-	-	-	-	-	-	-	-	-MABM, +MRP (Link)	-			
+#line	SOUTH	Naga	Naga	28	ST (0+)	W:5" G:7"	9	4 / 4	2	4+	5+	5+	2xMATM, MRC (FT+F)	Low Profile, Sensor Boom (Aux), TD:0 (Aux)	Strider 2"		
+#line	SOUTH	Naga	Long Fang Naga	24	ST	W:5" G:7"	9	4 / 4	2	4+	5+	5+	2xLFG (Stabilizer), MRC (FT+F)	Low Profile, Sensor Boom (Aux), TD:0 (Aux)	Strider 2"		
+#line	SOUTH	Naga	Sniper Naga	24	ST	W:5" G:7"	9	4 / 4	2	4+	5+	5+	2xMLC, LPL (FT+F)	Low Profile, Sensor Boom (Aux), TD:0 (Aux)	Strider 2"		
+#line	SOUTH	Naga	Double Nash Naga	24	ST	W:5" G:7"	9	4 / 4	2	4+	5+	5+	2xLATM, MRC (FT+F)	Low Profile, Sensor Boom (Aux), TD:0 (Aux)	Strider 2"		
+#line	SOUTH	Naga	Tusked Naga	24	ST	W:5" G:7"	9	4 / 4	2	4+	5+	5+	HATM, MRC (FT+F)	Low Profile, Sensor Boom (Aux), TD:0 (Aux)	Strider 2"		
+#line	SOUTH	Naga	Brawler Naga	24	ST	W:5" G:7"	9	4 / 4	2	4+	5+	5+	2xHGL (Precise), MFL (FT+F)	Low Profile, Sensor Boom (Aux), TD:0 (Aux)	Strider 2"		
+#line	SOUTH	Naga	Command Naga	24	ST (CMD)	W:5" G:7"	9	4 / 4	2	4+	5+	4+	MATM, MRC (FT+F)	Init:2, ECCM (Aux), ECM:1, Low Profile, Sensor Boom (Aux), SatUp:5+ (Aux), TD:0 (Aux)	Strider 2"		
+#line	SOUTH	Hydra	Hydra	25	ST (0+)	W:4" G:6"	10	5 / 3	2	4+	5+	5+	HGL (T), MGM (T), LFM (T), HAC (FT+F), HMG (FT+F, Link)	Amphib, ECM:1, Low Profile, Sensor Booms (Aux)	Strider 2"		
+#line	SOUTH	Sagittarius	Sagittarius	23	ST (0+)	W:4"	11	5 / 3	2	4+	6+	5+	HABM , LAC (FT), HMG (FT)	Amphib, ECM:1	Strider 3"		
+#line	SOUTH	Sagittarius	Venomous Sagittarius	21	ST	W:4"	11	5 / 3	2	4+	6+	5+	HAPR (Link), LAC (FT), HMG (FT)	Amphib, ECM:1	Strider 3"		
+#line	SOUTH	Sagittarius	Long Fang Sagittarius	20	ST	W:4"	11	5 / 3	2	4+	6+	5+	HAR, LAC (FT), HMG (FT)	Amphib, ECM:1	Strider 3"		
+#line	SOUTH	Sagittarius	Spark Sagittarius	26	ST	W:4"	11	5 / 3	2	4+	6+	5+	MPA (Link), MRP (Link), LAC (FT), HMG (FT)	Amphib, ECM:1	Strider 3"		
+#line	SOUTH	Sagittarius	Force Sagittarius	24	ST	W:4"	11	5 / 3	2	4+	6+	5+	MPL (Link), LAC (FT), HMG (FT)	Amphib, ECM:1	Strider 3"		
+#line	SOUTH	Dragon	Fire Dragon	26	ST (0+)	W:4" G:6"	10	5 / 3	2	3+	6+	5+	HRP (T, Precise, Range:6-12/48"), MFL, LRC (FT, Auto)	AMS (Aux), Lumbering, Stable	Strider 1.5"		
+#line	SOUTH	Dragon	Water Dragon	27	ST	W:4" G:6"	10	5 / 3	2	3+	6+	5+	MFM (T, Link), LSC, LRC (FT, Auto)	Amphib, Lumbering, Stable	Strider 1.5"		
+#line	SOUTH	Dragon	Force Dragon	28	ST	W:4" G:6"	10	5 / 3	2	3+	6+	5+	MPL (FT, Split:2) LPL, LRC (FT, Auto)	Lumbering, Stable	Strider 1.5"		
+#line	SOUTH	Hun	Hun	16	LT (0+)	G:6"	10	5 / 3	2	4+	6+	6+	HRF (T), LLC (FT, AA), MRP (T, Range: 6-12/48")	Amphib, Offroad:1, Smoke:2	Vehicle 1"		
+#line	SOUTH	Hun	Recon Hun (+3 Recon Drones)	16	LT , CV	G:6"	10	4 / 4	2	4+	6+	4+	HRF (T), LLC (FT, AA)	Amphibious, Drone Bay:3 Recon, ECCM, Offroad:1, Smoke:2	Vehicle 1"		
+#line	SOUTH	Hun	Ballista Hun	12	LT (SU)	G:6"	9	4 / 4	2	4+	6+	6+	MAR (T)	Amphibious, Offroad:1, Smoke:2	Vehicle 1"		
+#line	SOUTH	Hun	Hittite	16	IN	G:6"	10	5 / 3	2	4+	6+	6+	HFL (T), HMG (L, Link), HMG (R, Link)	Amphibious, APC:2, Offroad:1, Smoke:2	Vehicle 1"		
+#line	SOUTH	Hun	Ostrogoth	18	LT (SU)	G:4"	9	4 / 4	2	4+	6+	6+	MAG (T, stabilizer)	Amphibious, Offroad:1, Smoke:2	Vehicle 1"		
+#line	SOUTH	Hetairoi	Hetairoi	24	HV (0+)	H:9"	10	4 / 4	2	4+	4+	5+	HRC (T), MRP (T), LLC (FT)	Airdrop, Jump Jets:2" (Aux)	Vehicle 2"		
+#line	SOUTH	Hetairoi	Spark Hetairoi	26	HV	H:9"	10	4 / 4	2	4+	4+	5+	MPA (T), MRP (T), LLC (FT)	Airdrop, Jump Jets:2" (Aux)	Vehicle 2"		
+#line	SOUTH	Hetairoi	Longfang Hetairoi	26	HV	H:9"	10	4 / 4	2	4+	4+	5+	MFG (T), MRP (T), LLC (FT)	Airdrop, Jump Jets:2" (Aux)	Vehicle 2"		
+#line	SOUTH	Hetairoi	Force Hetairoi	26	HV	H:9"	10	4 / 4	2	4+	4+	5+	MPL (T), MRP (T), LLC (FT)	Airdrop, Jump Jets:2" (Aux)	Vehicle 2"		
+#mod{chassis: 'Hetairoi'}	SOUTH	Hetairoi	#prefix:'Command'	+2	+(CMD)	-	-	-	-	-	-	4+	-	+SatUp:6+ (Aux), ECCM			
+#line	SOUTH	Visigoth	Visigoth	34	HT	G:4"	12	6 / 2	3	4+	6+	6+	HTG (T), HAC (T), LLC (FT, AA), 2xMRP (FT, Aux)	Offroad:1, Smoke:3	Vehicle 1"		
+#line	SOUTH	Visigoth	Blitz Visigoth	32	HT	G:4"	12	6 / 2	3	4+	6+	6+	HSC (T, Link), HAC (T), LLC (FT, AA), 2xMRP (FT, Aux), APGL (Auto)	Offroad:1, Smoke:3	Vehicle 1"		
+#line	SOUTH	Visigoth	Visigoth Khan	36	HT (CMD)	G:4"	12	6 / 2	3	4+	6+	5+	HTG (T, Precise), HAC (T), LLC (FT, AA), 2xMRP (FT, Aux)	ECCM (Aux), ECM:1, Offroad:1, Smoke:3	Vehicle 1"		
+#line	SOUTH	Artemis	Artemis	28	HT (SU)	G:4"	11	4 / 4	3	4+	6+	6+	2xHAC (AA, FT, Link, Split:2)	Offroad:1	Vehicle 1.5"		
+#line	SOUTH	Artemis	Force Artemis	32	HT (SU)	G:4"	11	4 / 4	3	4+	6+	6+	2xLPL (AA, T, Link)	Offroad:1	Vehicle 1.5"		
+#line	SOUTH	Varis	Varis VTOL (South)	16	VL (0+)	F:14" H:14"	5	4 / 4	2	4+	3+	6+	LLC (FT+F, AA), LAM	Agile, TD:1	Vehicle 3"		
+#line	SOUTH	Stonemason	Stonemason	5	EG (0+), IN	W:5" G:6"	4	3 / 3	1	5+	5+	6+	LAC (Arm), MCW (Reach: 1"), LHG (Arm), LSE (Arm)	Arms, Brawler:1, Recovery, Vuln:F	Gear 1.5"		
+#line	SOUTH	Engineering Cobra	Engineering Cobra	8	EG , IN	W:4" G:6"	6	3 / 3	1	5+	5+	6+	HAC (Arm), HCW (Reach: 1"), MHG (Arm), MSE (Arm)	Arms, Brawler:2, Recovery, Vuln:F	Gear 2"		
+#line	SOUTH	Caiman	Caiman	5	CV (0+), IN	G:7"	6	4 / 2	1	5+	6+	6+	MAC (FT), LMG (T)	APC:1	Vehicle 1"		
+#line	SOUTH	Caiman	Crocodile	6	CV (0+), IN	G:7"	6	4 / 2	1	5+	6+	6+	MAR (T)	Amphib, APC:1	Vehicle 1"		
+#line	SOUTH	Caiman	Medical Caiman	3	IN (0-1)	G:7"	6	4 / 2	1	5+	6+	6+	-	APC:1, Medic	Vehicle 1"		
+#mod{name:'Caiman'}	SOUTH	Caiman	#prefix:'Command' 	+2	+(CMD)	-	-	-	-	-	-	5+	-	+ECCM, ECM:1, SatUp:6+ (Aux)	Vehicle 1"		
+#mod{name:'Crocodile'}	SOUTH	Caiman	#prefix:'Command' 	+2	+(CMD)	-	-	-	-	-	-	5+	-	+ECCM, ECM:1, SatUp:6+ (Aux)	Vehicle 1"		
+#line	SOUTH	Elan	Elan	3	CV (0+), IN	G:9"	4	2 / 4	1	5+	4+	5+	MMG	TD:+0D6, Low Profile	Vehicle 0.5"		
+#line	SOUTH	Barnaby	Barnaby Gear Transport	8	GT (SU)	G:7"	8	3 / 5	3	5+	5+	6+	-	HGC: 5	Vehicle 3"		
+#line	SOUTH	Field Gun	Field Gun	4	IN (SU)	G:2"	4	3 / 0	1	5+	6+	-	LFG (Stabilizer)	Towed	Infantry 0.5"		
+#line	SOUTH	Jackrabbit	Jackrabbit	2	IN (0+)	G:11"	2	3 / 0	1	5+	4+	6+	MIW	Agile	Infantry 0.5"		
+#line	SOUTH	Infantry Squad	Machine Gun Infantry Squad	2	IN (0+)	I:3"	2	2 / 2	1	4+	4+	6+	LMG, LIW		Infantry 0.5"		
+#line	SOUTH	Infantry Squad	Anti-Tank Infantry Squad	4	IN	I:3"	2	2 / 2	1	4+	4+	6+	LIW, MAVM		Infantry 0.5"		
+#line	SOUTH	Infantry Team	Sniper Infantry Team	3	IN	I:3"	2	2 / 0	1	4+	4+	6+	LIW, MIS (AP:1, Precise, Silent, Stabilizer)	Stealth	Infantry 0.5"		
+#line	SOUTH	Infantry Team	Observation Infantry Team	3	IN	I:3"	2	2 / 0	1	4+	4+	4+	LIW	Comms:1	Infantry 0.5"		
+#line	SOUTH	Infantry Squad	Mortar Squad	4	IN	I:3"	2	2 / 2	1	4+	4+	6+	LIW, MIM		Infantry 0.5"		
+#mod{chassis:'Infantry Squad', faction:'SOUTH'}	SOUTH	Infantry Squad	#prefix:'Paratroop'	+1	-	-	-	-	-	-	-	-	-	+Airdrop			
+#mod{chassis:'Infantry Team', faction:'SOUTH'}	SOUTH	Infantry Team	#prefix:'Paratroop'	+1	-	-	-	-	-	-	-	-	-	+Airdrop			
+#line	SOUTH	Lizard Rider Infantry	Lizard Rider Infantry	5	IN (0+)	I:7"	3	2 / 2	1	4+	4+	6+	LIW, MIS	Agile	Infantry 1"		
+#line	SOUTH	Lizard Rider Infantry	Lizard Rider Anti-Tank Infantry	6	IN	I:7"	3	2 / 2	1	4+	4+	6+	LIW, LAVM	Agile	Infantry 1"		
+#line	SOUTH	Lizard Rider Infantry	Lizard Rider Infantry Observer Team	5	IN	I:7"	3	2 / 0	1	4+	4+	5+	LIW	Agile, Comms:1	Infantry 1"		
+#line	Peace River	Warrior	Warrior	7	GP (0+), SK , FS, ST, HT	W:4" G:6"	6	4 / 2	1	4+	4+	5+	LAC (Arm, Split:2), LRP, APGL, LVB (Arm)	Arms, ECM:1	Gear 1.5"		
+#line	Peace River	Warrior	Sweeper Warrior	7	GP , SK	W:4" G:6"	6	4 / 2	1	4+	4+	5+	MFC (Arm), LRP, APGL, LVB (Arm)	Arms, ECM:1	Gear 1.5"		
+#line	Peace River	Warrior	Vanguard Warrior	8	GP , SK , FS	W:4" G:6"	6	4 / 2	1	4+	4+	5+	MAC (Arm), LRP, APGL, LVB (Arm)	Arms, ECM:1	Gear 1.5"		
+#line	Peace River	Warrior	Scourge Warrior	9	GP , SK , FS	W:4" G:6"	6	4 / 2	1	4+	4+	5+	LBZ (Arm, Split:2), LRP, APGL, LVB (Arm)	Arms, ECM:1	Gear 1.5"		
+#mod{chassis:'Warrior'}	Peace River	Warrior	#replace:{from:'Warrior', to:'Chieftain'}	+1	+(CMD)	-	-	-	-	-	-	4+	-	+Init:1, Comms:1			
+#line	Peace River	Jackal	Jackal	6	GP , AR	W:5" G:7"	5	3 / 3	1	4+	4+	6+	LAC (Arm), LRP (PEN:6), LMG, LVB (Arm)	Arms	Gear 1.5"		
+#line	Peace River	Jackal	Vanguard Jackal	7	GP , AR	W:5" G:7"	5	3 / 3	1	4+	4+	6+	MAC (Arm), LRP (PEN:6), LMG, LVB (Arm)	Arms	Gear 1.5"		
+#line	Peace River	Jackal	Kestros Jackal	6	GP , AR	W:5" G:7"	5	3 / 3	1	4+	4+	6+	LAC (Arm), LGL, LMG, LVB (Arm)	Arms	Gear 1.5"		
+#line	Peace River	Jackal	Fusillade Jackal	8	GP , AR	W:5" G:7"	5	3 / 3	1	4+	4+	6+	LRL (Arm), LMG, MVB (Arm, Reach 1")	Arms	Gear 1.5"		
+#mod{chassis:'Jackal'}	Peace River	Jackal	#prefix:'Para'	+1	PT	-	-	-	-	-	-	-	-	+Airdrop			
+#line	Peace River	Warrior IV	Warrior IV	12	SK (0+), FS	W:5" G:7"	7	3 / 3	1	3+	3+	5+	LAC (Arm, Split:2), MRP, APGL, LVB (Arm)	Arms, ECM:1, Sensors:18" (Aux)	Gear 1.5"		
+#line	Peace River	Warrior IV	Vanguard Warrior IV	13	SK	W:5" G:7"	7	3 / 3	1	3+	3+	5+	MAC (Arm), MRP, APGL, LVB (Arm)	Arms, ECM:1, Sensors:18" (Aux)	Gear 1.5"		
+#line	Peace River	Warrior IV	Sweeper Warrior IV	12	SK	W:5" G:7"	7	3 / 3	1	3+	3+	5+	MFC (Arm), MRP, APGL, LVB (Arm)	Arms, ECM:1, Sensors:18" (Aux)	Gear 1.5"		
+#line	Peace River	Warrior IV	Scourge Warrior IV	14	SK	W:5" G:7"	7	3 / 3	1	3+	3+	5+	LBZ (Arm, Split:2), MRP, APGL, LVB (Arm)	Arms, ECM:1, Sensors:18" (Aux)	Gear 1.5"		
+#mod{chassis:'Warrior IV'}	Peace River	Warrior IV	#prefix:'Para'	+1	PT	-	-	-	-	-	-	-	-	+Airdrop			
+#mod{chassis:'Warrior IV'}	Peace River	Warrior IV	#replace:{from:'Warrior', to:'Chieftain'}	+1	+(CMD)	-	-	-	-	-	-	4+	-	+Init:1, SatUp:6+ (Aux)			
+#line	Peace River	Spartan	Spartan	9	SK , SF	W:4" G:6"	7	4 / 2	1	3+	4+	5+	HAC (Arm), MFC (Arm), LCW (Arm)	Airdrop, Arms, ECM:1, Sensors:18" (Aux)	Gear 2"		
+#line	Peace River	Spartan	Incendiary Spartan	10	SK , SF	W:4" G:6"	7	4 / 2	1	3+	4+	5+	MFL (Arm), LGM, LHG (Arm), LCW (Arm)	Airdrop, Arms, ECM:1, Sensors:18" (Aux)	Gear 2"		
+#line	Peace River	Spartan	Assassin Spartan	10	SF	W:4" G:6"	7	4 / 2	1	3+	4+	5+	HRF (Arm), MFC (Arm), LCW (Arm)	Airdrop, Arms, ECM:1, Sensors:18" (Aux)	Gear 2"		
+#line	Peace River	Spartan	Kestros Spartan	10	SK , FS	W:4" G:6"	7	4 / 2	1	3+	4+	5+	MGL (Arm), MFC (Arm), LCW (Arm)	Airdrop, Arms, ECM:1, Sensors:18" (Aux)	Gear 2"		
+#line	Peace River	Gladiator	Gladiator	12	SK , TR	W:6" G:7"	6	3 / 3	1	4+	3+	6+	MAC (Arm, Link, Range:3-9"/18"), APGL, LSG (Arm)	Agile, Arms, Brawler:1, Shield:1	Gear 1.5"		
+#line	Peace River	Gladiator	Scourge Gladiator	13	SK , TR	W:6" G:7"	6	3 / 3	1	4+	3+	6+	LBZ (Arm, Split:2), APGL, LSG (Arm)	Agile, Arms, Brawler:1, Shield:1	Gear 1.5"		
+#line	Peace River	Gladiator	Shamshir Gladiator	13	SK , TR	W:6" G:7"	6	3 / 3	1	4+	3+	6+	MBZ (Arm), APGL, LSG (Arm)	Agile, Arms, Brawler:1, Shield:1	Gear 1.5"		
+#line	Peace River	Gladiator	Vanguard Gladiator	13	SK , TR	W:6" G:7"	6	3 / 3	1	4+	3+	6+	HAC, APGL, LSG (Arm)	Agile, Arms, Brawler:1, Shield:1	Gear 1.5"		
+#line	Peace River	Pitbull	Pitbull	6	AR (0+), TR, ST, HT	W:6" G:8"	5	3 / 3	1	4+	3+	4+	LAC (Arm), LMG, APGL, LVB (Arm)	Agile, Arms	Gear 1.5"		
+#line	Peace River	Pitbull	Scourge Pitbull	8	AR , TR	W:6" G:8"	5	3 / 3	1	4+	3+	4+	LBZ ( Arm, Split:2), LMG, APGL, LVB (Arm)	Agile, Arms	Gear 1.5"		
+#line	Peace River	Pitbull	Sweeper Pitbull	6	AR , TR	W:6" G:8"	5	3 / 3	1	4+	3+	4+	LFC (Arm), LMG, APGL, LVB (Arm)	Agile, Arms	Gear 1.5"		
+#line	Peace River	Mustang	Mustang	10	AR , TR	W:4" G:6"	8	3 / 3	1	4+	5+	6+	MAC (Arm), MAPR (Link), LFM, APGL, MVB (Arm, Reach: 1")	Arms	Gear 2"		
+#line	Peace River	Mustang	Vanguard Mustang	11	AR , TR	W:4" G:6"	8	3 / 3	1	4+	5+	6+	HAC (Arm), MAPR (Link), LFM, APGL, MVB (Arm, Reach: 1")	Arms	Gear 2"		
+#line	Peace River	Mustang	Demolisher Mustang	10	AR , TR	W:4" G:6"	8	3 / 3	1	4+	5+	6+	LSC (Arm), MAPR (Link), LFM, APGL, MVB (Arm, Reach: 1")	Arms	Gear 2"		
+#line	Peace River	Mustang	Shamshir Mustang	12	AR , TR	W:4" G:6"	8	3 / 3	1	4+	5+	6+	MBZ (Arm), MAPR (Link), LFM, APGL, MVB (Arm, Reach: 1")	Arms	Gear 2"		
+#line	Peace River	Greyhound	Greyhound	10	RC, AR, TR	W:7" G:9"	4	3 / 3	1	3+	4+	4+	LRF (Arm), LVB (Arm)	Airdrop, Agile, Arms, Comms:2, ECM:2 (Aux), SatUp:5+, Sensors:18" (Aux)	Gear 1.5"		
+#mod{chassis:'Greyhound'}	Peace River	Greyhound	#postfix:'Chieftain'	+2	+(CMD)	-	-	-	-	-	-	3+	-	+Init:2, ECCM	Gear 1.5"		
+#line	Peace River	Skirmisher	Skirmisher	8	RC, AR	W:7" G:8"	5	3 / 3	1	4+	3+	4+	LRF (Arm), RP (PEN:6), LVB (Arm)	Airdrop, Agile, Arms, Comms:1, ECM:2, Sensors:24" (Aux)	Gear 1.5"		
+#line	Peace River	Skirmisher	Vanguard Skirmisher	8	RC, AR	W:7" G:8"	5	3 / 3	1	4+	3+	4+	LAC (Arm), RP (PEN:6), LVB (Arm)	Airdrop, Agile, Arms, Comms:1 ECM:2, Sensors:24" (Aux)	Gear 1.5"		
+#line	Peace River	Skirmisher	Sweeper Skirmisher	8	RC, AR	W:7" G:8"	5	3 / 3	1	4+	3+	4+	LFC (Arm), RP (PEN:6), MHG, LVB (Arm)	Airdrop, Agile, Arms, Comms:1, ECM:2, Sensors:24" (Aux)	Gear 1.5"		
+#line	Peace River	Skirmisher	Scourge Skirmisher	9	RC, AR	W:7" G:8"	5	3 / 3	1	4+	3+	4+	LBZ (Arm, Split:2), RP (PEN:6), LVB (Arm)	Airdrop, Agile, Arms, Comms:1, ECM:2, Sensors:24" (Aux)	Gear 1.5"		
+#mod{chassis:'Skirmisher'}	Peace River	Skirmisher	#postfix:'Chieftain'	+1	+(CMD), +TR (CMD), +HA (CMD)	-	-	-	-	-	-	3+	-	-			
+#mod{chassis:'Skirmisher'}	Peace River	Skirmisher	#postfix:'Tag'	+1	+(CMD)	-	-	-	-	-	-	4+	-	+ECCM, SatUp:5+ (Aux), TD:1			
+#mod{chassis:'Skirmisher'}	Peace River	Skirmisher	#prefix:'Special Forces'	+1	SF	-	-	-	-	-	-	-	-	+Stealth			
+#line	Peace River	Assassin Skirmisher	Assassin Skirmisher	10	SF	W:7" G:8"	5	3 / 3	1	4+	3+	4+	MRF (Arm, Silent), RP (PEN:6), LVB (Arm)	Airdrop, Agile, Arms, Comms:1, ECM:2, Sensors:24" (Aux), Stealth	Gear 1.5"		
+#line	Peace River	Shinobi	Shinobi	14	SF	W:7" G:8"	5	3 / 3	1	3+	3+	3+	LAC (Arm, Precise, Silent), RP (PEN:6), LVB (Arm)	Airdrop, Agile, Arms, Brawler:1, Comms:1, ECM:2, Sensors:18" (Aux), Stealth (Aux), Vet	Gear 1.5"		
+#line	Peace River	Shinobi	Vanguard Shinobi	15	SF	W:7" G:8"	5	3 / 3	1	3+	3+	3+	MAC (Arm, Precise, Silent), RP (PEN:6), LVB (Arm)	Airdrop, Agile, Arms, Brawler:1, Comms:1, ECM:2, Sensors:18" (Aux), Stealth (Aux), Vet	Gear 1.5"		
+#line	Peace River	Shinobi	Lookout Shinobi	16	SF	W:7" G:8"	5	3 / 3	1	3+	3+	3+	LRF (Arm, Silent), LRP (PEN:6), LVB (Arm)	Airdrop, Agile, Arms, Brawler:1, Comms:1, ECM:3, Sensors:18" (Aux), Stealth (Aux), Vet	Gear 1.5"		
+#line	Peace River	Shinobi	Sweeper Shinobi	14	SF	W:7" G:8"	5	3 / 3	1	3+	3+	3+	MFC (Arm), RP (PEN:6), LVB (Arm)	Airdrop, Agile, Arms, Brawler:1, Comms:1, ECM:2, Sensors:18" (Aux), Stealth (Aux), Vet	Gear 1.5"		
+#line	Peace River	Shinobi	Scourge Shinobi	16	SF	W:7" G:8"	5	3 / 3	1	3+	3+	3+	LBZ (Arm, Split:2), RP (PEN:6), LVB (Arm)	Airdrop, Agile, Arms, Brawler:1, Comms:1, ECM:2, Sensors:18" (Aux), Stealth (Aux), Vet	Gear 1.5"		
+#line	Peace River	Shinobi	Assassin Shinobi	16	SF	W:7" G:8"	5	3 / 3	1	3+	3+	3+	HRF (Arm, Silent, Stabilizer), LVB (Arm)	Airdrop, Agile, Arms, Brawler:1, ECM:3, Sensors:18" (Aux), Stealth (Aux), Vet	Gear 1.5"		
+#mod{chassis:'Shinobi'}	Peace River	Shinobi	#postfix:'Chieftain'	+1	+(CMD)	-	-	-	-	-	-	-	-	+ECCM, SatUp:4+ (Aux)			
+#line	Peace River	Argos	Argos	19	FS, HA, SK	W:4" G:5"	9	5 / 1	2	4+	5+	5+	HRC (Arm), MAR, APGL, MVB (Arm, Reach: 1")	Arms, Brawler:1, Vet	Gear 2"		
+#line	Peace River	Argos	Demolisher Argos	19	FS, HA, SK	W:4" G:5"	9	5 / 1	2	4+	5+	5+	MSC (Arm), LABM, APGL, MVB (Arm, Reach: 1")	Arms, Brawler:1, Vet	Gear 2"		
+#line	Peace River	Argos	Shamshir Argos	19	FS, HA	W:4" G:5"	9	5 / 1	2	4+	5+	5+	HBZ (Arm), LATM, APGL, MVB (Arm, Reach: 1")	Arms, Brawler:1, Vet	Gear 2"		
+#line	Peace River	Crusader IV	Crusader IV	12	FS	W:4" G:5"	8	4 / 2	1	4+	5+	5+	HAC (Arm, Split:2), MRP (Link), LFM, APGL, MVB (Arm, Reach: 1")	Arms, Autopilot, Brawler:1, Vuln:H	Gear 2"		
+#line	Peace River	Crusader IV	Demolisher Crusader IV	13	FS, HA	W:4" G:5"	8	4 / 2	1	4+	5+	5+	MSC (Arm), MRP (Link), LFM, APGL, MVB (Arm, Reach: 1")	Arms, Autopilot, Brawler:1, Vuln:H	Gear 2"		
+#line	Peace River	Crusader IV	Scourge Crusader IV	13	FS	W:4" G:5"	8	4 / 2	1	4+	5+	5+	MBZ (Arm), MRP (Link), LFM, APGL, MVB (Arm, Reach: 1")	Arms, Autopilot, Brawler:1, Vuln:H	Gear 2"		
+#mod{chassis:'Crusader IV'}	Peace River	Crusader IV	#replace:{from:'Crusader IV', to:'Crusader V'}	+1	-	-	-	-	-	-	-	-	-MRP (Link), -LFM, +MRP, +MFM	-Vuln:H			
+#line	Peace River	Cataphract	Cataphract	26	SK , FS , HA	W:4" G:5"	10	5 / 3	2	4+	5+	5+	MRG (Arm), MFM, MMG (T, Link), HVB (Arm, Reach: 2")	Arms, Brawler:2, ECM:1,	Strider 2.5"		
+#line	Peace River	Cataphract	Scourge Cataphract	25	SK , FS , HA	W:4" G:5"	10	5 / 3	2	4+	5+	5+	HBZ (Arm), LATM, MMG (T, Link), HVB (Arm, Reach: 2")	Arms, Brawler:2, ECM:1,	Strider 2.5"		
+#line	Peace River	Cataphract	Tank hunter Cataphract	26	FS , ST	W:4" G:5"	10	5 / 3	2	4+	5+	5+	MTG (Arm), MATM, MMG (T, Link), HVB (Arm, Reach: 2")	Arms, Brawler:2, ECM:1,	Strider 2.5"		
+#mod{chassis:'Cataphract'}	Peace River	Cataphract	#postfix:'Lord'	+2	+(CMD)	-	-	-	-	-	-	4+	-	+Init:1, ECCM			
+#line	Peace River	Uhlan	Uhlan	28	HA	W:4" G:5"	11	5 / 3	2	4+	5+	5+	HAC (Arm, Burst: 2), MAC (FT+F, Auto, Link), HRP (Link), HHG, APGL (Auto), HSG (ARM)	Arms, AMS, Brawler:1,	Strider 3"		
+#line	Peace River	Uhlan	Kestros Uhlan	28	HA	W:4" G:5"	11	5 / 3	2	4+	5+	5+	HGL (Arm, IF), MAC (FT+F, Auto, Link), HRP (Link), HHG, APGL (Auto), HSG (ARM)	Arms, AMS, Brawler:1,	Strider 3"		
+#line	Peace River	Uhlan	Fusillade Uhlan	30	FS , ST	W:4" G:5"	11	5 / 3	2	4+	5+	5+	HPL (Arm), MAC (FT+F, Auto, Link), HRP (Fire: 3, Link), HHG, APGL (Auto), HSG (ARM)	Arms, AMS, Brawler:1,	Strider 3"		
+#mod{chassis:'Uhlan'}	Peace River	Uhlan	#postfix:'Lord'	+2	+(CMD)	-	-	-	-	-	-	4+	-	+Init:1, ECCM, ECM:1			
+#line	Peace River	Dragonfly	Dragonfly VTOL (Peace River)	19	VL (0+)	F:12" H:12"	6	4 / 4	2	4+	3+	5+	MAC (FT+F, AA), LATM, LSAM	Agile, ECM:1, TD:1	Vehicle 3"		
+#line	Peace River	Valence	Valence	3	EG (0+), AR, IN	W:4"	3	2 / 4	1	5+	5+	6+	LAC (Arm), APGL, LHG (Arm), LSE (Arm), LVB (Arm)	Arms, Recovery, Sensors: 6", Vuln:F	Gear 1.5"		
+#line	Peace River	Valence	Demolisher Valence	4	EG , AR , IN	W:4"	3	2 / 4	1	5+	5+	6+	LSC (Arm), APGL, LHG (Arm), LSE (Arm), LVB (Arm)	Arms, Recovery, Sensors: 6", Vuln:F	Gear 1.5"		
+#line	Peace River	Valence	Sweeper Valence	3	EG , AR , IN	W:4"	3	2 / 4	1	5+	5+	6+	LFC (Arm), APGL, HHG (Arm), LSE (Arm), LVB (Arm)	Arms, Recovery, Sensors: 6", Vuln:F	Gear 1.5"		
+#line	Peace River	Valence	Foreman Valence	4	EG (CMD)	W:4"	3	2 / 4	1	5+	5+	5+	LAC, (Arm), APGL, LHG (Arm), LSE (Arm), HCW (Arm, Reach: 1")	Arms, Recovery, Sensors: 6", Vuln:F	Gear 1.5"		
+#line	Peace River	Engineering Grizzly	Engineering Grizzly	8	EG	W:4" G:6"	6	3 / 3	1	5+	5+	6+	HAC (Arm), HCW (Reach: 1"), MHG (Arm), MSE (Arm)	Arms, Brawler:2, Recovery, Vuln:F	Gear 2"		
+#line	Peace River	Engineering Cobra	Engineering Cobra	8	EG	W:4" G:6"	6	3 / 3	1	5+	5+	6+	HAC (Arm), HCW (Reach: 1"), MHG (Arm), MSE (Arm)	Arms, Brawler:2, Recovery, Vuln:F	Gear 2"		
+#line	Peace River	Coyote	Coyote	24	LS	W:4" G:6"	9	4 / 4	2	4+	5+	5+	MRG (T), MRC (AA, FT), APGL, LCW	ECM:1, Low Profile, Sensors:18", Mount, Stable	Strider 2"		
+#line	Peace River	Coyote	Vanguard Coyote	21	LS	W:4" G:6"	9	4 / 4	2	4+	5+	5+	HRC (T), MRC (AA, FT), APGL, LCW	ECM:1, Low Profile, Sensors:18", Mount, Stable	Strider 2"		
+#line	Peace River	Coyote	Pilum Coyote	24	LS	W:4" G:6"	9	4 / 4	2	4+	5+	5+	MATM (T), MRC (AA, FT), APGL, LCW	ECM:1, Low Profile, Sensors:18", Mount, Stable	Strider 2"		
+#line	Peace River	Coyote	Fusillade Coyote	22	LS	W:4" G:6"	9	4 / 4	2	4+	5+	5+	MLC (T), MRC (AA, FT), LCW	ECM:1, Low Profile, Sensors:18", Mount, Stable	Strider 2"		
+#mod{chassis:'Coyote'}	Peace River	Coyote	#replace:{from:'Coyote', to:'Alpha Dog'}	+2	+(CMD)	-	-	-	-	-	-	4+	-	+Init:1, ECCM, ECM:2, SatUp:4+ (Aux)			
+#line	Peace River	Red Bull MK2	Red Bull MK2	28	ST (0+)	W:4" G:5"	12	4 / 4	2	4+	6+	5+	MFG (T, Link), MRC (FT, AA), APGL (Auto), MCW	Lumbering, Sensors: 18" (Aux), Stable	Strider 2"		
+#line	Peace River	Red Bull MK2	Arbalest Red Bull MK2	30	ST (0+)	W:4" G:5"	12	4 / 4	2	4+	6+	5+	MFG (T, Link), HAPR (T, Link), APGL (Auto), MCW	Lumbering, Sensors: 18" (Aux), Stable	Strider 2"		
+#line	Peace River	Red Bull MK2	Sarisa Red Bull MK2	32	ST (0+)	W:4" G:5"	12	4 / 4	2	4+	6+	5+	HATM (T), MRC (FT, AA), APGL (Auto), MCW	Lumbering, Sensors: 18" (Aux), Stable	Strider 2"		
+#line	Peace River	Red Bull MK2	Xyston Red Bull MK2	30	ST (0+)	W:4" G:5"	12	4 / 4	2	4+	6+	5+	HFG (T), MRC (FT, AA), APGL (Auto), MCW	Lumbering, Sensors: 18" (Aux), Stable	Strider 2"		
+#mod{chassis:'Red Bull MK2'}	Peace River	Red Bull MK2	#postfix:'Defender'	+3	-	-	-	-	-	-	-	-	+LRC (Auto)	AMS			
+#line	Peace River	Mastiff	Mastiff	4	CV (0+), IN (0-3)	G:7"	5	4 / 4	1	5+	6+	5+	LRF (FT), APGL	APC:1	Vehicle 0.5"		
+#line	Peace River	Mastiff	Pacifier Mastiff	5	CV	G:7"	5	4 / 4	1	5+	6+	5+	MFL (T), APGL		Vehicle 0.5"		
+#line	Peace River	Mastiff	Medic Mastiff	2	IN (0-1)	G:7"	5	4 / 4	1	5+	6+	5+	-	APC:1, Medic	Vehicle 0.5"		
+#line	Peace River	Mastiff	Hippeis Mastiff	5	CV (0+)	G:7"	5	4 / 4	1	5+	6+	5+	LFM (T), APGL		Vehicle 0.5"		
+#line	Peace River	Hoplite	Hoplite	7	CV (0+), IN	G:7"	7	4 / 4	1	4+	6+	5+	LAC (FT)	APC:2	Vehicle 1"		
+#line	Peace River	Hoplite	Hippeis Hoplite	8	CV	G:7"	7	4 / 4	1	4+	6+	5+	MFM	APC:2	Vehicle 1"		
+#line	Peace River	Hoplite	Arbalest Hoplite	8	CV	G:7"	7	4 / 4	1	4+	6+	5+	MRP	APC:2	Vehicle 1"		
+#line	Peace River	Hoplite	Xyston Hoplite	9	CV	G:7"	7	4 / 4	1	4+	6+	5+	LFG		Vehicle 1"		
+#mod{chassis:'Hoplite'}	Peace River	Hoplite	#postfix:'Herd Lord'	+1	+(CMD)	-	-	-	-	-	-	4+	-	+Init:1, SatUp:5+ (Aux), Smoke:2			
+#line	Peace River	Mameluk	Mameluk	5	CV (0+), IN	G:8"	5	4 / 2	1	4+	5+	6+	LAC (FT, AA), HMG (FT)	Airdrop	Vehicle 0.5"		
+#line	Peace River	Mameluk	Arbalest Mameluk	5	CV (0+), IN	G:8"	5	4 / 2	1	4+	5+	6+	LRP (T), HMG (FT)	Airdrop	Vehicle 0.5"		
+#line	Peace River	Antelope	Antelope	3	CV (0+), IN (0+)	G:9"	4	2 / 4	1	5+	4+	5+	MMG	Comms:1	Vehicle 0.5"		
+#line	Peace River	Elan	Elan	3	CV (0+), IN (0+)	G:9"	4	2 / 4	1	5+	4+	5+	MMG	TD:1	Vehicle 0.5"		
+#line	Peace River	Spitz Monowheel	Spitz Monowheel	3	IN (0+)	G:11"	3	3 / 0	1	5+	3+	6+	MIW	Agile	Infantry 0.5"		
+#line	Peace River	Infantry Squad	Riflemen Infantry Squad	3	IN	I:3"	2	2 / 2	1	4+	4+	5+	LIS (AI), LIW, HIS (Stabilizer)		Infantry 0.5"		
+#line	Peace River	Infantry Squad	Anti-Tank Infantry Squad	3	IN	I:3"	2	2 / 2	1	4+	4+	5+	LIS (AI), LAVM		Infantry 0.5"		
+#line	Peace River	Infantry Team	Sniper Team	3	IN	I:3"	2	2 / 0	1	4+	4+	5+	LIS (AI), HIS (AP:1, Precise, Silent, Stabilizer)	Stealth	Infantry 0.5"		
+#line	Peace River	Infantry Squad	Mortar Infantry Squad	3	IN	I:3"	2	2 / 2	1	4+	4+	5+	LIS (AI), LIM		Infantry 0.5"		
+#line	Peace River	Infantry Team	Observer Team	3	IN	I:3"	2	2 / 0	1	4+	4+	5+	LIS (AI)	Comms:1, TD:1	Infantry 0.5"		
+#mod{chassis:'Infantry Squad', faction:'Peace River'}	Peace River	Infantry Team	#postfix:'Paratroopers'	+1	-	-	-	-	-	-	-	-	-	+Airdrop			
+#mod{chassis:'Infantry Team', faction:'Peace River'}	Peace River	Infantry Squad	#postfix:'Paratroopers'	+1	-	-	-	-	-	-	-	-	-	+Airdrop			
+#line	Peace River	PILUM Infantry	PILUM Infantry	5	PI (0+)	I:4"	4	3 / 1	1	4+	5+	5+	MIS, LMG, VB (PEN:4)	Airdrop, Jet Pack: 4"	Infantry 0.5"		
+#line	NUCOAL	Chasseur	Chasseur	6	GP (0+), FS , HV , ST, HT	W:5" H:9"	6	3 / 3	1	4+	4+	6+	LAC (Arm, Split:2), LRP, APGL, LVB (Arm)	Arms	Gear 1.5"		
+#line	NUCOAL	Chasseur	Chasseur Gunner	7	GP , FS	W:5" H:9"	6	3 / 3	1	4+	4+	6+	MAC (Arm), LRP, APGL, LVB (Arm)	Arms	Gear 1.5"		
+#line	NUCOAL	Chasseur	Chasseur Grenadier	7	GP , FS	W:5" H:9"	6	3 / 3	1	4+	4+	6+	MGL (Arm), LRP, APGL, LVB (Arm)	Arms	Gear 1.5"		
+#line	NUCOAL	Chasseur	Chasseur Flechette	6	GP , FS	W:5" H:9"	6	3 / 3	1	4+	4+	6+	MFC (Arm), LRP, APGL, LVB (Arm)	Arms	Gear 1.5"		
+#line	NUCOAL	Chasseur	Chasseur Hellfire	8	GP , FS	W:5" H:9"	6	3 / 3	1	4+	4+	6+	LBZ (Arm), LRP, APGL, LVB (Arm)	Arms	Gear 1.5"		
+#mod{chassis:'Chasseur'}	NUCOAL	Chasseur	#postfix:'CV'	+1	+(CMD)	-	-	-	-	-	-	5+	-	+Init:1, ECCM			
+#line	NUCOAL	Chasseur MK2	Chasseur MK2	9	GP , SK	W:5" H:9"	6	3 / 3	1	4+	3+	6+	LAC (Arm, Split:2), LRP, APGL, LVB (Arm)	Agile, Arms, Jetpack: 6" (Aux)	Gear 1.5"		
+#line	NUCOAL	Chasseur MK2	Chasseur MK2 Gunner	10	GP , SK	W:5" H:9"	6	3 / 3	1	4+	3+	6+	MAC (Arm), LRP, APGL, LVB (Arm)	Agile, Arms, Jetpack: 6" (Aux)	Gear 1.5"		
+#line	NUCOAL	Chasseur MK2	Chasseur MK2 Grenadier	10	GP , SK	W:5" H:9"	6	3 / 3	1	4+	3+	6+	MGL (Arm), LRP, APGL, LVB (Arm)	Agile, Arms, Jetpack: 6" (Aux)	Gear 1.5"		
+#line	NUCOAL	Chasseur MK2	Chasseur MK2 Flechette	9	GP , SK	W:5" H:9"	6	3 / 3	1	4+	3+	6+	MFC (Arm), LRP, APGL, LVB (Arm)	Agile, Arms, Jetpack: 6" (Aux)	Gear 1.5"		
+#line	NUCOAL	Chasseur MK2	Chasseur MK2 Hellfire	11	GP , SK	W:5" H:9"	6	3 / 3	1	4+	3+	6+	LBZ (Arm), LRP, APGL, LVB (Arm)	Agile, Arms, Jetpack: 6" (Aux)	Gear 1.5"		
+#mod{chassis:'Chasseur MK2'}	NUCOAL	Chasseur MK2	#postfix:'CV'	+1	+(CMD)	-	-	-	-	-	-	5+	-	+Init:1, ECCM			
+#line	NUCOAL																
+#line	NUCOAL	Chevalier	Chevalier	14	FS (0+)	W:4" G:5"	8	4 / 2	1	4+	5+	6+	HAC (Arm, Split:2), MAR (Fire:1), LGM, HMG (Link), LVB (Arm)	Arms, Autopilot	Gear 2"		
+#line	NUCOAL	Chevalier	Chevalier Hellfire	14	FS	W:4" G:5"	8	4 / 2	1	4+	5+	6+	MBZ (Arm), MRP (Fire:1, Link), LGM, HMG (Link), LVB (Arm)	Arms, Autopilot	Gear 2"		
+#line	NUCOAL	Chevalier	Chevalier Hammer	14	FS	W:4" G:5"	8	4 / 2	1	4+	5+	6+	HRF (Arm), MAR (Fire:1), LAG (Stabilizer), HMG (Link), LVB (Arm)	Arms, Autopilot	Gear 2"		
+#line	NUCOAL	Chevalier	Chevalier Spear	14	FS	W:4" G:5"	8	4 / 2	1	4+	5+	6+	HAC (Arm, Split:2), HRP (Link, IF), HMG (Link), LVB (Arm)	Arms, Autopilot	Gear 2"		
+#line	NUCOAL	Chevalier	Chevalier Javelin	15	FS	W:4" G:5"	8	4 / 2	1	4+	5+	6+	HAC (Arm), MATM , HMG (Link), LVB (Arm)	Arms, Autopilot	Gear 2"		
+#mod{chassis:'Chevalier'}	NUCOAL	Chevalier	#postfix:'CV'	+1	+(CMD)	-	-	-	-	-	-	5+	-	+ECCM, SatUp:6+ (Aux)			
+#line	NUCOAL	Boa	Boa	14	FS	W:4" G:5"	9	5 / 1	1	4+	5+	6+	HAC (Arm, Split:2), MRP, MFM, MMG, MVB (Arm, Reach 1")	Arms, Brawler:2	Gear 2"		
+#line	NUCOAL	Boa	Strike Boa	14	FS	W:4" G:5"	9	5 / 1	1	4+	5+	6+	MBZ (Arm), MRP, MGM, MMG, MVB (Arm, Reach 1")	Arms, Brawler:2	Gear 2"		
+#line	NUCOAL	Boa	Firestorm Boa	14	FS	W:4" G:5"	9	5 / 1	1	4+	5+	6+	MRL (Arm) MRP, MGM, MMG, MVB (Arm, Reach 1")	Arms, Brawler:2	Gear 2"		
+#line	NUCOAL	Arbalestier	Arbalestier	19	FS, HV	W:4" H:7"	9	3 / 3	2	4+	4+	6+	HRP (Arm), MFC, HPZ, HMG, APGL, MVB (Arm)	Arms, Vet	Gear 2"		
+#line	NUCOAL	Arbalestier	Arbalestier Grenadier	19	FS, HV	W:4" H:7"	9	3 / 3	2	4+	4+	6+	HRP (Arm), MGL, HPZ, HMG, APGL, MVB (Arm)	Arms, Vet	Gear 2"		
+#line	NUCOAL	Arbalestier	Arbalestier Demolisher	19	FS, HV	W:4" H:7"	9	3 / 3	2	4+	4+	6+	HRP (Arm), HPZ, HMG, APGL, HSE, MVB (Arm)	Arms, Vet	Gear 2"		
+#line	NUCOAL	Cuirassier	Cuirassier	10	SK (0+), RC (CMD)	W:6" G:7"	6	3 / 3	1	3+	3+	5+	MAC (Arm, Split:2), LRP, APGL, LVB (Arm)	Agile, Airdrop, Arms	Gear 1.5"		
+#line	NUCOAL	Cuirassier	Cuirassier Hellfire	12	SK	W:6" G:7"	6	3 / 3	1	3+	3+	5+	MBZ (Arm), LRP, APGL, LVB (Arm)	Agile, Airdrop, Arms	Gear 1.5"		
+#line	NUCOAL	Cuirassier	Cuirassier Long Gunner	11	SK	W:6" G:7"	6	3 / 3	1	3+	3+	5+	HRF (Arm), LRP, APGL, LVB (Arm)	Agile, Airdrop, Arms	Gear 1.5"		
+#line	NUCOAL	Cuirassier	Cuirassier Grenadier	11	SK	W:6" G:7"	6	3 / 3	1	3+	3+	5+	MGL (Arm), LRP, APGL, LVB (Arm)	Agile, Airdrop, Arms	Gear 1.5"		
+#line	NUCOAL	Cuirassier	Cuirassier Lance	11	SK	W:6" G:7"	6	3 / 3	1	3+	3+	5+	LAC (AA, Arm, Burst:2) LRP, APGL, LVB (Arm)	Agile, Airdrop, Arms	Gear 1.5"		
+#mod{chassis:'Cuirassier'}	NUCOAL	Cuirassier	#postfix:'CV'	+1	+(CMD)	-	-	-	-	-	-	4+	-	+ECCM, SatUp:5+ (Aux)			
+#line	NUCOAL	Chasseur Paratrooper	Chasseur Paratrooper	7	PT (0+)	W:5" H:9"	6	3 / 3	1	4+	4+	6+	LAC (Arm), LGL (Arm), APGL, LSG (Arm)	Airdrop, Arms	Gear 1.5"		
+#line	NUCOAL	Chasseur Paratrooper	Chasseur Paratrooper Gunner	8	PT	W:5" H:9"	6	3 / 3	1	4+	4+	6+	MAC (Arm), APGL, LSG (Arm)	Airdrop, Arms	Gear 1.5"		
+#line	NUCOAL	Chasseur Paratrooper	Chasseur Paratrooper Hellfire	9	PT	W:5" H:9"	6	3 / 3	1	4+	4+	6+	LBZ (Arm), APGL, LSB (Arm)	Airdrop, Arms	Gear 1.5"		
+#mod{chassis:'Chasseur Paratrooper'}	NUCOAL	Chasseur Paratrooper	#postfix:'CV'	+1	+(CMD)	-	-	-	-	-	-	5+	-	+Init:1, ECCM			
+#line	NUCOAL	Jerboa Paratrooper	Jerboa Paratrooper	7	PT	W:5" G:9"	4	3 / 3	1	5+	3+	4+	LRF (Arm), APGL, LVB (Arm)	Airdrop, Arms, Brawler:-1, Comms:1, ECM:2, Jetpack:6" (Aux), Sensors:18"	Gear 1"		
+#line	NUCOAL	Jerboa Paratrooper	Jerboa Flash Paratrooper	8	PT	W:5" G:9"	4	3 / 3	1	5+	3+	4+	LRF (Arm), APGL, LVB (Arm)	Airdrop, Arms, Brawler:-1, Comms:1, Jetpack:6" (Aux), Sensors:18", TD:1	Gear 1"		
+#line	NUCOAL	Jerboa	Jerboa	6	FS , RC (0+), HT	W:5" G:9"	4	3 / 3	1	5+	3+	4+	LRF (Arm), RP (PEN:6), APGL, LVB (Arm)	Arms, Brawler:-1, Comms:1, ECM:2, Jetpack:6" (Aux), Sensors:18"	Gear 1"		
+#line	NUCOAL	Jerboa	Jerboa Fist	6	RC	W:5" G:9"	4	3 / 3	1	5+	3+	4+	LRF (Arm), RP (Pen:6), LPZ, APGL, LVB (Arm)	Arms, Brawler:-1, Comms:1, ECM:2, Jetpack:6" (Aux), Sensors:18"	Gear 1"		
+#line	NUCOAL	Jerboa	Jerboa Flash	6	RC	W:5" G:9"	4	3 / 3	1	5+	3+	4+	LRF (Arm), RP (PEN:6), APGL, LVB (Arm)	Arms, Brawler:-1, Comms:1, Jetpack:6" (Aux), Sensors: 18", TD:1	Gear 1"		
+#line	NUCOAL	Jerboa	Jerboa Sentry	8	RC	W:5" G:9"	4	3 / 3	1	5+	3+	4+	LRF (Arm), APGL, LVB (Arm, PEN:6)	Arms, Comms:1, Jetpack:6", SatUp:5+ (Aux), Sensors:18"	Gear 1"		
+#line	NUCOAL	Wildcat	Wildcat	8	RC , SK	W:6" G:8"	5	3 / 3	1	5+	4+	6+	LAC (Arm), LRP, MVB (Arm)	Agile, Arms, Brawler:1, Comms:1,	Gear 1.5"		
+#line	NUCOAL	Wildcat	Riotmaster Wildcat	8	RC , SK	W:6" G:8"	5	3 / 3	1	5+	4+	6+	LFC (Arm), LRP, MVB (Arm)	Agile, Arms, Brawler:1, Comms:1,	Gear 1.5"		
+#line	NUCOAL	Wildcat	Gunner Wildcat	9	SK	W:6" G:8"	5	3 / 3	1	5+	4+	6+	MAC (Arm), LRP, MVB (Arm)	Agile, Arms, Brawler:1, Comms:1,	Gear 1.5"		
+#line	NUCOAL	Wildcat	Assault Wildcat	9	SK	W:6" G:8"	5	3 / 3	1	5+	4+	6+	LSC (Arm), MVB (Arm)	Agile, Arms, Brawler:1, Comms:1,	Gear 1.5"		
+#line	NUCOAL	Lancier	Lancier	8	MN (0+)	W:6" G:7"	6	4 / 2	1	4+	3+	6+	LAC (Arm), HPZ, APGL, MSG (Link)	Arms, Brawler:1, Climber	Gear 1.5"		
+#line	NUCOAL	Lancier	Lancier Torch	9	MN	W:6" G:7"	6	4 / 2	1	4+	3+	6+	MFL (Arm), HPZ, APGL, MSG (Link)	Arms, Brawler:1, Climber	Gear 1.5"		
+#line	NUCOAL	Lancier	Lancier Flechette	8	MN	W:6" G:7"	6	4 / 2	1	4+	3+	6+	MFC (Arm), HPZ, APGL, MSG (Link)	Arms, Brawler:1, Climber	Gear 1.5"		
+#line	NUCOAL	Lancier	Lancier Spear	10	MN	W:6" G:7"	6	4 / 2	1	4+	3+	6+	MRP (Arm, IF), HPZ, APGL, MSG (Link)	Arms, Brawler:1, Climber	Gear 1.5"		
+#line	NUCOAL	Lancier	Lancier Dart	9	MN	W:6" G:7"	6	4 / 2	1	4+	3+	6+	LAPR (Arm, IF), HPZ, APGL, MSG (Link)	Arms, Brawler:1, Climber	Gear 1.5"		
+#mod{chassis:'Lancier'}	NUCOAL	Lancier	#postfix:'CV'	+0	+(CMD)	-	-	-	-	-	-	5+	-	+ECCM			
+#line	NUCOAL	Espion	Espion	14	SF (0+)	W:6" G:7"	6	3 / 3	1	4+	3+	5+	MRF (Arm, Silent), LRP, LVB (Arm)	Agile, Arms, Stealth (Aux), Vet	Gear 1.5"		
+#line	NUCOAL	Espion	Espion Firestorm	14	SF	W:6" G:7"	6	3 / 3	1	4+	3+	5+	MRL (Arm), LRP, LVB (Arm)	Agile, Arms, Stealth (Aux), Vet	Gear 1.5"		
+#line	NUCOAL	Espion	Espion Grenadier	14	SF	W:6" G:7"	6	3 / 3	1	4+	3+	5+	MGL (Arm), LRP, LVB (Arm)	Agile, Arms, Stealth (Aux), Vet	Gear 1.5"		
+#line	NUCOAL	Espion	Espion Flechette	14	SF	W:6" G:7"	6	3 / 3	1	4+	3+	5+	MFC (Arm), LRP, LVB (Arm)	Agile, Arms, Stealth (Aux), Vet	Gear 1.5"		
+#mod{chassis:'Espion'}	NUCOAL	Espion	#postfix:'CV'	+1	+(CMD)	-	-	-	-	-	-	4+	-	+Satup: 5+ (Aux)			
+#line	NUCOAL	Hussar	Hussar	24	ST (0+)	W:5" G:6"	10	4 / 4	2	4+	5+	6+	LTG (T, Link), HRC (Arm), HMG (FT+F), HVB (Arm)	Arms, Brawler:1, Low Profile	Strider 3"		
+#line	NUCOAL	Hussar	Hussar Spear	22	ST (0+)	W:5" G:6"	10	4 / 4	2	4+	5+	6+	HRP (T, Link), HRC (Arm), HMG (FT+F), HVB (Arm)	Arms, Brawler:1, Low Profile	Strider 3"		
+#line	NUCOAL	Hussar	Hussar Skyhammer	24	ST (0+)	W:5" G:6"	10	4 / 4	2	4+	5+	6+	HABM (T, Link), HRC (Arm), HMG (FT+F), HVB (Arm)	Arms, Brawler:1, Low Profile	Strider 3"		
+#line	NUCOAL	Hussar	Hussar Lance	23	ST (0+)	W:5" G:6"	10	4 / 4	2	4+	5+	6+	HRC (T, AA, Link, Split:3), HRC, (Arm), HMG (FT+F), HVB (Arm)	Arms, Brawler:1, Low Profile	Strider 3"		
+#line	NUCOAL	Hussar	Hussar Hammer	27	ST (0+)	W:5" G:6"	10	4 / 4	2	4+	5+	6+	HTG (T), HRC (Arm), HMG (FT+F), HVB (Arm)	Arms, Brawler:1, Low Profile	Strider 3"		
+#line	NUCOAL	Fusilier	Fusilier	18	HV (0+)	H:10"	8	4 / 4	2	4+	4+	6+	HAC (T), LRP (T), LLC (FT, AA), APGL	Airdrop, Agile, Jump Jets:3" (Aux)	Vehicle 2"		
+#line	NUCOAL	Fusilier	Fusilier Javelin	20	HV	H:10"	8	4 / 4	2	4+	4+	6+	HAC (T), LATM (T), LLC (FT, AA), APGL	Airdrop, Agile, Jump Jets:3" (Aux)	Vehicle 2"		
+#line	NUCOAL	Fusilier	Fusilier Anvil	18	HV	H:10"	8	4 / 4	2	4+	4+	6+	HAC (T), LGM (T), LLC (FT, AA), APGL	Airdrop, Agile, Jump Jets:3" (Aux)	Vehicle 2"		
+#line	NUCOAL	Voltigeur	Voltigeur	28	HT (0+)	G:5"	11	5 / 3	3	4+	6+	6+	LTG (T, Link), MLC (FT), HABM, HMG	Offroad:1, Smoke:3	Vehicle 1"		
+#line	NUCOAL	Voltigeur	Voltigeur Hammer	30	HT (0+)	G:5"	11	5 / 3	3	4+	6+	6+	HTG (T), MLC (FT), HABM, HMG	Offroad:1, Smoke:3	Vehicle 1"		
+#mod{chassis:'Voltigeur'}	NUCOAL	Voltigeur	#postfix:'CV'	+2	+(CMD)	-	-	-	-	-	-	5+	-HABM, +LATM	+ECCM, SatUp:5+ (Aux)			
+#line	NUCOAL	Varis	Varis VTOL (NuCoal)	17	VL (0+)	F:14" H:14"	5	5 / 3	2	4+	3+	5+	MAC (FT+F, AA), MABM	Agile, ECCM, TD:1	Vehicle 3"		
+#line	NUCOAL	Sampson	Sampson	8	CV (0+), IN , GP (0-1), SK (0-1), FS (0-1)	H:9"	7	4 / 4	1	5+	4+	6+	LAC (T, Link), APGL	APC:2, Jump Jets: 2" (Aux)	Vehicle 2"		
+#line	NUCOAL	Sampson	Sampson Spear	9	CV	H:9"	7	4 / 4	1	5+	4+	6+	LRP (T, Link), APGL	APC:2, Jump Jets: 2" (Aux)	Vehicle 2"		
+#line	NUCOAL	Sampson	Sampson Javelin	11	CV	H:9"	7	4 / 4	1	5+	4+	6+	LATM (T), APGL	APC:2, Jump Jets: 2" (Aux)	Vehicle 2"		
+#line	NUCOAL	Sampson	Medical Sampson	4	IN (0-1)	H:9"	7	4 / 4	1	5+	4+	6+	-	APC:1, Medic, Jump Jets: 2" (Aux)	Vehicle 2"		
+#mod{chassis:'Sampson'}	NUCOAL	Sampson	#postfix:'CV'	+1	CV (CMD)	-	-	-	-	-	-	5+	-	+ECCM			
+#line	NUCOAL	Chargeur	Chargeur	5	EG (0+), IN (0-1)	W:5" G:6"	5	3 / 3	1	5+	5+	6+	LAC (Arm), MCW (Reach: 1")	Arms, Brawler:2, Recovery	Gear 1.5"		
+#line	NUCOAL	Sapeur	Sapeur	8	EG (0+), IN (0-1)	W:4" G:6"	7	4 / 2	1	5+	5+	6+	HAC (Arm), HCW (Reach: 1")	Arms, Brawler:2, Recovery	Gear 2"		
+#line	NUCOAL	Bricklayer	Bricklayer	5	EG (0+)	W:5" G:6"	4	3 / 3	1	5+	4+	6+	LAC (Arm), LCW (Reach: 1"), LHG (Arm), LSE (Arm)	Arms, Recovery, Smoke, Vuln:F	Gear 1.5"		
+#line	NUCOAL	Engineering Grizzly	Engineering Grizzly	8	EG	W:4" G:6"	6	3 / 3	1	5+	5+	6+	HAC (Arm), HCW (Reach: 1"), MHG (Arm), MSE (Arm)	Arms, Brawler:2, Recovery, Vuln:F	Gear 2"		
+#line	NUCOAL	Stonemason	Stonemason	5	EG (0+)	W:5" G:6"	4	3 / 3	1	5+	5+	6+	LAC (Arm), MCW (Reach: 1"), LHG (Arm), LSE (Arm)	Arms, Brawler:1, Recovery, Vuln:F	Gear 1.5"		
+#line	NUCOAL	Engineering Cobra	Engineering Cobra	8	EG	W:4" G:6"	6	3 / 3	1	5+	5+	6+	HAC (Arm), HCW (Reach: 1"), MHG (Arm), MSE (Arm)	Arms, Brawler:2, Recovery, Vuln:F	Gear 2"		
+#line	NUCOAL	Valence	Valence	3	EG (0+)	W:4"	3	2 / 4	1	5+	5+	6+	LAC (Arm), APGL, LHG (Arm), LSE (Arm), LVB (Arm)	Arms, Recovery, Sensors: 6", Vuln:F	Gear 1.5"		
+#line	NUCOAL	Valence	Demolisher Valence	4	EG	W:4"	3	2 / 4	1	5+	5+	6+	LSC (Arm), APGL, LHG (Arm), LSE (Arm), LVB (Arm)	Arms, Recovery, Sensors: 6", Vuln:F	Gear 1.5"		
+#line	NUCOAL	Valence	Sweeper Valence	3	EG	W:4"	3	2 / 4	1	5+	5+	6+	LFC (Arm), APGL, HHG (Arm), LSE (Arm), LVB (Arm)	Arms, Recovery, Sensors: 6", Vuln:F	Gear 1.5"		
+#line	NUCOAL	Valence	Foreman Valence	4	EG (CMD)	W:4"	3	2 / 4	1	5+	5+	5+	LAC, (Arm), APGL, LHG (Arm), LSE (Arm), HCW (Arm, Reach: 1")	Arms, Recovery, Sensors: 6", Vuln:F	Gear 1.5"		
+#line	NUCOAL	Infantry Squad	Rifle Infantry Squad	2	IN, GP (0-1), FS (0-1)	I:3"	2	2 / 2	1	4+	4+	6+	LIW, MIS		Infantry 0.5"		
+#line	NUCOAL	Infantry Squad	Anti-Tank Infantry Squad	4	IN, SK, FS (0-1)	I:3"	2	2 / 2	1	4+	4+	6+	LIW, MAVM		Infantry 0.5"		
+#line	NUCOAL	Infantry Team	Sniper Team	3	IN, SK , FS (0-1)	I:3"	2	2 / 0	1	4+	4+	6+	LIW, MIS (AP:1, Precise, Silent, Stabilizer)	Stealth	Infantry 0.5"		
+#line	NUCOAL	Infantry Squad	Mortar Infantry Squad	3	IN, GP (0-1), FS (0-1)	I:3"	2	2 / 2	1	4+	4+	6+	LIW, MIM		Infantry 0.5"		
+#line	NUCOAL	Infantry Team	EW Jammer Team	3	IN	I:3"	2	2 / 0	1	4+	4+	4+	LIW	ECCM, ECM:1	Infantry 0.5"		
+#mod{chassis:'Infantry Squad', faction:'NUCOAL'}	NUCOAL	Infantry Squad	#postfix:'Paratroopers'	+1	-	-	-	-	-	-	-	-	-	+Airdrop			
+#mod{chassis:'Infantry Team', faction:'NUCOAL'}	NUCOAL	Infantry Team	#postfix:'Paratroopers'	+1	-	-	-	-	-	-	-	-	-	+Airdrop			
+#line	NUCOAL	Armadillo Beast	Armadillo Beast	4	CV , IN (0+)	W:5"	6	3 / 3	1	4+	4+	6+	MIW, MSG (Reach: 1")	Brawler:1	Vehicle 1"	OnePerBase	
+#line	NUCOAL	Barnaby Rider	Barnaby Rider	4	IN (0+)	W:7"	4	3 / 3	1	4+	4+	6+	MIW	Agile, Climber	Vehicle 1"	OnePerBase	
+#line	NUCOAL	Sandriders Squad	Sandriders Squad	5	SR (0+)	I:4"	4	2 / 2	1	4+	3+	6+	LIW (AI, Corrosion:0), LIS (Corrosion:1)	Agile, Stealth	Infantry 0.5"		
+#line	NUCOAL	Sandriders Squad	Support Sandriders Squad	5	SR	I:4"	4	2 / 2	1	4+	3+	6+	LIS (AI, Corrosion:0), MAVM (Corrosion:0)	Agile, Stealth	Infantry 0.5"		
+#line	NUCOAL	Sandriders Squad	Mortar Sandriders Squad	5	SR	I:4"	4	2 / 2	1	4+	3+	6+	LIS (AI, Corrosion:0), MIM (Corrosion:0)	Agile, Stealth	Infantry 0.5"		
+#mod{chassis:'Sandriders Squad'}	NUCOAL	Sandriders Squad	#prefix:'Koreshi'	+1	+(CMD)	-	-	-	-	-	-	-	-	+Init:1, Comms:1			
+#line	NUCOAL	Barnaby Sandrider	Barnaby Sandrider	6	SR (0+)	W:7"	3	3 / 0	1	4+	3+	6+	LIW (AI, Corrosion:0), LPZ (Corrosion:0)	Agile, Climber	Vehicle 1"	OnePerBase	
+#line	NUCOAL	Lizard Sandrider Infantry	Lizard Sandrider Infantry squad	5	SR (0+)	I:7"	3	2 / 2	1	4+	4+	6+	LIW (AI, Corrosion:0)	Agile	Infantry1"		
+#line	NUCOAL	Lizard Sandrider Infantry	Lizard Sandrider Anti-Tank Infantry Squad	7	SR	I:7"	3	2 / 2	1	4+	4+	6+	LIS (Corrosion:0), LAVM (Corrosion:0)	Agile	Infantry1"		
+#line	NUCOAL	Lizard Sandrider Infantry	Lizard Sandrider Infantry Observer Team	5	SR	I:7"	3	2 / 0	1	4+	4+	5+	LIS (AI, Corrosion:0)	Agile, Comms:1, TD:1	Infantry 1"		
+#line	NUCOAL	En Koreshi	En Koreshi	10	SR (0-1), EK (0+ SU)	I:5"	7	3 / 1	2	3+	3+	5+	MIS (Corrosion:0, AI, Burst:1), VB (Arm, PEN:6, AP:1)	Agile, Brawler:1, Stealth, Vet	Infantry 0.5"	OnePerBase	
+#line	Black Talon	Dark Cheetah	Dark Cheetah	14	RC	W:7" G:9"	4	3 / 3	1	4+	2+	4+	MRF (Arm), LPZ, LVB (Arm)	Agile, Arms, Comms:2, ECM:1, Sensors:24" (Aux), TD:2	Gear 1.5"	DarkSeries	
+#line	Black Talon	Dark Cheetah	Dark Cheetah: Assault Pack	15	RC	W:7" G:9"	4	3 / 3	1	4+	2+	4+	LBZ (Arm, Split:2), LPZ, LVB (Arm)	Agile, Arms, Comms:2, ECM:1, Sensors:24" (Aux), TD:2	Gear 1.5"	DarkSeries	
+#line	Black Talon	Dark Cheetah	Dark Cheetah: Urban Pack	15	RC	W:7" G:9"	4	3 / 3	1	4+	2+	4+	MAC (Arm), LFC (Arm), RP (PEN:6), LPZ, LVB (Arm)	Agile, Arms. Comms:2, ECM:1, Sensors:24" (Aux), TD:2	Gear 1.5"	DarkSeries	
+#line	Black Talon	Dark Skirmisher	Dark Skirmisher	15	RC , PI	W:7" G:8"	5	3 / 3	1	4+	3+	4+	HRF (Arm, Sniper), LPZ, LVB (Arm)	Agile, Arms, Comms:1, ECM:2, TD:1	Gear 1.5"	DarkSeries	
+#line	Black Talon	Dark Skirmisher	Dark Skirmisher: Assault Pack	16	RC , PI	W:7" G:8"	5	3 / 3	1	4+	3+	4+	LBZ (Arm, Split:2), LPZ, LVB (Arm)	Agile, Arms, Comms:1, ECM:2, TD:1	Gear 1.5"	DarkSeries	
+#line	Black Talon	Dark Skirmisher	Dark Skirmisher: Urban Pack	16	RC , PI	W:7" G:8"	5	3 / 3	1	4+	3+	4+	MAC (Arm), LFC (Arm), RP (PEN:6), LPZ, LVB (Arm)	Agile, Arms, Comms:1, ECM:2, TD:1	Gear 1.5"	DarkSeries	
+#line	Black Talon	Dark Jaguar	Dark Jaguar	16	PI , TI , TA , OA	W:6" G:7"	6	4 / 2	1	3+	3+	5+	MRF (Arm), LRP, LVB (Arm)	Agile, Arms, Autopilot,	Gear 1.5"	DarkSeries	
+#line	Black Talon	Dark Jaguar	Dark Jaguar: Assault Package	18	PI , TI , TA , OA	W:6" G:7"	6	4 / 2	1	3+	3+	5+	MBZ (Arm), LRP, LVB (Arm)	Agile, Arms, Autopilot,	Gear 1.5"	DarkSeries	
+#line	Black Talon	Dark Jaguar	Dark Jaguar: Urban Pack	16	PI , TI , TA , OA	W:6" G:7"	6	4 / 2	1	3+	3+	5+	MAC (Arm, Split:2), LFC (Arm), MPZ, LVB (Arm)	Agile, Arms, Autopilot,	Gear 1.5"	DarkSeries	
+#line	Black Talon	Dark Jaguar	Dark Jaguar: Suppression Pack	16	PI , TI , TA , OA	W:6" G:7"	6	4 / 2	1	3+	3+	5+	MAC (Arm, Split:2), LGL (Arm), LRP, LVB (Arm)	Agile, Arms, Autopilot,	Gear 1.5"	DarkSeries	
+#line	Black Talon	Dark Mamba	Dark Mamba	16	TI , OA	W:6" G:7"	7	4 / 2	1	3+	3+	5+	LLC (Arm), MRP, LVB (Arm)	Agile, Arms, Autopilot,	Gear 1.5"	DarkSeries	
+#line	Black Talon	Dark Mamba	Dark Mamba: Assault Pack	17	TI , OA	W:6" G:7"	7	4 / 2	1	3+	3+	5+	MRL (Arm, Precise), MRP, MPZ, LVB (Arm)	Agile, Arms, Autopilot,	Gear 1.5"	DarkSeries	
+#line	Black Talon	Dark Mamba	Dark Mamba: Suppression Pack	17	TI , OA	W:6" G:7"	7	4 / 2	1	3+	3+	5+	MGL (Arm), MRP, LVB (Arm)	Agile, Arms, Autopilot,	Gear 1.5"	DarkSeries	
+#line	Black Talon	Dark Kodiak	Dark Kodiak	20	TA	W:4" G:5"	9	4 / 2	2	3+	5+	6+	MPA (Arm, Precise), MATM, HMG (Link), MVB (Arm)	Arms	Gear 2"	DarkSeries	
+#line	Black Talon	Dark Kodiak	Dark Kodiak: Assault Pack	22	TA	W:4" G:5"	9	4 / 2	2	3+	5+	6+	HBZ (Arm, Precise), LATM, HMG (Link), MVB (Arm)	Arms	Gear 2"	DarkSeries	
+#line	Black Talon	Dark Kodiak	Dark Kodiak: Support Pack	22	TA	W:4" G:5"	9	4 / 2	2	3+	5+	6+	MPA (Arm, Precise), MAR, HMG (Link), MVB (Arm)	Arms	Gear 2"	DarkSeries	
+#line	Black Talon	Dark Cobra	Dark Cobra	20	TA , OT	W:4" G:5"	8	4 / 2	2	3+	4+	6+	HRC (AA, Arm, Precise), MAR, MRP, MVB (Arm)	Arms	Gear 2"	DarkSeries	
+#line	Black Talon	Dark Cobra	Dark Cobra: Assault Pack	22	TA, OT	W:4" G:5"	8	4 / 2	2	3+	4+	6+	MPA (Arm, Precise), MAR, MRP, MVB (Arm)	Arms	Gear 2"	DarkSeries	
+#line	Black Talon	Dark Cobra	Dark Cobra: Support Pack	24	TA, OT	W:4" G:5"	8	4 / 2	2	3+	4+	6+	HRC (AA, Arm, Precise), MAG (Stabilizer), MRP, MVB (Arm)	Arms	Gear 2"	DarkSeries	
+#line	Black Talon	Dark Coyote	Dark Coyote	28	MO	W:4" G:6"	10	4 / 4	3	3+	5+	5+	MRG (T, Precise), MRC (AA, FT), APGL	ECM:1, Low Profile, Offroad:2, Stable	Strider 2"	DarkSeries	
+#line	Black Talon	Dark Coyote	Dark Coyote: Suppression Pack	26	MO	W:4" G:6"	10	4 / 4	3	3+	5+	5+	MPA (FT), LLC (AA, FT), APGL	ECM:1, Low Profile, Offroad:2, Stable	Strider 2"	DarkSeries	
+#mod{chassis:'Dark Coyote'}	Black Talon	Dark Coyote	#replace:{from:'Coyote', to:'Alpha Dog'}	+4	+(CMD)	-	-	-	-	-	-	4+	-	+ECM:2, ECCM		DarkSeries	
+#line	Black Talon	Dark Naga	Dark Naga	30	MO	W:5" G:7"	10	4 / 4	2	3+	5+	6+	2xMAR, MRC (FT+F)	Autopilot, Low Profile, Sensor Boom (Aux), TD:0 (Aux)	Strider 2"	DarkSeries	
+#line	Black Talon	Dark Naga	Dark Naga: Anti-Tank Pack	34	MO	W:5" G:7"	10	4 / 4	2	3+	5+	6+	2xMATM, MRC (FT+F)	Autopilot, Low Profile, SMS:G, Sensor Boom (Aux), TD:0 (Aux)	Strider 2"	DarkSeries	
+#line	Black Talon	Dark Naga	Dark Naga: Suppression Pack	30	MO	W:5" G:7"	10	4 / 4	2	3+	5+	6+	2xHGL, MRC (FT+F)	Autopilot, Low Profile, SMS:G, Sensor Boom (Aux), TD:0 (Aux)	Strider 2"	DarkSeries	
+#line	Black Talon	Dark Naga	Dark Naga: Sniper Pack	30	MO	W:5" G:7"	10	4 / 4	2	3+	5+	6+	2xMLC (Precise), LPA (FT+F)	Autopilot, Low Profile, SMS:G, Sensor Boom (Aux), TD:0 (Aux)	Strider 2"	DarkSeries	
+#line	Black Talon	Dark Naga	Dark Naga: Assault Pack	30	MO	W:5" G:7"	10	4 / 4	2	3+	5+	6+	2xHRL, LPA (FT+F)	Autopilot, Low Profile, SMS:G, Sensor Boom (Aux), TD:0 (Aux)	Strider 2"	DarkSeries	
+#line	Black Talon	Dark Mastiff	Dark Mastiff	6	IF (0+), CV (0+)	G:8"	6	3 / 3	1	4+	5+	6+	MRF (FT), APGL	APC:1, Autopilot, Low Profile	Vehicle 0.5"	DarkSeries	
+#line	Black Talon	Dark Mastiff	Mastiff: Support Pack	7	IF (0+), CV (0+)	G:8"	6	3 / 3	1	4+	5+	6+	MGM (T)	Autopilot, Low Profile	Vehicle 0.5"	DarkSeries	
+#line	Black Talon	Dark Mastiff	Mastiff: Suppression Pack	7	IF (0+), CV (0+)	G:8"	6	3 / 3	1	4+	5+	6+	MRP (T, Link)	Autopilot, Low Profile	Vehicle 0.5"	DarkSeries	
+#line	Black Talon	Eagle	Eagle	16	PI , TI	W:6" G:7"	7	3 / 3	2	3+	4+	4+	MRL (Arm), MRP, MPZ, LVB (Arm)	Arms, Jetpack:6"	Gear 1.5"	TalonSeries	
+#line	Black Talon	Eagle	Eagle: Suppression Pack	17	PI , TI	W:6" G:7"	7	3 / 3	2	3+	4+	4+	HAC (Arm, Split: 2), LGL (Arm), MRP, LVB (Arm)	Arms, Jetpack:6"	Gear 1.5"	TalonSeries	
+#line	Black Talon	Eagle	Eagle: Assault Pack	18	PI , TI	W:6" G:7"	7	3 / 3	2	3+	4+	4+	MBZ (Arm), MRP, LVB (Arm)	Arms, Jetpack:6"	Gear 1.5"	TalonSeries	
+#mod{chassis:'Eagle'}	Black Talon	Eagle	#postfix:'Anti-Infantry'	+0	PI (0+), TI (0+)	-	-	-	-	-	-	-	-MRP, +LAPR	-		TalonSeries	
+#line	Black Talon	Owl	Owl	18	PI (CMD), TI (CMD), OA (CMD), MO (CMD 0-1), TA (CMD), RC (CMD)	W:6" G:7"	7	3 / 3	2	4+	3+	4+	MRF (Arm), MRP, LVB (Arm)	Arms, Comms:1, Init:2, ECM:1, ECCM, Jetpack:6", SatUp:4+	Gear 1.5"	TalonSeries	
+#line	Black Talon	Owl	Owl: Assault Pack	18	PI (CMD), TI (CMD), OA (CMD), MO (CMD 0-1), TA (CMD), RC (CMD)	W:6" G:7"	7	3 / 3	2	4+	3+	4+	LRL (Arm), MRP, LPZ, LVB (Arm)	Arms, Comms:1, Init:2, ECM:1, ECCM, Jetpack:6", SatUp:4+	Gear 1.5"	TalonSeries	
+#line	Black Talon	Owl	Owl: Suppression Pack Alpha	18	PI (CMD), TI (CMD), OA (CMD), MO (CMD 0-1), TA (CMD), RC (CMD)	W:6" G:7"	7	3 / 3	2	4+	3+	4+	MAC (Arm, Split:2), LGL (Arm), MRP, LVB (Arm)	Arms, Comms:1, Init:2, ECM:1, ECCM, Jetpack:6", SatUp:4+	Gear 1.5"	TalonSeries	
+#line	Black Talon	Owl	Owl: Suppression Pack Beta	18	PI (CMD), TI (CMD), OA (CMD), MO (CMD 0-1), TA (CMD), RC (CMD)	W:6" G:7"	7	3 / 3	2	4+	3+	4+	MAC (Arm, Split: 2), MFC (Arm), MRP, LVB (Arm)	Arms, Comms:1, Init:2, ECM:1, ECCM, Jetpack:6", SatUp:4+	Gear 1.5"	TalonSeries	
+#mod{chassis:'Owl'}	Black Talon	Owl	#postfix:'Anti-Infantry'	+0	-	-	-	-	-	-	-	-	-MRP, +LAPR	-		TalonSeries	
+#line	Black Talon	Raptor	Raptor	22	OA , TA, TI	W:5" G:7"	8	3 / 3	2	3+	4+	5+	HRC (Arm), MAPR, MRP, MMG, HPZ, MVB (Arm, Reach 1")	Arms, Brawler:1, Jetpack:6"	Gear 2"	TalonSeries	
+#line	Black Talon	Raptor	Raptor: Interdiction Pack	22	OA , TA, TI	W:5" G:7"	8	3 / 3	2	3+	4+	5+	LPL (Arm), MAPR, MRP, MMG, MVB (Arm, Reach: 1")	Arms, Brawler:1, Jetpack:6"	Gear 2"	TalonSeries	
+#line	Black Talon	Raptor	Raptor: Assault Pack	23	OA , TA, TI	W:5" G:7"	8	3 / 3	2	3+	4+	5+	HBZ (Arm, Precise), MAPR, MRP, MMG, MVB (Arm, Reach: 1")	Arms, Brawler:1, Jetpack:6"	Gear 2"	TalonSeries	
+#line	Black Talon	Raven	Raven	14	RC	W:7" G:9"	5	3 / 3	2	4+	2+	3+	LRF (Arm), LPZ, LVB (Arm)	Agile, Arms, Comms:1, ECM:2, Jetpack:6", Sensors: 18" (Aux), TD:2	Gear 1.5"	TalonSeries	
+#line	Black Talon	Raven	Raven: Assault Pack	16	RC	W:7" G:9"	5	3 / 3	2	4+	2+	3+	LBZ (Arm, Split:2), LPZ, LVB (Arm)	Agile, Arms, Comms:1, ECM:2, Jetpack:6", Sensors: 18" (Aux), TD:2	Gear 1.5"	TalonSeries	
+#line	Black Talon	Raven	Raven: Suppression Pack	16	RC	W:7" G:9"	5	3 / 3	2	4+	2+	3+	MAC (Arm), LGL (Arm), LPZ, LVB (Arm)	Agile, Arms, Comms:1, ECM:2, Jetpack:6", Sensors: 18" (Aux), TD:2	Gear 1.5"	TalonSeries	
+#line	Black Talon	Raven	Raven: Control Pack	18	RC	W:7" G:9"	5	3 / 3	2	4+	2+	3+	LRF (Arm), LPZ, LVB (Arm)	Agile, Arms, Comms:1, ECM:3, Jetpack:6", Sensors: 18" (Aux), TD:1	Gear 1.5"	TalonSeries	
+#line	Black Talon	Vulture	Vulture	24	OA , TA	W:4" G:6"	9	3 / 3	2	3+	4+	5+	LTG (Arm, Precise), MGM, MFC, MVB (Arm, Reach: 1")	Arms, Jetpack:4" (Aux)	Gear 2"	TalonSeries	
+#line	Black Talon	Vulture	Vulture: Interdiction Pack	24	OA , TA	W:4" G:6"	9	3 / 3	2	3+	4+	5+	LRG (Arm, Precise), MGM, MFC, MVB (Arm, Reach: 1")	Arms, Jetpack:4" (Aux)	Gear 2"	TalonSeries	
+#line	Black Talon	Vulture	Vulture: Assault Pack	24	OA , TA	W:4" G:6"	9	3 / 3	2	3+	4+	5+	HBZ (Arm, Precise), MGM, MFC, MVB (Arm, Reach: 1")	Arms, Jetpack:4" (Aux)	Gear 2"	TalonSeries	
+#mod{chassis:'Vulture'}	Black Talon	Vulture	#postfix:'Anti-Tank'	+2	OA, TA								-MGM, +MATM	-		TalonSeries	
+#line	Black Talon	Infantry Squad	Infiltrator Infantry Squad	6	IN (0+)	I:3"	3	3 / 1	1	3+	3+	4+	MIW, MAVM	Agile, Jetpack:4"	Infantry 0.5"		
+#line	Black Talon	Infantry Team	Sniper Team	6	IN (0+)	I:3"	3	2 / 0	1	3+	3+	4+	MIW, HIS (AP:1, Precise, Silent, Stabilizer)	Agile, Jetpack:4"	Infantry 0.5"		
+#line	Black Talon	Infantry Team	Observer Team	6	IN (0+)	I:3"	3	2 / 0	1	3+	3+	3+	LIW	Agile, Comms:1, Jetpack:4", TD:1	Infantry 0.5"		
+#line	CEF	F6-16	F6-16: No Pack	8	IF , HF	W:5" H:9"	6	3 / 3	1	4+	4+	5+	LLC (Arm), LCW (Arm)	Arms	Gear 1.5"		
+#line	CEF	F6-16	F6-16: AT Pack	10	HF	W:5" H:9"	6	3 / 3	1	4+	4+	5+	LPA (Arm), LATM (LA:2), LCW (Arm)	Arms	Gear 1.5"		
+#line	CEF	F6-16	F6-16: Assault Pack	9	IF , HF	W:5" H:9"	6	3 / 3	1	4+	4+	5+	LRL (Arm), LCW (Arm)	Arms, Shield:1	Gear 1.5"		
+#line	CEF	F6-16	F6-16: Recon Pack	10	IF	W:5" H:9"	6	3 / 3	1	4+	4+	5+	LLC (Arm), LCW (Arm)	Arms, Comms:1 (Aux), ECM:1, Sensor Boom (Aux), TD:1 (Aux)	Gear 1.5"		
+#line	CEF	F6-16	F6-16: Support Pack	9	IF , HF	W:5" H:9"	6	3 / 3	1	4+	4+	5+	LLC (Arm), LGM, LCW (Arm)	Arms	Gear 1.5"		
+#mod{chassis:'F6-16'}	CEF	F6-16	#replace:{from:'F6', to:'CF6'}	+1	+(CMD)	-	-	-	-	-	-	4+	-	+ECCM, SatUp:6+ (Aux)			
+#mod{chassis:'F6-16'}	CEF	F6-16	#postfix:'Mobility Pack'	+2	-	-	-	-	-	-	-	-	-	+Airdrop, Jetpack:6" (Aux)			
+#line	CEF	BF2-21	BF2-21: No Pack	10	IF	W:5" H:9"	6	4 / 2	1	4+	4+	5+	LLC (Arm), LCW (Arm)	ANN, Arms	Gear 1.5"		
+#line	CEF	BF2-21	BF2-21: Anti-Tank Pack	12	IF	W:5" H:9"	6	4 / 2	1	4+	4+	5+	LPA (Arm), LATM (LA:2), LCW (Arm)	ANN, Arms	Gear 1.5"		
+#line	CEF	BF2-21	BF2-21: Assault Pack	11	IF	W:5" H:9"	6	4 / 2	1	4+	4+	5+	MRL (Arm), LCW (Arm)	ANN, Arms, Shield:1	Gear 1.5"		
+#line	CEF	BF2-21	BF2-21: Recon Pack	12	IF	W:5" H:9"	6	4 / 2	1	4+	4+	5+	LLC (Arm), LCW (Arm)	ANN, Arms, Comms:1 (Aux), ECM:1, Sensor Boom (Aux), TD:1 (Aux)	Gear 1.5"		
+#line	CEF	BF2-21	BF2-21: Support Pack	11	IF	W:5" H:9"	6	4 / 2	1	4+	4+	5+	LLC (Arm), LGM, LCW (Arm)	ANN, Arms	Gear 1.5"		
+#mod{chassis:'BF2-21'}	CEF	BF2-21	#postfix:'Mobility Pack'	+2	-	-	-	-	-	-	-	-	-	+Airdrop, Jetpack:6" (Aux)			
+#line	CEF	BF2-25	BF2-25: No Pack	14	RC	W:6" H:10"	6	3 / 3	1	4+	4+	5+	LLC (Arm), LSG (Arm)	Airdrop, Agile, ANN, Arms, Comms:1, Jetpack:6" (Aux), Stealth (Aux)	Gear 1.5"		
+#line	CEF	BF2-25	BF2-25: Anti-Tank Pack	16	RC	W:6" H:10"	6	3 / 3	1	4+	4+	5+	LLC (Arm), LATM (LA:2), LSG (Arm)	Airdrop, Agile, ANN, Arms, Comms:1, Jetpack:6" (Aux), Stealth (Aux)	Gear 1.5"		
+#line	CEF	BF2-25	BF2-25: Assault Pack	15	RC	W:6" H:10"	6	3 / 3	1	4+	4+	5+	LLC (Arm), LCW (Arm)	Airdrop, Agile, ANN, Arms, Comms:1, Jetpack:6" (Aux), Shield:1, Stealth (Aux)	Gear 1.5"		
+#line	CEF	BF2-25	BF2-25: Recon Pack	15	RC	W:6" H:10"	6	3 / 3	1	4+	4+	5+	LLC (Arm), LCW	Airdrop, ANN, Agile, Arms, Comms:2 (Aux), ECM:1, Jetpack:6" (Aux), Sensor Boom (Aux), Stealth (Aux), TD:1	Gear 1.5"		
+#mod{chassis:'BF2-25'}	CEF	BF2-25	#replace:{from:'Pack', to:'and Rotary Laser Pack'} 	+0	-	-	-	-	-	-	-	-	-LLC, +MRL				
+#line	CEF	F6-16-S	CF6-16-S: No Pack	10	RC (CMD)	W:5" H:9"	6	3 / 3	1	4+	4+	5+	LLC (Arm), LCW (Arm)	Arms, ECCM, SatUp:5+, Stealth (*Aux)	Gear 1.5"		
+#line	CEF	F6-16-S	F6-16-S: Assault Pack	11	RC	W:5" H:9"	6	3 / 3	1	4+	4+	5+	LRL (Arm), LCW (Arm)	Arms, Shield:1, Stealth (Aux)	Gear 1.5"		
+#line	CEF	F6-16-S	F6-16-S: Recon Pack	11	RC	W:5" H:9"	6	3 / 3	1	4+	4+	5+	LLC (Arm), LCW (Arm)	Arms, Comms:1 (Aux), ECM:1, Sensor Boom (Aux), TD:1 (Aux), Stealth (Aux)	Gear 1.5"		
+#mod{chassis:'F6-16-S'}	CEF	F6-16-S	#replace:{from:'Pack', to:'and Mobility Pack'}	+2	-	-	-	-	-	-	-	-	-	+Airdrop, Jetpack:6" (Aux)			
+#line	CEF	BF2-19	BF2-19: No Pack	13	HF	W:4" H:7"	7	4 / 2	1	4+	4+	5+	MLC (Arm), MRP, LATM, MCW (Arm)	ANN, Arms	Gear 2"		
+#line	CEF	BF2-19	BF2-19: Anti-Tank Pack	15	HF	W:4" H:7"	7	4 / 2	1	4+	4+	5+	MPA (Arm), MRP, MATM (LA: 2), MCW (Arm)	ANN, Arms	Gear 2"		
+#line	CEF	BF2-19	BF2-19: Assault Pack	14	HF	W:4" H:7"	7	4 / 2	1	4+	4+	5+	MRL (Arm), MRP, LATM, MCW (Arm)	ANN, Arms, Shield:1	Gear 2"		
+#line	CEF	BF2-19	BF2-19: Support Pack	14	HF	W:4" H:7"	7	4 / 2	1	4+	4+	5+	MLC (Arm), LATM, MGM, MCW (Arm)	ANN, Arms	Gear 2"		
+#line	CEF	BF2-19	BF2-19: Recon Pack	15	HF	W:4" H:7"	7	4 / 2	1	4+	4+	5+	MRL (Arm), MRP, LATM, MCW (Arm)	ANN, Arms, Comms:1 (Aux), ECM:1, Sensor Boom (Aux), TD:1 (Aux)	Gear 2"		
+#mod{chassis:'BF2-19'}	CEF	BF2-19	#replace:{from:'Pack', to:'and Mobility Pack'}	+2	-	-	-	-	-	-	-	-	-	+Airdrop, Jetpack:5" (Aux)			
+#line	CEF	MHT-68	MHT-68	28	MT	H:8"	10	4 / 4	3	4+	5+	5+	HPA (T), MATM (T), MABM (T)	Airdrop, Jump Jets:3" (Aux), Sensors:18", TD:0	Vehicle 2"		
+#line	CEF	MHT-68	MHT-68: AA Pack	28	MT	H:8"	10	4 / 4	3	4+	5+	5+	HLC (AA, T), MATM (T), MSAM (T)	Airdrop, Jump Jets:3" (Aux), Sensors:18", TD:0	Vehicle 2"		
+#line	CEF	MHT-68	MHT-68: Assault Pack	28	MT	H:8"	10	4 / 4	3	4+	5+	5+	HRL (T), MFC (FT, Link), MATM (T)	Airdrop. Jump Jets:3" (Aux), Sensors:18", TD:0	Vehicle 2"		
+#mod{chassis:'MHT-68'}	CEF	MHT-68	#postfix:'GREL/FLAIL Crew'	+2	-	-	-	-	-	-	-	-	-	+ANN	-		
+#line	CEF	MHT-72	MHT-72	28	MT	H:7"	10	5 / 3	3	4+	5+	5+	HPA (T), MATM (T), MABM (T)	Airdrop, Jump Jets:2" (Aux), Sensors:18", TD:0	Vehicle 2"		
+#line	CEF	MHT-72	MHT-72: AA Pack	28	MT	H:7"	10	5 / 3	3	4+	5+	5+	HLC (AA, T), MATM (T), MSAM (T)	Airdrop, Jump Jets:2" (Aux), Sensors:18", TD:0	Vehicle 2"		
+#line	CEF	MHT-72	MHT-72: Assault Pack	28	MT	H:7"	10	5 / 3	3	4+	5+	5+	HRL (T), MATM (T), MFC (FT, Link)	Airdrop, Jump Jets:2" (Aux), Sensors:18", TD:0	Vehicle 2"		
+#mod{chassis:'MHT-72'}	CEF	MHT-72	#postfix:'GREL/FLAIL Crew'	+2	-	-	-	-	-	-	-	-	-	+ANN	-		
+#line	CEF	MHT-95	MHT-95	24	MT, LT	H:6"	9	5 / 3	2	4+	4+	6+	MRG (T), MRP (T, Link), MLC (FT, AA), HMG (FT, Auto)	Airdrop, Jump Jets:3", Sensors:18"	Vehicle 2"		
+#line	CEF	MHT-95	MHT-95: Assault Pack	24	MT, LT	H:6"	9	5 / 3	2	4+	4+	6+	HGL (T), MFC (FT), MRP (T, Link), MLC (FT, AA), HMG (FT, Auto)	Airdrop, Jump Jets:3", Sensors:18"	Vehicle 2"		
+#line	CEF	MHT-95	MHT-95: Support Pack	24	MT, LT	H:6"	9	5 / 3	2	4+	4+	6+	MAG (T), MRP (T, Link), MLC (FT, AA), HMG (FT, Auto)	Airdrop, Jump Jets:3", Sensors:18"	Vehicle 2"		
+#mod{chassis:'MHT-95'}	CEF	MHT-95	#postfix:'GREL/FLAIL Crew'	+2	-	-	-	-	-	-	-	-	-	+ANN			
+#line	CEF	LHT-67	LHT-67	18	LT	H:10"	8	4 / 4	2	4+	4+	5+	MPA (T), LABM (T)	Airdrop, Agile. Jump Jets:3" (Aux), Sensors:18", TD:0	Vehicle 2"		
+#line	CEF	LHT-67	LHT-67: AA Pack	18	LT	H:10"	8	4 / 4	2	4+	4+	5+	MLC (AA, T), LATM (T)	Airdrop, Agile, Jump Jets:3" (Aux), Sensors:18", TD:0	Vehicle 2"		
+#line	CEF	LHT-67	LHT-67: Assault Pack	18	LT	H:10"	8	4 / 4	2	4+	4+	5+	MRL (T), MFC (FT, Link)	Airdrop, Agile, Jump Jets:3" (Aux), Sensors:18", TD:0	Vehicle 2"		
+#mod{chassis:'LHT-67'}	CEF	LHT-67	#postfix:'GREL/FLAIL Crew'	+2	-	-	-	-	-	-	-	-	-	+ANN	-		
+#line	CEF	LHT-71	LHT-71	18	LT	H:9"	8	5 / 3	2	4+	4+	5+	MPA (T), LABM (T)	Airdrop, Agile, Jump Jets:3" (Aux), Sensors:18", TD:0	Vehicle 2"		
+#line	CEF	LHT-71	LHT-71: AA Pack	18	LT	H:9"	8	5 / 3	2	4+	4+	5+	MLC (AA, T), LATM (T)	Airdrop, Agile, Jump Jets:3" (Aux), Sensors:18", TD:0	Vehicle 2"		
+#line	CEF	LHT-71	LHT-71: Assault Pack	18	LT	H:9"	8	5 / 3	2	4+	4+	5+	MRL (T), MFC (FT, Link)	Airdrop, Agile, Jump Jets:3" (Aux), Sensors:18", TD:0	Vehicle 2"		
+#mod{chassis:'LHT-71'}	CEF	LHT-71	GREL/FLAIL Crew (MHT-68 upgrade)	+2	-	-	-	-	-	-	-	-	-	+ANN	-		
+#line	CEF	HPC-64	HPC-64	8	CV (0+), IN	H:9"	7	4 / 4	1	4+	4+	5+	LLC (FT)	Airdrop, APC:2, Jump Jets:2" (Aux)	Vehicle 2"		
+#line	CEF	HPC-64	HPC-64 Support	10	CV (0+)	H:9"	7	4 / 4	1	4+	4+	5+	MAR (T)	Airdrop, APC:1, Jump Jets:2" (Aux)	Vehicle 2"		
+#line	CEF	HPC-64	HPC-64 Medic	4	IN (0-1)	H:9"	7	4 / 4	1	4+	4+	5+	-	Airdrop, APC:1, Jump Jets:2" (Aux), Medic	Vehicle 2"		
+#mod{chassis:'HPC-64'}	CEF	HPC-64	#prefix:'Command'	+1	+(CMD)	-	-	-	-	-	-	4+	-	+ECM:1, SatUp:6+ (Aux)			
+#line	CEF	HC-3A	HC-3A	9	RC (0+), CV	H:10"	5	3 / 3	1	4+	3+	3+	LLC	Airdrop, Agile, Comms:2, ECM:3, Jump Jets:2" (Aux), Sensors:24" (Aux), TD:1	Vehicle 2"		
+#mod{chassis:'HC-3A'}	CEF	HC-3A	#prefix:'Command'	+2	+(CMD)	-	-	-	-	-	-	-	+LATM (LA:1)	+ECCM, SatUp:4+ (Aux)			
+#line	CEF	GREL Squad	GREL Squad	5	CV , IN (0+), HT	I:4"	4	3 / 1	1	3+	3+	6+	HIW, MIS		Infantry 1"		
+#line	CEF	GREL Squad	Support GREL Squad	6	CV (0-1), IN, HT	I:4"	4	3 / 1	1	3+	3+	6+	HIW, HIM		Infantry 1"		
+#line	CEF	GREL Squad	Anti-Tank GREL Squad	7	CV (0-1), IN, HT	I:4"	4	3 / 1	1	3+	3+	6+	HIW, MAVM		Infantry 1"		
+#line	CEF	GREL Squad	Interdiction GREL Squad	6	CV (0-1), IN, HT	I:4"	4	3 / 1	1	3+	3+	6+	HIW, HIS		Infantry 1"		
+#mod{chassis:'GREL Squad'}	CEF	GREL Squad	#postfix:'Jan'	+1	+(CMD)	-	-	-	-	-	-	-	-	+Comms:1			
+#line	CEF	Morgana Team	Morgana Assault GREL Team	6	IN, HT	I:5"	3	3 / 0	1	3+	3+	5+	MIW, VB (AI, AP:1, PEN:4)	Agile, Brawler:1, Stealth	Infantry 0.5"		
+#line	CEF	Morgana Team	Morgana Sniper GREL Team	7	IN, HT	I:5"	3	3 / 0	1	3+	3+	5+	MIW, HIS (AP:1, Precise, Silent)	Agile, Brawler:1, Stealth	Infantry 0.5"		
+#line	CEF	Hoverbike GREL Squad	Hoverbike GREL Squad	6	CV , HB (0+)	H:12"	3	3 / 0	1	4+	3+	6+	HIW	Agile, Jump Jets:2"	Infantry 1"		
+#line	CEF	Hoverbike GREL Squad	Hoverbike Anti-Tank Squad	8	HB	H:12"	3	3 / 0	1	4+	3+	6+	HIW, LPZ	Agile, Jump Jets:2"	Infantry 1"		
+#mod{chassis:'Hoverbike GREL Squad'}	CEF	Hoverbike GREL Squad	#postfix:'Jan'	+1	+(CMD)	-	-	-	-	-	-	-	-	+Comms:1			
+#line	CEF	FLAIL Squad	FLAIL Squad	6	FL (0+), HT	I:4" H:6"	5	3 / 1	2	3+	3+	5+	HMG, LIS	Jetpack:4"	Infantry 1"		
+#line	CEF	FLAIL Squad	Support FLAIL Squad	7	FL, HT	I:4" H:6"	5	3 / 1	2	3+	3+	5+	HMG, HIM	Jetpack:4"	Infantry 1"		
+#line	CEF	FLAIL Squad	Anti-Tank FLAIL Squad	8	FL, HT	I:4" H:6"	5	3 / 1	2	3+	3+	5+	HMG, HAVM	Jetpack:4"	Infantry 1"		
+#line	CEF	FLAIL Squad	Interdiction FLAIL Squad	7	FL, HT	I:4" H:6"	5	3 / 1	2	3+	3+	5+	HMG, HIS	Jetpack:4"	Infantry 1"		
+#line	CEF	Morgana FLAIL Team	Morgana FLAIL Team	7	FL, HT	I:4" H:7"	4	3 / 0	2	3+	3+	4+	HMG, LVB (AI)	Agile, Brawler:1, Jetpack:4"	Infantry 1"		
+#line	CEF	HHT-90	HHT-90	70	HT (0-1)	-	-	-	-	-	-	-	-	-	Vehicle 3"	MultiComponent{chassis:'HHT-90'}, NoSU	
+#line	CEF	HHT-90	Turret			-	11	5 / 3	3	4+	6+	5+	TG (T, Ammo:AP:5, PEN:12, Precise), HAM (T), HATM (T), HRL (FT, AA)	Attached: HHT Body, AMS (Aux), ECCM, Comms:1 (Aux), Resist:H, SatUp:4+ (Aux), Sensors: 18", Vet, TD:1	-		
+#line	CEF	HHT-90	Body			H:6"	12	5 / 5	3	5+	6+	6+	MRL (FT+R, Auto), MRL (FT+L, Auto), HRP (L, Aux), HRP (R, Aux), HPA (FT+F)	APC:4, CBS (Aux), Init:1, Jump Jets:2", Resist:H, Stable, Sensors:18", Vet			
+#line	Caprice	Acco	Acco	6	GP (0+), FS, HM	W:6"	6	3 / 3	1	5+	3+	6+	LAC, LRP, MMG, CW (AP:1, PEN:5)	Agile, Climber, Mount	Gear 1"		
+#line	Caprice	Acco	Stalker Acco	6	GP (0+), RC, SK	W:6"	6	3 / 3	1	5+	3+	6+	LFC, LRP, MMG, CW (AP:1, PEN:5)	Agile, Climber, Mount	Gear 1"		
+#line	Caprice	Acco	Pyro Acco	6	GP (0+), SK	W:6"	6	3 / 3	1	5+	3+	6+	LFL, LRP, MMG, CW (AP:1, PEN:5)	Agile, Climber, Mount	Gear 1"		
+#line	Caprice	Bashan	Bashan	11	RC (0+)	W:8"	7	3 / 5	1	5+	3+	4+	MAC, HMG, LSG	Autopilot, Brawler:1, Climber, Comms:2, ECM:1, Low Profile, Mount, TD:1	Strider 2"		
+#line	Caprice	Bashan	Jammer Bashan	11	RC, SK	W:8"	7	3 / 5	1	5+	3+	4+	HMG, LSG	Autopilot, Brawler:1, Climber, Comms:1, ECM:2, ECCM (Aux), Low Profile, Mount, SatUp:6+, TD:1	Strider 2"		
+#line	Caprice	Aphek	Aphek	12	RC (0+)	W:7"	8	4 / 4	1	4+	4+	5+	MRC, LRP, HMG, LSG (Link)	Autopilot, Brawler:1, Climber, ECM:1, Low Profile, Mount, TD:1	Strider 2"		
+#line	Caprice	Aphek	Close Support Aphek	12	RC, SK	W:7"	8	4 / 4	1	4+	4+	5+	LRP (Link), HMG, LSG (Link)	Autopilot, Brawler:1, Climber, ECM:1, Low Profile, Mount, TD:1	Strider 2"		
+#line	Caprice	Aphek	Support Aphek	14	RC	W:7"	8	4 / 4	1	4+	4+	5+	MRC, LATM, HMG, LSG (Link)	Autopilot, Brawler:1, Climber, ECM:1, Low Profile, Mount, TD:1	Strider 2"		
+#line	Caprice	Kadesh	Kadesh	15	FS (0+)	W:6"	8	4 / 4	1	4+	4+	6+	MRC, HMG, MSG (Link)	Autopilot, Brawler:1, Climber, Jetpack: 4", Low Profile, Mount	Strider 2"		
+#line	Caprice	Kadesh	Close Support Kadesh	15	FS, SK	W:6"	8	4 / 4	1	4+	4+	6+	MRP, HMG, MSG (Link)	Autopilot, Brawler:1, Climber, Jetpack: 4", Low Profile, Mount	Strider 2"		
+#line	Caprice	Kadesh	Support Kadesh	15	FS	W:6"	8	4 / 4	1	4+	4+	6+	LPA, HMG, MSG (Link)	Autopilot, Brawler:1, Climber, Jetpack: 4", Low Profile, Mount	Strider 2"		
+#line	Caprice	Meggido	Meggido	18	FS (0+)	W:6"	9	4 / 4	1	3+	4+	6+	HRC, MGL, HMG, MSG (Link)	Autopilot, Brawler:1, Climber, Jetpack: 4", Low Profile, Mount	Strider 2"		
+#line	Caprice	Meggido	Support Meggido	20	FS	W:6"	9	4 / 4	1	3+	4+	6+	HRC, LATM, HMG, MSG (Link)	Autopilot, Brawler:1, Climber, Jetpack: 4", Low Profile, Mount	Strider 2"		
+#line	Caprice	Meggido	Close Suport Meggido	18	FS, SK	W:6"	9	4 / 4	1	3+	4+	6+	MGL, MRL, HMG, MSG (Link)	Autopilot, Brawler:1, Climber, Jetpack: 4", Low Profile, Mount	Strider 2"		
+#line	Caprice	Meggido	Rocket Support Meggido	20	FS	W:6"	9	4 / 4	1	3+	4+	6+	MRP, LATM, HMG, MSG (Link)	Autopilot, Brawler:1, Climber, Jetpack: 4", Low Profile, Mount	Strider 2"		
+#line	Caprice	Ammon	Ammon	26	HM (0+)	W:5"	11	4 / 4	2	4+	5+	5+	2xHRP (Range 6-12/96"), HMG, MSG (Link)	Autopilot, Climber, Low Profile, Mount, Stable, TD:0	Strider 2"		
+#line	Caprice	Ammon	Support Ammon	28	HM	W:5"	11	4 / 4	2	4+	5+	5+	2xMRG, HMG, MSG (Link)	Autopilot, Climber, Low Profile, Mount, Stable, TD:0	Strider 2"		
+#line	Caprice	Ammon	Missile Support Ammon	30	HM	W:5"	11	4 / 4	2	4+	5+	5+	2xMATM, HMG, MSG (Link)	Autopilot, Climber, Low Profile, Mount, Stable, TD:0	Strider 2"		
+#line	Caprice	Moab	Moab	22	HM (0+)	W:6"	10	4 / 4	2	5+	5+	6+	2xHRL, HCW (Link)	Autopilot, Climber, Low Profile, Mount, Stable, TD:0	Strider 3"		
+#line	Caprice	Moab	Close Support Moab	24	HM	W:6"	10	4 / 4	2	5+	5+	6+	2xMPA (Split:2), HCW (Link)	Autopilot, Climber, ECM:1, Low Profile, Mount, Stable, TD:0	Strider 3"		
+#line	Caprice	Moab	Support Moab	26	HM	W:6"	10	4 / 4	2	5+	5+	6+	2xMATM, HCW (Link)	Autopilot, Climber, Low Profile, Mount, Stable, TD:0	Strider 3"		
+#line	Caprice	Hamath	Hamath	8	IN	W:7"	7	4 / 4	1	5+	4+	6+	LRC, LCW (Link)	APC:2, Climber, Low Profile, Mount	Strider 2"		
+#line	Caprice	Hamath	Hamath Medic	4	IN (0-1)	W:7"	7	4 / 4	1	5+	4+	6+	LCW (Link)	APC:1, Climber, Low Profile, Medic, Mount	Strider 2"		
+#line	Caprice	Corporate Troops	Corporate Troops	3	IN (0+)	I:3"	2	2 / 2	1	4+	4+	5+	LIS (AI), HIS (Stabilizer)	TD:1, Climber	Infantry 0.5"		
+#line	Caprice	Corporate Troops	Support Troops	4	IN (0+)	I:3"	2	2 / 2	1	4+	4+	5+	LIS (AI), MIM	TD:1, Climber	Infantry 0.5"		
+#line	Caprice	Corporate Troops	Missile Support Troops	4	IN (0+)	I:3"	2	2 / 2	1	4+	4+	5+	LIS (AI), MAVM	TD:1, Climber	Infantry 0.5"		
+#line	Utopia	Recce Armiger	Recce Armiger	12	RC , GP (0-1)	W:5" H:8"	6	4 / 2	1	4+	4+	3+	LLC (Arm), MRP, LVB (Arm), MHG	Agile, Arms, ECM:2, Drone Bay:2, ECCM, NCM:6", Sensors:18", Stealth (Aux)	Gear 1.5"		
+#line	Utopia	Recce Armiger	Close Support Recce Armiger	12	RC	W:5" H:8"	6	4 / 2	1	4+	4+	3+	MRL (Arm), MRP, LVB (Arm), MHG	Agile, Arms, Drone Bay:2, ECM:2, ECCM, NCM:6", Sensors:18", Stealth (Aux)	Gear 1.5"		
+#line	Utopia	Recce Armiger	Missile Support Recce Armiger	14	RC	W:5" H:8"	6	4 / 2	1	4+	4+	3+	LLC (Arm), LATM, LVB (Arm), MHG	Agile, Arms, Drone Bay:2, ECM:2, ECCM, NCM:6", Sensors: 18", Stealth (Aux)	Gear 1.5"		
+#line	Utopia	Support Armiger	Support Armiger	13	FS , GP (0-1)	G:5"	8	5 / 1	1	4+	5+	5+	HRC (Arm), MGM, MRP, LVB (Arm)	Arms, Autopilot, Drone Bay:2, Low Profile, NCM:6"", Offroad:2	Vehicle 1.5"		
+#line	Utopia	Support Armiger	Missile Support Armiger	15	FS	G:5"	8	5 / 1	1	4+	5+	5+	HRC (Arm), MATM, MRP, LVB (Arm)	Arms, Autopilot, Drone Bay:2, Low Profile, NCM:6"", Offroad:2	Vehicle 1.5"		
+#mod{chassis:'Support Armiger'}	Utopia	Support Armiger	#postfix:'Sniper'	+1	-	-	-	-	-	-	-	-	-HRC, +MLC (Arm)	-			
+#line	Utopia	Commando Armiger	Commando Armiger	14	CO , GP (0-1)	W:5" H:8"	7	3 / 3	1	3+	3+	5+	MRL (Arm), MRP, LVB (Arm), LHG	Agile, Airdrop, Arms, Drone Bay:2, Jump Pack: 6", NCM:6", Stealth (Aux)	Gear 1.5"		
+#line	Utopia	Commando Armiger	Sniper Commando Armiger	14	CO	W:5" H:8"	7	3 / 3	1	3+	3+	5+	MLC (Arm), MRP, LVB (Arm)	Agile, Airdrop, Arms, Drone Bay:2, Jump Pack: 6", NCM:6", Stealth (Aux)	Gear 1.5"		
+#mod{chassis:'Commando Armiger'}	Utopia	Commando Armiger	#postfix:'Anti-Tank'	+1	CO	-	-	-	-	-	-	-	-MRP, +LATM	-			
+#line	Utopia	Recon N-KIDU	Recon N-KIDU	3	RC (0+), CO	W:6"	3	4 / 2	1	5+	4+	5+	HIW	Conscript, Comms:1, Stealth, TD:1	Gear 1"		
+#line	Utopia	Recon N-KIDU	Hunter Recon N-KIDU	3	RC (0+), CO	W:6"	3	4 / 2	1	5+	4+	5+	MIS	Conscript, Comms:1, Stealth, TD:2	Gear 1"		
+#line	Utopia	Recon N-KIDU	MP Recon N-KIDU	3	RC (0+)	W:6"	3	4 / 2	1	5+	4+	5+	MIW (Frag, AI)	Conscript, Comms:1, Stealth, TD:3	Gear 1"		
+#line	Utopia	Recon N-KIDU	Recon-ECM N-KIDU	4	RC	W:6"	3	4 / 2	1	5+	4+	5+	MIL	Conscript, ECM:1, Stealth	Gear 1"		
+#line	Utopia	Recon N-KIDU	Comms Recon N-KIDU	2	RC	W:6"	3	4 / 2	1	5+	4+	5+	HIW	Comms:1, NCM:6", SatUp:6+, Stealth	Gear 1"		
+																	
+#line	Utopia	Support N-KIDU	Support N-KIDU	5	FS (0+)	G:5"	4	4 / 2	1	4+	6+	5+	MRP	Conscript, Offroad:1	Gear 1"		
+#line	Utopia	Support N-KIDU	Battery Support N-KIDU	8	FS (0+)	G:5"	4	4 / 2	1	4+	6+	5+	LATM	Conscript, Offroad:1	Gear 1"		
+#line	Utopia	Support N-KIDU	Comms Support N-KIDU	2	FS	G:5"	4	4 / 2	1	4+	5+	5+	-	NCM:6", Offroad:1, SatUp:6+	Gear 1"		
+#line	Utopia	Commando N-KIDU	Commando N-KIDU	5	FS , CO (0+)	H:8"	3	4 / 2	1	4+	3+	5+	BZ (AP:1, PEN:6)	Conscript, Airdrop, Agile, Jetpack: 6", Stealth	Gear 1.5"		
+#line	Utopia	Commando N-KIDU	Commando-ECM N-KIDU	7	FS , CO	H:8"	3	4 / 2	1	4+	3+	5+	BZ (AP:1, PEN:6)	Conscript, Airdrop, Agile, ECM:1, Jetpack: 6", Stealth	Gear 1.5"		
+#line	Utopia	Commando N-KIDU	Comms Commando N-KIDU	3	FS , CO	H:8"	3	4 / 2	1	4+	3+	5+	-	Airdrop, Agile, Jetpack: 6", NCM:6", SatUp:6+, Stealth	Gear 1.5"		
+#line	Utopia	EMT Commando Drone	EMT Commando Drone	2	FS (0-1), CO (0-1), RC (0-1), GP (0-1)	H:8"	3	4 / 2	1	4+	4+	5+	-	Conscript, Airdrop, Agile, Jetpack: 6", Recovery, Stealth	Gear 1.5"		
+#line	Utopia	Marshal Ape	Marshal Ape	7	AL (CMD), BT (CMD)	W:4"	5	4 / 2	1	4+	4+	5+	LAC (Arm), LRP, APGL, LVB (Arm)	Airdrop, Arms, ECM:1, ECCM, Jetpack:6", Stealth	Gear 1"		
+#line	Utopia	Constable Ape	Constable Ape	7	AL (0+)	W:4"	5	3 / 3	1	4+	4+	6+	LAC (Arm), APGL, LVB (Arm)	Airdrop, Arms, Jetpack:6", ECM:1, Stealth	Gear 1"		
+#line	Utopia	Constable Ape	Ignus Constable Ape	7	AL	W:4"	5	3 / 3	1	4+	4+	6+	LFL (Arm), APGL, LVB (Arm)	Airdrop, Arms, Jetpack:6", ECM:1, Stealth	Gear 1"		
+#line	Utopia	Constable Ape	Suppressor Constable Ape	7	AL	W:4"	5	3 / 3	1	4+	4+	6+	GL (Arm, PEN:6), APGL, LVB (Arm)	Airdrop, Arms, Jetpack:6", ECM:1, Stealth	Gear 1"		
+#line	Utopia	Man at Arms Ape	Man at Arms Ape	7	BT (0+)	W:4"	6	3 / 3	1	4+	5+	6+	LAC (Arm, Split:2), LRP, LVB (Arm)	Airdrop, Arms, Jetpack:5", Stealth	Gear 1"		
+#line	Utopia	Man at Arms Ape	Sniper Man at Arms Ape	8	BT	W:4"	6	3 / 3	1	4+	5+	6+	MRF (Arm), LRP, LVB (Arm)	Airdrop, Arms, Jetpack:5", Stealth	Gear 1"		
+#line	Utopia	Man at Arms Ape	Suppressor Man at Arms Ape	8	BT	W:4"	6	3 / 3	1	4+	5+	6+	LGL (Arm), LRP, LVB (Arm)	Airdrop, Arms, Jetpack:5", Stealth	Gear 1"		
+#line	Utopia	Man at Arms Ape	Ignus Man at Arms Ape	7	BT	W:4"	6	3 / 3	1	4+	5+	6+	MFL (Arm), LRP, LVB (Arm)	Airdrop, Arms, Jetpack:5", Stealth	Gear 1"		
+#line	Eden	Marshal Golem	Marshal Golem	5	AL (CMD), BT (CMD)	W:4"	5	4 / 2	1	4+	4+	5+	LAC (Arm), LRP, APGL, LVB (Arm)	Airdrop, Arms, ECM:1, ECCM, Jetpack:6"	Gear 1"		
+#line	Eden	Constable Golem	Constable Golem	5	AL (0+)	W:4"	5	3 / 3	1	4+	4+	6+	LAC (Arm), APGL, LVB (Arm)	Airdrop, Arms, Jetpack:6", ECM:1	Gear 1"		
+#line	Eden	Constable Golem	Ignus Constable Golem	5	AL 	W:4"	5	3 / 3	1	4+	4+	6+	LFL (Arm), APGL, LVB (Arm)	Airdrop, Arms, Jetpack:6", ECM:1	Gear 1"		
+#line	Eden	Constable Golem	Suppressor Constable Golem	5	AL 	W:4"	5	3 / 3	1	4+	4+	6+	GL (Arm, PEN:6), APGL, LVB (Arm)	Airdrop, Arms, Jetpack:6", ECM:1	Gear 1"		
+#mod{chassis:'Constable Golem'}	Eden	Constable Golem	#replace:{from:'Golem', to:'APE'}	+2	AL(SU)	-	-	-	-	-	-	-	-	+Stealth			
+#mod{chassis:'Marshal Golem'}	Eden	Constable Golem	#replace:{from:'Golem', to:'APE'}	+2	AL(SU)	-	-	-	-	-	-	-	-	+Stealth			
+#line	Eden	Man at Arms Golem	Man at Arms Golem	5	BT (0+)	W:4"	6	3 / 3	1	4+	5+	6+	LAC (Arm, Split:2), LRP, LVB (Arm)	Airdrop, Arms, Jetpack:5"	Gear 1"		
+#line	Eden	Man at Arms Golem	Sniper Man at Arms Golem	6	BT	W:4"	6	3 / 3	1	4+	5+	6+	MRF (Arm), LRP, LVB (Arm)	Airdrop, Arms, Jetpack:5"	Gear 1"		
+#line	Eden	Man at Arms Golem	Suppressor Man at Arms Golem	6	BT 	W:4"	6	3 / 3	1	4+	5+	6+	LGL (Arm), LRP, LVB (Arm)	Airdrop, Arms, Jetpack:5"	Gear 1"		
+#line	Eden	Man at Arms Golem	Ignus Man at Arms Golem	5	BT 	W:4"	6	3 / 3	1	4+	5+	6+	MFL (Arm), LRP, LVB (Arm)	Airdrop, Arms, Jetpack:5"	Gear 1"		
+#mod{chassis:'Man at Arms Golem'}	Eden	Man at Arms Golem	#replace:{from:'Golem', to:'APE'}	+2	BT(SU)	-	-	-	-	-	-	-	-	+Stealth			
+#line	Generic	Generic Fighter	Generic Fighter	10	GF (0-3)	F:14" G:2"	6	2 / 4	2	5+	3+	6+	2xMAC, LSAM (LA:2)	Agile, TD:0	Flyer	NoGenericUpgrades	
+#line	Generic	Generic Fighter/Bomber	Generic Fighter/Bomber	20	FB (0-3)	F:12" G:2"	6	3 / 3	2	5+	3+	6+	2xHAC, LSAM (LA:2), HRP	Agile, TD:0	Flyer	NoGenericUpgrades	
+#line	Generic	Generic Bomber	Generic Bomber	25	GB	F:10" G:2"	7	4 / 4	3	4+	4+	5+	LRC (FT), MSAM (LA:2), 2xMBB (LA:2)		Flyer	NoGenericUpgrades	
+#line	Generic	Recon UAV	Recon UAV	12	UV	F:12" G:2"	4	2 / 2	1	5+	5+	4+	LATM (LA:2)	TD:1, Sensors:24"	Flyer	NoGenericUpgrades	
+#line	Support	Building	AutoCannon Turret (1)	15	SU	0"	10	4 / 2	1	4+	-	6+	HAC (FT, Link)	Sensors 18" (Aux)	Fortification 1"	Support	
+#line	Support	Building	Rocket Turret (1)	15	SU	0"	10	4 / 2	1	4+	-	6+	HRP (Link)	Sensors 18" (Aux)	Fortification 1"	Support	
+#line	Support	Building	Anti-Air Turret (1)	15	SU	0"	10	4 / 2	1	4+	-	6+	HAC (FT, AA, Flak)	Sensors 18" (Aux)	Fortification 1"	Support	
+#line	Support	Building	Outpost	20	SU	0"	10	5 / 3	3	4+	-	5+	3x MAC (T, Auto)	HGC:2, APC:6, Sensors:18" (Aux)	Fortification 4"	Support	
+#line	Support	Earthworks	Minefields (6"x3")	5	SU	0"	-	-	0	-	-	-	-	-	Hazard 0"	Support	
+#line	Support	Earthworks	Obstacles (5)	5	SU	0"	8	6 / 0	0	-	-	-	-	-	Hazard 1"	Support	
+#line	Support	Building	Bunker (1)	5	SU	0"	12	6 / 0	0	-	-	-	-	APC:2	Fortification 1"	Support	
+#line	Support	Earthworks	Trench (6"x1")	5	SU	0"	10	6 / 0	0	-	-	-	-	APC:3	Fortification 0.5"	Support	
+#line	Drone	Drone	Recon Drone	1	Attached upgrade	H:8"	1	2 / 0	1	-	5+	5+	-	TD:0	Drone 0.5"	Drone	
+#line	Drone	Drone	Demo Drone Grenade	1	Attached upgrade	G:5"	2	2 / 0	1	5+	6+	-	MHG (LA:1)*	Offroad:1	Drone 0.5"	Drone	
+#line	Drone	Drone	Demo Drone Charge	1	Attached upgrade	G:5"	2	2 / 0	1	-	6+	-	MSE (LA:1)*	Offroad:1	Drone 0.5"	Drone	
+#line	Drone	Drone	Hunter Killer	1	Attached upgrade	H:6"	1	2 / 0	1	5+	4+	-	MIW (FT, Auto)	Jump Jets:2	Drone 0.5"	Drone	
+#line	Drone	Drone	Hunter Killer Defender	2	Attached upgrade	H:6"	1	2 / 0	1	5+	4+	-	LIW (FT)	AMS, Jump Jets:2	Drone 0.5"	Drone	
+#line	Drone	Drone	Hunter Killer Defense	1	Attached upgrade	H:6"	1	2 / 0	1	5+	4+	-	MIW (FT, AA)	Jump Jets:2	Drone 0.5"	Drone	
+																	
+																	
+																	
+																	

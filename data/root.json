@@ -1,0 +1,14 @@
+{
+    "weapons": {
+        "filename": "Weapons.tsv.txt",
+        "format": "tsv"
+    },
+    "traits": {
+        "filename": "traits.tsv",
+        "format": "tsv"
+    },
+    "statlines": {
+        "filename": "Statlines.tsv.txt",
+        "format": "tsv"
+    }
+}
