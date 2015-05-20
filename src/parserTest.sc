@@ -1,4 +1,5 @@
 import tsvparser.TsvParser._
+import model._
 
 object parserTest {
   new java.io.File(".").getAbsolutePath           //> res0: String = /home/pirkka/eclipse/scala-SDK-4.0.0-vfinal-2.11-linux/.
@@ -26,9 +27,15 @@ object parserTest {
                                                   //| s, faction -> Faction, gu -> GU, #head -> #labels, mr -> MR, special -> Spec
                                                   //| ial Rules, type -> Type/Height, traits -> Traits)
 	
-	tsv.tail.tail.head                        //> res3: Map[String,String] = Map(name -> Hunter, ar -> 6, pi -> 4+, weapons ->
-                                                  //|  LAC (Arm, Split:2), LRP, APGL, LPZ, LVB (Arm), ua -> GP(0+), FS, ST, HT, ew
-                                                  //|  -> 6+, hs -> 4 / 2, a -> 1, tv -> 6, chassis -> Hunter, faction -> NORTH, g
-                                                  //| u -> 4+, #head -> #line, mr -> W:5" G:6", type -> Gear 1.5", traits -> Arms)
-                                                  //| 
+	val modelLine = tsv.tail.tail.head        //> modelLine  : Map[String,String] = Map(name -> Hunter, ar -> 6, pi -> 4+, wea
+                                                  //| pons -> LAC (Arm, Split:2), LRP, APGL, LPZ, LVB (Arm), ua -> GP(0+), FS, ST,
+                                                  //|  HT, ew -> 6+, hs -> 4 / 2, a -> 1, tv -> 6, chassis -> Hunter, faction -> N
+                                                  //| ORTH, gu -> 4+, #head -> #line, mr -> W:5" G:6", type -> Gear 1.5", traits -
+                                                  //| > Arms)
+
+	val model = Model(modelLine)              //> model  : model.Model = Model(Hunter,6,6,List(Move(W,5), Move(G,6)),4,4,6,Lis
+                                                  //| t(LAC (Arm, Split:2), LRP, APGL, LPZ, LVB (Arm)),HullStructure(4,2),1,Hunter
+                                                  //| ,NORTH)
+                                              
+	
 }
