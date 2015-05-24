@@ -44,15 +44,31 @@ object Model {
   
   implicit def toStringList(str : String) : List[String] = {
     str.split(", *").toList
-  } 
+  }
+  
+  /**
+   * True if the line is a data line that contains a new model.
+   * False if the line is a mod.
+   */
+  private def isDataLine(line : Map[String, String]) : Boolean = 
+    try {
+      line("#head") == "#line"
+    } catch { 
+      case e : Exception => throw new ModelParserException(s"no #head on line: ${line}", e) 
+    }    
+  
   
   def apply(statLines : List[Map[String, String]]) : List[Model] = {
-    statLines.filter(!_.isEmpty).filter { l=> try {
-      l("#head") == "#line"
-    } catch { case e : Exception => throw new ModelParserException(s"no #head on line: ${l}", e) }
-    }.flatMap(line => try { 
+    val (lines, mods) = statLines.filter(!_.isEmpty).partition(isDataLine(_))
+    val lineModels = lines.flatMap(line => try { 
       Some(Model(line)) 
     } catch {case e : Exception => None})
+    
+    val modModels = mods.flatMap(mod => try { 
+      Some(Model.parseMods(mod, lineModels)) 
+    } catch {case e : Exception => None}).flatten
+    
+    lineModels ++ modModels
   }
   
   def apply(statLine : Map[String, String]) : Model = {
@@ -76,7 +92,39 @@ object Model {
     case e : Exception => throw new ModelParserException(s"stats line: ${statLine}", e)
     }
   }
+  
+  /**
+   * #mod{chassis:'Tiger'}
+   */
+  def parseModTargetChassis(head : String) : String = {
+    val Groups = "#mod\\{chassis:'(.+)'\\}".r
+    head match {
+      case Groups(chassis) => chassis
+      case _ => throw new ModelParserException(s"Could not match head: $head to regexp. Chassis not found.")
+    }
+  }
+  
+  def parseMods(mod : Map[String, String], lineModels : List[Model]) : List[Model] = {
+    lineModels.filter(_.chassis == parseModTargetChassis(mod("#head"))).map(parseMod(mod, _))
+  }
+  
+  def parseModName(modNameField : String, lineModelName : String) : String = {
+    val Prefix = "#prefix:'(.+)'".r
+    // #replace:{from:'Tiger', to:'Sabertooth'}
+    val Replace = "#replace:\\{from:'(.+)', to:'(.+)'}".r
+    modNameField match {
+      case Prefix(namePrefix) => namePrefix + " " + lineModelName
+      case Replace(from, to) => lineModelName.replace(from, to)
+      case _ => lineModelName
+    }
+  }
+  
+  def parseMod(mod : Map[String, String], lineModel : Model) : Model = {
+    lineModel.copy(
+      name = parseModName(mod("name"), lineModel.name)
+    )
+  }
 }
 
-class ModelParserException(msg : String, e : Exception) extends Exception(msg, e)
+class ModelParserException(msg : String, e : Exception = null) extends Exception(msg, e)
 

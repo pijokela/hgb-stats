@@ -5,11 +5,6 @@ import java.io.File
 import scala.io.Codec
 
 object TsvParser {
-  def readHeaders(fileName : String) : Vector[String] = {
-    val file = new File(fileName)
-    readHeaders(file)
-  }
-  
   def readHeaders(file : File) : Vector[String] = {
     val source = Source.fromFile(file)(Codec.UTF8)
     val lines = source.getLines()
@@ -18,7 +13,11 @@ object TsvParser {
   
   def readHeaders(lines : Iterator[String]) : Vector[String] = {
     val headers = lines.next()
-    headers.split("\\t").toVector
+    readHeaders(headers)
+  }
+  
+  def readHeaders(line : String) : Vector[String] = {
+    line.split("\\t").toVector
   }
   
   def parseLine(line : String, headers : Vector[String]) : Map[String, String] = {
